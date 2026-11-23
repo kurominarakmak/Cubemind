@@ -17,6 +17,7 @@ CubeMind studies next-move imitation with a deterministic 3×3 simulator and PyT
 - An expert-aware hierarchical F2L extension: canonical-frame action and pair-order models trained from scratch on solver-disjoint reco.nz rows. Validation-only calibration feeds expert scores into the existing pair-conditioned search; historical planner and expert checkpoints remain unchanged.
 - A from-scratch OLL/PLL/ZBLL policy/value model trained on replay-confirmed reco.nz last-layer segments plus separately stored simulator-generated CFOP/ZBLL trajectories. It uses neural greedy rollout or neural-guided search; exact case recognition is reported as a reference only, and failed neural routes never fall back to a table or full-cube solver.
 - A Streamlit demo with a Cross-policy view and an interactive last-layer view showing the cube, exact case, neural prediction, predicted algorithm, and replay-verified solution.
+- The pretrained expert-aware full-cube checkpoint bundle is published on [Hugging Face](https://huggingface.co/iamrealwonyoung/cubemind-cfop-policies).
 
 The user authorized local use of reco.nz 3×3 reconstructions for this community research project. Raw and processed solve data are kept local and are not included in the checked-in project. ZBLL/PLL strings come from the MIT-licensed Alg-Trainer source; ZBLS representatives come from CubeRoot's public algorithm API and are replay-verified. See [dataset provenance](docs/dataset_provenance.md).
 

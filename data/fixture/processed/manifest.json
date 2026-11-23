@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "seed": 3,
+  "sample_kinds": [
+    "synthetic"
+  ],
+  "source_kinds": [
+    "synthetic:shortest-cross-bfs-v1"
+  ],
+  "split_policy": "grouped_by_scramble_id; each solve is kept intact",
+  "splits": {
+    "train": {
+      "solves": 24,
+      "scrambles": 24,
+      "samples": 140,
+      "file": "train.jsonl",
+      "sha256": "18128df828c1eef5f01571d4832fad1a818635b307d12653d3b18f62d05dc9c6"
+    },
+    "validation": {
+      "solves": 3,
+      "scrambles": 3,
+      "samples": 15,
+      "file": "validation.jsonl",
+      "sha256": "f08bcb10627d5bbfad2561394108e999d4518bf061a602ebf4e03ece8eb95b2a"
+    },
+    "test": {
+      "solves": 3,
+      "scrambles": 3,
+      "samples": 18,
+      "file": "test.jsonl",
+      "sha256": "d5fa3d7413b1c1760ce6e95ca0bfb518a9506187e44f6847014426628fbc6eae"
+    }
+  }
+}

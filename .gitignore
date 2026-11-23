@@ -1,0 +1,13 @@
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+*.tmp
+
+/work/
+cubemind.egg-info/

@@ -1,0 +1,3959 @@
+{
+  "schema_version": 1,
+  "dataset": "ZBLL including PLL",
+  "cases": [
+    {
+      "case_id": "T1-01",
+      "family": "T1",
+      "algorithms": [
+        "U' R U R' U R U2 R' U2 R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-02",
+      "family": "T1",
+      "algorithms": [
+        "R' U R U2 R' U' R U' R U R' U' R' U' R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-03",
+      "family": "T1",
+      "algorithms": [
+        "U2 R' U2 R U R' U R2 U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-04",
+      "family": "T1",
+      "algorithms": [
+        "R U2 R' U' R U' R2 U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-05",
+      "family": "T1",
+      "algorithms": [
+        "R' U R U2 R' U' R U2 R' U' R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-06",
+      "family": "T1",
+      "algorithms": [
+        "U2 R U' R' U2 R U R' U2 R U R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-07",
+      "family": "T1",
+      "algorithms": [
+        "R' U R2 U R' U R' U' R U' R' U' R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-08",
+      "family": "T1",
+      "algorithms": [
+        "U' R U R' U R U' R' U R' U' R2 U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-09",
+      "family": "T1",
+      "algorithms": [
+        "U2 R' U2 R U R' U R U' R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-10",
+      "family": "T1",
+      "algorithms": [
+        "R U2 R' U' R U' R' U R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-11",
+      "family": "T1",
+      "algorithms": [
+        "U' R' U' R2 U R2 U R2 U2 R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T1-12",
+      "family": "T1",
+      "algorithms": [
+        "U' R U R2 U' R2 U' R2 U2 R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-01",
+      "family": "T2",
+      "algorithms": [
+        "U R U R' U R U R2 D' r U2 r' D R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-02",
+      "family": "T2",
+      "algorithms": [
+        "U R' U' R U' R' U' R2 D r' U2 r D' R2 U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-03",
+      "family": "T2",
+      "algorithms": [
+        "U2 R U' R2 D' r U2 r' D R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-04",
+      "family": "T2",
+      "algorithms": [
+        "R' U R2 D r' U2 r D' R2 U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-05",
+      "family": "T2",
+      "algorithms": [
+        "R' U' R U2 R D R' U' R D' R2 U R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-06",
+      "family": "T2",
+      "algorithms": [
+        "U' R U2 R' U' R U r' F r U2 R' r' F r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-07",
+      "family": "T2",
+      "algorithms": [
+        "R' U' R U R2 D' R U2 R' D R2 U2 R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-08",
+      "family": "T2",
+      "algorithms": [
+        "U R U R' U' R U R2 D' R U' R' D R U2 R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-09",
+      "family": "T2",
+      "algorithms": [
+        "U R' D' R U' R' D R U' R U' R' U R U' R' U' R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-10",
+      "family": "T2",
+      "algorithms": [
+        "R U' R' U R U R' U' R U R' U R' D' R U R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-11",
+      "family": "T2",
+      "algorithms": [
+        "U R U R D R' U R D' R' U L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T2-12",
+      "family": "T2",
+      "algorithms": [
+        "U2 R2 F R U R' U' R' F' R' U' R2 U2 R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-01",
+      "family": "T3",
+      "algorithms": [
+        "R' U R U2 L' R' U R U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-02",
+      "family": "T3",
+      "algorithms": [
+        "R' U2 R U R2 F R U R U' R' F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-03",
+      "family": "T3",
+      "algorithms": [
+        "U2 R' U' R2 U R' F' R U R' U' R' F R2 U' R' U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-04",
+      "family": "T3",
+      "algorithms": [
+        "U2 r U' r U2 R' F R U2 r2 F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-05",
+      "family": "T3",
+      "algorithms": [
+        "U' R' U' R' D' R U R' D R U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-06",
+      "family": "T3",
+      "algorithms": [
+        "R' U' R y R U R' U' R l U' R' U l'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-07",
+      "family": "T3",
+      "algorithms": [
+        "U L' U2 R U2 R' U2 L U R U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-08",
+      "family": "T3",
+      "algorithms": [
+        "F U' R' U2 R U F' R' U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-09",
+      "family": "T3",
+      "algorithms": [
+        "U2 R' U' R U' R' U R F U' R' U2 R U F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-10",
+      "family": "T3",
+      "algorithms": [
+        "R U R' U R U' R' U' L' U2 R U2 R' U2 L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-11",
+      "family": "T3",
+      "algorithms": [
+        "R' U2 R U R' U R F U R U2 R' U R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T3-12",
+      "family": "T3",
+      "algorithms": [
+        "r' U' l' U2 R U' R' U2 l R U' R' U2 r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-01",
+      "family": "T4",
+      "algorithms": [
+        "U' l' U2 R' D2 R U2 R' D2 R2 x'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-02",
+      "family": "T4",
+      "algorithms": [
+        "R' U2 R U' R' F R U R' U' R' F' R U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-03",
+      "family": "T4",
+      "algorithms": [
+        "R' U2 R' D' R U2 R' D R' U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-04",
+      "family": "T4",
+      "algorithms": [
+        "U2 R U2 R D R' U2 R D' R U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-05",
+      "family": "T4",
+      "algorithms": [
+        "R' D' R U R' D R U2 R U2 R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-06",
+      "family": "T4",
+      "algorithms": [
+        "U R' U' R' D' R U R' D R U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-07",
+      "family": "T4",
+      "algorithms": [
+        "R' U R2 D R' U R D' R' U R' U' R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-08",
+      "family": "T4",
+      "algorithms": [
+        "U2 R U' R2 D' R U' R' D R U' R U R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-09",
+      "family": "T4",
+      "algorithms": [
+        "U R' U' R U' F U' R' U R U F' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-10",
+      "family": "T4",
+      "algorithms": [
+        "R' D' R U R' D R2 U R' U2 R U' R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-11",
+      "family": "T4",
+      "algorithms": [
+        "U2 F R U R' U' R U' R' U' R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T4-12",
+      "family": "T4",
+      "algorithms": [
+        "U' R U R' U2 R U' R' U2 R U' R2 F' R U R U' R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-01",
+      "family": "T5",
+      "algorithms": [
+        "R U R D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-02",
+      "family": "T5",
+      "algorithms": [
+        "U' R U2 R' U2 R' F R U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-03",
+      "family": "T5",
+      "algorithms": [
+        "U2 R2 B2 R' U2 R' U2 R B2 R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-04",
+      "family": "T5",
+      "algorithms": [
+        "U' R' D' R U R' D R2 U' R' U R U R' U' R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-05",
+      "family": "T5",
+      "algorithms": [
+        "U' F' U' r' F2 r U' r' F' r F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-06",
+      "family": "T5",
+      "algorithms": [
+        "U' R U R' U' R U' R' L U' R U R' L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-07",
+      "family": "T5",
+      "algorithms": [
+        "U R U R' U R U R' U2 L R U' R' U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-08",
+      "family": "T5",
+      "algorithms": [
+        "R' U' R U' R2' F' R U R U' R' F U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-09",
+      "family": "T5",
+      "algorithms": [
+        "U R' U' R U R' U' R2 D R' U2 R D' R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-10",
+      "family": "T5",
+      "algorithms": [
+        "U2 R U R D R' U2 R D' R' U' R' U R U' R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-11",
+      "family": "T5",
+      "algorithms": [
+        "U2 F R U R' U' R' F' U2 R U R U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T5-12",
+      "family": "T5",
+      "algorithms": [
+        "U' R U' R' U' R U R D R' U2 R D' R' U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-01",
+      "family": "T6",
+      "algorithms": [
+        "x' U' R' D R U R' D' R x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-02",
+      "family": "T6",
+      "algorithms": [
+        "U R U R' U' R' F' R U2 R U2 R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-03",
+      "family": "T6",
+      "algorithms": [
+        "R2 F2 R U2 R U2 R' F2 R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-04",
+      "family": "T6",
+      "algorithms": [
+        "U' R D R' U' R D' R2 U R U' R' U' R U R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-05",
+      "family": "T6",
+      "algorithms": [
+        "U F U R U2 R' U R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-06",
+      "family": "T6",
+      "algorithms": [
+        "R U R' U' R U' R' U' F R U R' U' R' F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-07",
+      "family": "T6",
+      "algorithms": [
+        "U R' U' R U' R' U' R U2 L' R' U R U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-08",
+      "family": "T6",
+      "algorithms": [
+        "U F R U R' U' R U R' U' F' R U R' U' R' F R F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-09",
+      "family": "T6",
+      "algorithms": [
+        "U R U R' U' R U R2 D' R U2 R' D R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-10",
+      "family": "T6",
+      "algorithms": [
+        "R' U2 R F U' R' U R U F' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-11",
+      "family": "T6",
+      "algorithms": [
+        "U R' U2 R2 U R' U' R' U2 F' R U2 R U2 R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "T6-12",
+      "family": "T6",
+      "algorithms": [
+        "U' R' U R U R' U' R' D' R U2 R' D R U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-01",
+      "family": "U1",
+      "algorithms": [
+        "U R U2 R' U' R U' R' U2 R' U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-02",
+      "family": "U1",
+      "algorithms": [
+        "R U R' U' R U' R U2 R2 U' R U R' U' R2 U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-03",
+      "family": "U1",
+      "algorithms": [
+        "R' U' R U' R' U2 R2 U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-04",
+      "family": "U1",
+      "algorithms": [
+        "U2 R U R' U R U2 R2 U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-05",
+      "family": "U1",
+      "algorithms": [
+        "U' R U R' U' R U' R' U2 R U' R' U2 R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-06",
+      "family": "U1",
+      "algorithms": [
+        "U' R' U' R U R' U R U2 R' U R U2 R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-07",
+      "family": "U1",
+      "algorithms": [
+        "U R U2 R2 U' R2 U' R' U R' U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-08",
+      "family": "U1",
+      "algorithms": [
+        "U R' U2 R2 U R2 U R U' R U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-09",
+      "family": "U1",
+      "algorithms": [
+        "U R' U2 R U R' U R U R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-10",
+      "family": "U1",
+      "algorithms": [
+        "U R U2 R' U' R U' R' U' R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-11",
+      "family": "U1",
+      "algorithms": [
+        "R' U' R U' R U2 R2 U' R2 U' R2 U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U1-12",
+      "family": "U1",
+      "algorithms": [
+        "U2 R U R' U R' U2 R2 U R2 U R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-01",
+      "family": "U2",
+      "algorithms": [
+        "U2 R' U' R U' F U' R' U R U R' U R U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-02",
+      "family": "U2",
+      "algorithms": [
+        "R U R' U L' U R U' M' x' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-03",
+      "family": "U2",
+      "algorithms": [
+        "U' R U2 R2 F R F' M' U' R U' R' U M"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-04",
+      "family": "U2",
+      "algorithms": [
+        "U' R' U2 R F U' R' U R U R' U R U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-05",
+      "family": "U2",
+      "algorithms": [
+        "U2 R2 D R' U' R D' R' U' R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-06",
+      "family": "U2",
+      "algorithms": [
+        "R2 D' R U R' D R U R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-07",
+      "family": "U2",
+      "algorithms": [
+        "R U' R' U' R U R D R' U R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-08",
+      "family": "U2",
+      "algorithms": [
+        "U2 R' U R U R' U' R' D' R U' R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-09",
+      "family": "U2",
+      "algorithms": [
+        "M U' M' F R U R' U' F' M U M'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-10",
+      "family": "U2",
+      "algorithms": [
+        "U' F R U R' U' R U R' U' F' U' R' F' U' F U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-11",
+      "family": "U2",
+      "algorithms": [
+        "F R U' R' U' R U2 R' U' R U' R' U' R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U2-12",
+      "family": "U2",
+      "algorithms": [
+        "U r' U' R' F R U r F R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-01",
+      "family": "U3",
+      "algorithms": [
+        "R' F R U' R' U' R U R' F' R U R' U' R' F R F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-02",
+      "family": "U3",
+      "algorithms": [
+        "U' F2 R U' R' U' R U R' F' R U R' U' R' F R F2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-03",
+      "family": "U3",
+      "algorithms": [
+        "R U' R' U R U' L U r' F U2 R U2 R2 x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-04",
+      "family": "U3",
+      "algorithms": [
+        "U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-05",
+      "family": "U3",
+      "algorithms": [
+        "U R U' L U L' U R' U' l U2 R U2 R2 x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-06",
+      "family": "U3",
+      "algorithms": [
+        "U R' U L' U' L U' R U l' U2 R' U2 R2 x'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-07",
+      "family": "U3",
+      "algorithms": [
+        "F R U R U2 R' U' R U' R' U2 R' U2 R U' R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-08",
+      "family": "U3",
+      "algorithms": [
+        "U' r U R' U' r' F R2 U' R' U' R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-09",
+      "family": "U3",
+      "algorithms": [
+        "U F U R U2 R' U R U R2 F' r U R U' r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-10",
+      "family": "U3",
+      "algorithms": [
+        "U' R U2 R' U2 R' F R U R U2 R' U' R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-11",
+      "family": "U3",
+      "algorithms": [
+        "U' R' U' R F R2 D' R U R' D R2 U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U3-12",
+      "family": "U3",
+      "algorithms": [
+        "U' r U R' U' r' F R U R' U' R F' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-01",
+      "family": "U4",
+      "algorithms": [
+        "x R2 U2 R' D2 R U2 R' D2 R' x'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-02",
+      "family": "U4",
+      "algorithms": [
+        "U2 x R2 D2 R U2 R' D2 R U2 l"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-03",
+      "family": "U4",
+      "algorithms": [
+        "R U R' U R U' R' U2 R' D' R U2 R' D R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-04",
+      "family": "U4",
+      "algorithms": [
+        "U' R' U2 R U R' U R' D R' U2 R D' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-05",
+      "family": "U4",
+      "algorithms": [
+        "U' R U' R' U' R U' R' U R' D' R U R' D R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-06",
+      "family": "U4",
+      "algorithms": [
+        "U' R' U R U R' U R U' R D R' U' R D' R2 U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-07",
+      "family": "U4",
+      "algorithms": [
+        "R' U2 R U R' U R' D' R U' R' D R U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-08",
+      "family": "U4",
+      "algorithms": [
+        "R U' R' U' R U2 R' U2 R' D' R U' R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-09",
+      "family": "U4",
+      "algorithms": [
+        "R' U' R U2 R' F' R U R' U' R' F R2 U2 R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-10",
+      "family": "U4",
+      "algorithms": [
+        "U2 R U R' U R U R' U2 R U' R2 D' R U' R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-11",
+      "family": "U4",
+      "algorithms": [
+        "F R U' R' U R U R' U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U4-12",
+      "family": "U4",
+      "algorithms": [
+        "U F' R U R' U' R' F R2 U R' U2 R U R' U2 R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-01",
+      "family": "U5",
+      "algorithms": [
+        "R2 D' r U2 r' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-02",
+      "family": "U5",
+      "algorithms": [
+        "R2 D' R U2 R' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-03",
+      "family": "U5",
+      "algorithms": [
+        "R U' R' D R' U' R D' R2 U R' U' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-04",
+      "family": "U5",
+      "algorithms": [
+        "U2 R U R' U R U2 R2 U z U R' D R U' z'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-05",
+      "family": "U5",
+      "algorithms": [
+        "U R2 D' R U' R' D R2 U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-06",
+      "family": "U5",
+      "algorithms": [
+        "U' R' U R U R' U2 R U2 y R U' R' U2 R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-07",
+      "family": "U5",
+      "algorithms": [
+        "U' R2 D R' U R D' R2 U' R U' R' U2 R U' R' U2 R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-08",
+      "family": "U5",
+      "algorithms": [
+        "U R U L' U R' U' L U' R U R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-09",
+      "family": "U5",
+      "algorithms": [
+        "U' R' U2 R2 D R' U2 R D' R2 U R U2 R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-10",
+      "family": "U5",
+      "algorithms": [
+        "U' R U R' U2 F2 R U2 R' U2 R' F2 R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-11",
+      "family": "U5",
+      "algorithms": [
+        "U' R' U2 R' D' R U2 R' D R U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U5-12",
+      "family": "U5",
+      "algorithms": [
+        "U' R' U R U' R' U' R U2 R D R' U' R D' R2 U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-01",
+      "family": "U6",
+      "algorithms": [
+        "R' U2 R U R2 F' R U R U' R' F R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-02",
+      "family": "U6",
+      "algorithms": [
+        "U2 R2 D R' U2 R D' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-03",
+      "family": "U6",
+      "algorithms": [
+        "R' U' R U R U R' U' R' U F R U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-04",
+      "family": "U6",
+      "algorithms": [
+        "R U' R' U' R U2 R' U' R' D' R U2 R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-05",
+      "family": "U6",
+      "algorithms": [
+        "U R U R2 D' R U R' D R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-06",
+      "family": "U6",
+      "algorithms": [
+        "U' R U' R' U' R U2 R' U2 y' R' U R U2 R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-07",
+      "family": "U6",
+      "algorithms": [
+        "U R' U R' U' D' R U' R' U2 R U' R' D R U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-08",
+      "family": "U6",
+      "algorithms": [
+        "U R' U' L U' R U L' U R' U' R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-09",
+      "family": "U6",
+      "algorithms": [
+        "U' R' U' R U R' U R U2 F R' U R U' F' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-10",
+      "family": "U6",
+      "algorithms": [
+        "U R U R' U R U' R' U R U' R' U' L' U R U' R' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-11",
+      "family": "U6",
+      "algorithms": [
+        "U' R U2 R D R' U2 R D' R' U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "U6-12",
+      "family": "U6",
+      "algorithms": [
+        "U' R U' R' U R U R' U2 R' D' R U R' D R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-01",
+      "family": "L1",
+      "algorithms": [
+        "R U2 R' U2 R' U' R U R U' R' U2 R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-02",
+      "family": "L1",
+      "algorithms": [
+        "R U R' U R U' R' U R U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-03",
+      "family": "L1",
+      "algorithms": [
+        "U2 R U2 R' U' R U' R' U2 R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-04",
+      "family": "L1",
+      "algorithms": [
+        "U2 R U R' U R U2 R' U2 R U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-05",
+      "family": "L1",
+      "algorithms": [
+        "R2 U R' U R' U' R U' R' U' R U R U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-06",
+      "family": "L1",
+      "algorithms": [
+        "U' R2 U' R U' R U R' U R U R' U' R' U R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-07",
+      "family": "L1",
+      "algorithms": [
+        "U R' U2 R U R' U R U' R U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-08",
+      "family": "L1",
+      "algorithms": [
+        "U2 R U2 R' U' R U' R' U R' U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-09",
+      "family": "L1",
+      "algorithms": [
+        "U R2 U R' U' R' U R U R' U R U' R U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-10",
+      "family": "L1",
+      "algorithms": [
+        "U2 R2 U' R U R U' R' U' R U' R' U R' U R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-11",
+      "family": "L1",
+      "algorithms": [
+        "U2 R U R' U R U2 R' U R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L1-12",
+      "family": "L1",
+      "algorithms": [
+        "U R' U' R U' R' U2 R U' R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-01",
+      "family": "L2",
+      "algorithms": [
+        "F R U' R' U' R U R D R' U' R D' R' U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-02",
+      "family": "L2",
+      "algorithms": [
+        "U F R U R' U' R U' R' U2 R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-03",
+      "family": "L2",
+      "algorithms": [
+        "L' U2 R U' R' U2 L R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-04",
+      "family": "L2",
+      "algorithms": [
+        "R' U' R U R' F' R U R' U' R' F R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-05",
+      "family": "L2",
+      "algorithms": [
+        "F R U R' U' R' F R2 U' R' U' R U R' F2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-06",
+      "family": "L2",
+      "algorithms": [
+        "R' U' R U R' U' R' F R2 U' R' U' R U R' F' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-07",
+      "family": "L2",
+      "algorithms": [
+        "U r U2 R r2 F R' F' r2 U2 r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-08",
+      "family": "L2",
+      "algorithms": [
+        "U2 r U2 r2 F R F' r2 R' U2 r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-09",
+      "family": "L2",
+      "algorithms": [
+        "U2 F R U R' U' F' r U r' U R U' R' r U' r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-10",
+      "family": "L2",
+      "algorithms": [
+        "U r U r' R U R' U' r U' r' F U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-11",
+      "family": "L2",
+      "algorithms": [
+        "U R U2 R' U' L' U2 R U R' L U L' U L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L2-12",
+      "family": "L2",
+      "algorithms": [
+        "U R U R' U' R' U2 R' U D R' U' R U2 D' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-01",
+      "family": "L3",
+      "algorithms": [
+        "U' F' r U R' U' r' F R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-02",
+      "family": "L3",
+      "algorithms": [
+        "R' U' R U R' F2 R U2 R' U2 R' F2 R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-03",
+      "family": "L3",
+      "algorithms": [
+        "U' F' R U2 R' U2 R' F R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-04",
+      "family": "L3",
+      "algorithms": [
+        "U R' U R U' R' U R U R' U' R2 D R' U R D' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-05",
+      "family": "L3",
+      "algorithms": [
+        "F R U' R' U' R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-06",
+      "family": "L3",
+      "algorithms": [
+        "U2 R' U' R U2 R' F' R U R' U' R' F R2 U R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-07",
+      "family": "L3",
+      "algorithms": [
+        "R' F R U R U' R' F' U R U R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-08",
+      "family": "L3",
+      "algorithms": [
+        "R' U R U2 R' L' U R U L U r' F r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-09",
+      "family": "L3",
+      "algorithms": [
+        "U F R' F' R U R U' R' F U R U' R' U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-10",
+      "family": "L3",
+      "algorithms": [
+        "U' F' R U2 R' U2 R' F U2 R U R U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-11",
+      "family": "L3",
+      "algorithms": [
+        "U2 R U R' U R' D' R U2 R' D R2 U' R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L3-12",
+      "family": "L3",
+      "algorithms": [
+        "U R' U' R' D' R U2 R' D R U R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-01",
+      "family": "L4",
+      "algorithms": [
+        "U2 F R' F' r U R U' r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-02",
+      "family": "L4",
+      "algorithms": [
+        "U' R U R' U' R B2 R' U2 R U2 R B2 R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-03",
+      "family": "L4",
+      "algorithms": [
+        "U2 F R U R' U' R' F' R U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-04",
+      "family": "L4",
+      "algorithms": [
+        "U2 R U' R' U R U' R' U' R U R2 D' R U' R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-05",
+      "family": "L4",
+      "algorithms": [
+        "U F' r' F r U r' F2 r U F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-06",
+      "family": "L4",
+      "algorithms": [
+        "U R U R' U R U R' U' R U R D R' U2 R D' R' U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-07",
+      "family": "L4",
+      "algorithms": [
+        "U L R U' R' U R L' U R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-08",
+      "family": "L4",
+      "algorithms": [
+        "U L U' R U R' L' U2 R U' R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-09",
+      "family": "L4",
+      "algorithms": [
+        "U R' U2 R U R' U' F' R U R' U' R' F R2 U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-10",
+      "family": "L4",
+      "algorithms": [
+        "U R' U2 R2 U R' U' R' U2 F R U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-11",
+      "family": "L4",
+      "algorithms": [
+        "U R U R' U R U' R' U' L' U R U' M' x'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L4-12",
+      "family": "L4",
+      "algorithms": [
+        "U2 R U R D R' U2 R D' R' U' R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-01",
+      "family": "L5",
+      "algorithms": [
+        "U R' U2 R' D' R U2 R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-02",
+      "family": "L5",
+      "algorithms": [
+        "U R' U2 R' D' r U2 r' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-03",
+      "family": "L5",
+      "algorithms": [
+        "U2 R D R' U2 R D' R' U' R' U2 R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-04",
+      "family": "L5",
+      "algorithms": [
+        "U2 R U2 R U R U' R2 D R' U R D' R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-05",
+      "family": "L5",
+      "algorithms": [
+        "U R U R' U2 R U R' U2 y' R' U2 R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-06",
+      "family": "L5",
+      "algorithms": [
+        "R' U2 R U R2 D' R U R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-07",
+      "family": "L5",
+      "algorithms": [
+        "U R U R' U' R U' R' U L' U R U' L U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-08",
+      "family": "L5",
+      "algorithms": [
+        "U R U' R' U2 R U R' U2 R U R' U R2 D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-09",
+      "family": "L5",
+      "algorithms": [
+        "U R' U2 R U2 R' U' R2 D R' U2 R D' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-10",
+      "family": "L5",
+      "algorithms": [
+        "U2 F' R U R' U' R' F R2 U' R' U' R U' R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-11",
+      "family": "L5",
+      "algorithms": [
+        "R U' R2 F2 R U2 R U2 R' F2 U2 R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L5-12",
+      "family": "L5",
+      "algorithms": [
+        "U R' U R2 D R' U R D' R' U2 R' U R U R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-01",
+      "family": "L6",
+      "algorithms": [
+        "U2 R U2 R D R' U2 R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-02",
+      "family": "L6",
+      "algorithms": [
+        "U R' F' R U R' U' R' F R2 U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-03",
+      "family": "L6",
+      "algorithms": [
+        "U' L' U R U' L U R2 U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-04",
+      "family": "L6",
+      "algorithms": [
+        "U' F R U R' U' R' F' U' R U R U' R' U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-05",
+      "family": "L6",
+      "algorithms": [
+        "U2 R' U' R U2 R' U' R y U2 R U2 R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-06",
+      "family": "L6",
+      "algorithms": [
+        "U' R U2 R' U' R2 D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-07",
+      "family": "L6",
+      "algorithms": [
+        "U2 R' U' R U R' U R U' L U' R' U L' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-08",
+      "family": "L6",
+      "algorithms": [
+        "U2 R' U R' D' R U R' U2 R U R' D U R U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-09",
+      "family": "L6",
+      "algorithms": [
+        "U2 R U2 R' U2 R U R2 D' R U2 R' D R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-10",
+      "family": "L6",
+      "algorithms": [
+        "U' R U R' U R U2 R D R' U2 R D' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-11",
+      "family": "L6",
+      "algorithms": [
+        "U' R' U R2 B2 R' U2 R' U2 R B2 U2 R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "L6-12",
+      "family": "L6",
+      "algorithms": [
+        "U2 R U' R2 D' R U' R' D R U2 R U' R' U' R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-01",
+      "family": "Pi1",
+      "algorithms": [
+        "R' U' R U R U2 R' U' R U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-02",
+      "family": "Pi1",
+      "algorithms": [
+        "R U R' U' R' U2 R U R' U R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-03",
+      "family": "Pi1",
+      "algorithms": [
+        "U' R' U2 R U R' U R2 U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-04",
+      "family": "Pi1",
+      "algorithms": [
+        "U R U2 R' U' R U' R2 U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-05",
+      "family": "Pi1",
+      "algorithms": [
+        "U' R U2 R' U2 R U' R' U2 R U' R' U2 R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-06",
+      "family": "Pi1",
+      "algorithms": [
+        "U R' U2 R U2 R' U R U2 R' U R U2 R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-07",
+      "family": "Pi1",
+      "algorithms": [
+        "U2 R U' R' U2 R U R' U2 R U R' U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-08",
+      "family": "Pi1",
+      "algorithms": [
+        "U2 R' U R U2 R' U' R U2 R' U' R U2 R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-09",
+      "family": "Pi1",
+      "algorithms": [
+        "R' U2 R2 U R2 U R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-10",
+      "family": "Pi1",
+      "algorithms": [
+        "R U2 R2 U' R2 U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-11",
+      "family": "Pi1",
+      "algorithms": [
+        "R U R' U' R' U' R U R U R' U' R' U R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi1-12",
+      "family": "Pi1",
+      "algorithms": [
+        "R U2 R' U' R U' R' U' R U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-01",
+      "family": "Pi2",
+      "algorithms": [
+        "F R2 U' R U' R U' R' U2 R' U R2 F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-02",
+      "family": "Pi2",
+      "algorithms": [
+        "U2 F R2 U' R U2 R U R' U R' U R2 F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-03",
+      "family": "Pi2",
+      "algorithms": [
+        "F U R' U' R2 U' R2 U2 R U2 R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-04",
+      "family": "Pi2",
+      "algorithms": [
+        "r' U' R U' R' U R U' R' U R' F R F' U r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-05",
+      "family": "Pi2",
+      "algorithms": [
+        "U R U2 R' U' F' R U2 R' U' R U' R' F R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-06",
+      "family": "Pi2",
+      "algorithms": [
+        "U R' U' R' D' R U R' D R U2 R' D' R U2 R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-07",
+      "family": "Pi2",
+      "algorithms": [
+        "U' R' U' R U R' U' R2 D R' U R D' R' U R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-08",
+      "family": "Pi2",
+      "algorithms": [
+        "U R U R' U' R U R2 D' R U' R' D R U' R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-09",
+      "family": "Pi2",
+      "algorithms": [
+        "U2 R U2 R' U R' D' R U R' D R2 U' R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-10",
+      "family": "Pi2",
+      "algorithms": [
+        "U2 R' U2 R U' R D R' U' R D' R2 U R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-11",
+      "family": "Pi2",
+      "algorithms": [
+        "R2 D R' U' R D' R' U' R' U R U' R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi2-12",
+      "family": "Pi2",
+      "algorithms": [
+        "R2 D' R U R' D R U R U' R' U R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-01",
+      "family": "Pi3",
+      "algorithms": [
+        "U' F U R U2 R' U R U R' F' R U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-02",
+      "family": "Pi3",
+      "algorithms": [
+        "r U' r' U' r U r' U' l R U' R' U l'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-03",
+      "family": "Pi3",
+      "algorithms": [
+        "r' U r U r' U' r U R2 F R F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-04",
+      "family": "Pi3",
+      "algorithms": [
+        "r' U' R U' R' U2 r U' R U2 R' U2 R' F R F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-05",
+      "family": "Pi3",
+      "algorithms": [
+        "R' U' R U R2 F' R U R U' R' F U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-06",
+      "family": "Pi3",
+      "algorithms": [
+        "R U2 R D' R U' R' D R' U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-07",
+      "family": "Pi3",
+      "algorithms": [
+        "R' U' R U' R2 D' R U R' D R2 U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-08",
+      "family": "Pi3",
+      "algorithms": [
+        "U2 L' U R U' L U' R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-09",
+      "family": "Pi3",
+      "algorithms": [
+        "R U' L' U R' U L U L' U L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-10",
+      "family": "Pi3",
+      "algorithms": [
+        "U R2 D' R U2 R' D R2 U R2 D' R U R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-11",
+      "family": "Pi3",
+      "algorithms": [
+        "U' R2 D R' U2 R D' R2 U' R2 D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi3-12",
+      "family": "Pi3",
+      "algorithms": [
+        "U2 R U2 R' U' R U r' F2 r U2 R' U' r' F r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-01",
+      "family": "Pi4",
+      "algorithms": [
+        "U R U2 R2 U' R U' R' U2 F R U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-02",
+      "family": "Pi4",
+      "algorithms": [
+        "U' R U R' U R U2 R2 F' r U R U' r' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-03",
+      "family": "Pi4",
+      "algorithms": [
+        "U' r' F' r U' r' F2 r2 U R' U' r' F R F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-04",
+      "family": "Pi4",
+      "algorithms": [
+        "F R U R' U' R' F' R U2 R' U' R2 U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-05",
+      "family": "Pi4",
+      "algorithms": [
+        "U R' U' R L U2 R' U2 R U2 L' U R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-06",
+      "family": "Pi4",
+      "algorithms": [
+        "U' F U' R U' R' U R U R' U2 R U2 R' U F' U"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-07",
+      "family": "Pi4",
+      "algorithms": [
+        "U R2 D' R U' R' D R U R' D' R U R' D R U R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-08",
+      "family": "Pi4",
+      "algorithms": [
+        "R' U' F' R U R' U' R' F R2 U2' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-09",
+      "family": "Pi4",
+      "algorithms": [
+        "U' R U R' U R U' R' U' R' F' R U2 R U2' R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-10",
+      "family": "Pi4",
+      "algorithms": [
+        "U2 R' U' R' D' R U R' D R' U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-11",
+      "family": "Pi4",
+      "algorithms": [
+        "U2 R U R D R' U' R D' R U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi4-12",
+      "family": "Pi4",
+      "algorithms": [
+        "U F U R U' R' U R U2 R' U' R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-01",
+      "family": "Pi5",
+      "algorithms": [
+        "r' F' r U r U2 r' F2 U' R U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-02",
+      "family": "Pi5",
+      "algorithms": [
+        "U2 R U2 R' U2 R' F R2 U' R' U2 R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-03",
+      "family": "Pi5",
+      "algorithms": [
+        "R' F R U R' U' R' F' R2 U' R' U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-04",
+      "family": "Pi5",
+      "algorithms": [
+        "R' L U2 R2 U R2 U R U L' U' R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-05",
+      "family": "Pi5",
+      "algorithms": [
+        "l U2 l' U2 R' U2 R B2 U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-06",
+      "family": "Pi5",
+      "algorithms": [
+        "U' R U R' U F2 R U2 R' U2 R' F2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-07",
+      "family": "Pi5",
+      "algorithms": [
+        "U' R' U2 R U R' U R2 U' L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-08",
+      "family": "Pi5",
+      "algorithms": [
+        "U R U R' U R U' R' U R U' R D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-09",
+      "family": "Pi5",
+      "algorithms": [
+        "R U R' U' R' F R2 U R' U' R U R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-10",
+      "family": "Pi5",
+      "algorithms": [
+        "U2 R' U' R U' R' U' R U' x' U L' U L U2 R U' R' U x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-11",
+      "family": "Pi5",
+      "algorithms": [
+        "R U2 R' U' R U R' U2 L' U R U' M' x'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi5-12",
+      "family": "Pi5",
+      "algorithms": [
+        "U' L R' U' R U L' U2 R' U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-01",
+      "family": "Pi6",
+      "algorithms": [
+        "U' R U R' U R U' R' U F2 r U2 r' U' r' F r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-02",
+      "family": "Pi6",
+      "algorithms": [
+        "U F U R U2 R' U2 R U R2 F' R U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-03",
+      "family": "Pi6",
+      "algorithms": [
+        "R U' R' U' R U' R' U R U R' U R' F' R U R U' R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-04",
+      "family": "Pi6",
+      "algorithms": [
+        "R L' U2 R2 U' R2 U' R' U' L U R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-05",
+      "family": "Pi6",
+      "algorithms": [
+        "R' F2 R U2 R U2 R' F2 U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-06",
+      "family": "Pi6",
+      "algorithms": [
+        "U R' U' R U' B2 R' U2 R U2 l U2 l'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-07",
+      "family": "Pi6",
+      "algorithms": [
+        "U R U2 R' U' R U' R2 U L U' R U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-08",
+      "family": "Pi6",
+      "algorithms": [
+        "U' R' U' R U' R' U R U' R' U R' D' R U R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-09",
+      "family": "Pi6",
+      "algorithms": [
+        "U F U R U' R' U R U' R2 F' R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-10",
+      "family": "Pi6",
+      "algorithms": [
+        "R U R' U R U2 R' U' R L' U R' U' L U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-11",
+      "family": "Pi6",
+      "algorithms": [
+        "R' U2 R U R' U' R U2 L U' R' U R L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "Pi6-12",
+      "family": "Pi6",
+      "algorithms": [
+        "U R L' U R' U' L U2 R U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-01",
+      "family": "H1",
+      "algorithms": [
+        "R U2 R' U' R U' R' U' R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-02",
+      "family": "H1",
+      "algorithms": [
+        "R' U2 R U R' U R U R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-03",
+      "family": "H1",
+      "algorithms": [
+        "U R' U' R U' R' U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-04",
+      "family": "H1",
+      "algorithms": [
+        "U' R U R' U R U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-05",
+      "family": "H1",
+      "algorithms": [
+        "R' U2 R U R' U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-06",
+      "family": "H1",
+      "algorithms": [
+        "R U2 R' U' R U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-07",
+      "family": "H1",
+      "algorithms": [
+        "U R U R' U R U' R' U R U' R' U R' U' R2 U' R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H1-08",
+      "family": "H1",
+      "algorithms": [
+        "U R U R' U R U2 R' U' R' U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-01",
+      "family": "H2",
+      "algorithms": [
+        "U x' U' R U' R' U R' F2 R U' R U R' U x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-02",
+      "family": "H2",
+      "algorithms": [
+        "F U R U' R' U R U' R' U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-03",
+      "family": "H2",
+      "algorithms": [
+        "R U R' y' U R' U R U' R2 F R F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-04",
+      "family": "H2",
+      "algorithms": [
+        "R' U' R y U' R U' R' U R l U' R' U l'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-05",
+      "family": "H2",
+      "algorithms": [
+        "F R U R' U' R U R' U' F' U R' F' U' F U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-06",
+      "family": "H2",
+      "algorithms": [
+        "R' U' R U' R' U2 R U R' U' R U R' F' R U R' U' R' F R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-07",
+      "family": "H2",
+      "algorithms": [
+        "U L' U L U' L' U' L U R' U' R U L' U' L U2 R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H2-08",
+      "family": "H2",
+      "algorithms": [
+        "U R U' R' U R U R' U' L U L' U' R U R' U2 L U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-01",
+      "family": "H3",
+      "algorithms": [
+        "U2 R U R' U R U2 R' F R U' R' U' R U2 R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-02",
+      "family": "H3",
+      "algorithms": [
+        "l U' R U R' l' U r U' r' U r U r'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-03",
+      "family": "H3",
+      "algorithms": [
+        "U2 R' F R' F' R2 U' r' U r U' r' U' r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-04",
+      "family": "H3",
+      "algorithms": [
+        "U R' U' R U' R' U' L U' R U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-05",
+      "family": "H3",
+      "algorithms": [
+        "U R U R' U R U L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-06",
+      "family": "H3",
+      "algorithms": [
+        "U' R' U' R U' R U R2 U R2 U L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-07",
+      "family": "H3",
+      "algorithms": [
+        "U' R U R' U R' U' R2 U' R2 U' L U' R U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-08",
+      "family": "H3",
+      "algorithms": [
+        "R U2 R2 U' R' D R' U' R D' R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-09",
+      "family": "H3",
+      "algorithms": [
+        "R U2 R' U' R2 D R' U R D' R2' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-10",
+      "family": "H3",
+      "algorithms": [
+        "U2 R U R' U' L' U2 R U2 R' U L U' r' F2 r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-11",
+      "family": "H3",
+      "algorithms": [
+        "U' R2 D' R U' R' D R2 U' R2 D' R U2 R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H3-12",
+      "family": "H3",
+      "algorithms": [
+        "U' R2 D R' U R D' R2' U R2 D R' U2 R D' R2'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-01",
+      "family": "H4",
+      "algorithms": [
+        "U2 F R' F' r U R U' r2 F2 r U r' F r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-02",
+      "family": "H4",
+      "algorithms": [
+        "U R U R' U' R' F R U R U' R' F' R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-03",
+      "family": "H4",
+      "algorithms": [
+        "R' U2 R U' L U2 R' U2 R U2 L' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-04",
+      "family": "H4",
+      "algorithms": [
+        "R U2 R' U L' U2 R U2 R' U2 L R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-05",
+      "family": "H4",
+      "algorithms": [
+        "U' F U' R U2 R' U2 R U' R' U' R U R' U F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-06",
+      "family": "H4",
+      "algorithms": [
+        "U' R' F R U R' U' F' R U' R' U R' F R F' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-07",
+      "family": "H4",
+      "algorithms": [
+        "U' R U2 R' U' R U' R D' R U' R' D R U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-08",
+      "family": "H4",
+      "algorithms": [
+        "R U2 R2 F U' R2 U' R2 U F' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-09",
+      "family": "H4",
+      "algorithms": [
+        "U2 R' U2 R U2' R2 F' R U R U' R' F U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-10",
+      "family": "H4",
+      "algorithms": [
+        "U' F B' R2 B R2 U' R2 U' R2 U R2 F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-11",
+      "family": "H4",
+      "algorithms": [
+        "U2 F R U R' U' R' F' U2 R U R' U R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "H4-12",
+      "family": "H4",
+      "algorithms": [
+        "U F R U' R' U R U2 R' U' R U R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-01",
+      "family": "S1",
+      "algorithms": [
+        "U' R' U R2 U R' U R U2 R U2 R U R' U R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-02",
+      "family": "S1",
+      "algorithms": [
+        "U' R' U2 R2 U R U' R' U R U R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-03",
+      "family": "S1",
+      "algorithms": [
+        "R U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-04",
+      "family": "S1",
+      "algorithms": [
+        "U' R' U2 R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-05",
+      "family": "S1",
+      "algorithms": [
+        "R U R2 U' R2 U' R2 U2 R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-06",
+      "family": "S1",
+      "algorithms": [
+        "U2 R' U' R U' R U R2 U R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-07",
+      "family": "S1",
+      "algorithms": [
+        "U' R U R' U' R' U2 R U R U' R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-08",
+      "family": "S1",
+      "algorithms": [
+        "U' R' U' R U R U R' U' R' U R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-09",
+      "family": "S1",
+      "algorithms": [
+        "R U R' U R U' R' U R' U' R2 U' R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-10",
+      "family": "S1",
+      "algorithms": [
+        "R U R' U R U R U R U R U' R' U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-11",
+      "family": "S1",
+      "algorithms": [
+        "U R U R' U R' U' R2 U' R' U R' U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S1-12",
+      "family": "S1",
+      "algorithms": [
+        "R U R' U R U' R' U R' U' R' U R U' R' U' R2 U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-01",
+      "family": "S2",
+      "algorithms": [
+        "F U' R' U R U F' R U R2 U R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-02",
+      "family": "S2",
+      "algorithms": [
+        "U R' D' R U' R' D R U2 R U R' U2 R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-03",
+      "family": "S2",
+      "algorithms": [
+        "R' U2 R U R' U' R F U' R' U' R U F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-04",
+      "family": "S2",
+      "algorithms": [
+        "R' U R U2 R' U R U2 R D R' U' R D' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-05",
+      "family": "S2",
+      "algorithms": [
+        "L' U2 R U' R' U2 L U R U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-06",
+      "family": "S2",
+      "algorithms": [
+        "U F R U R' U' R U R2 U' F' U R U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-07",
+      "family": "S2",
+      "algorithms": [
+        "U2 R U R' F' R U R' U R U2 R' F R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-08",
+      "family": "S2",
+      "algorithms": [
+        "U R U2 L' R' U2 R U2 R' U2 L U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-09",
+      "family": "S2",
+      "algorithms": [
+        "U' R U' R2 U2 D' R U R' U D R2 U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-10",
+      "family": "S2",
+      "algorithms": [
+        "U F U R' F R F' R U' R' U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-11",
+      "family": "S2",
+      "algorithms": [
+        "R U R' U' L' U R U' L U' L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S2-12",
+      "family": "S2",
+      "algorithms": [
+        "U2 r' F2 R F' r U' R' U r' F r U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-01",
+      "family": "S3",
+      "algorithms": [
+        "R U' L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-02",
+      "family": "S3",
+      "algorithms": [
+        "U R' U2 R U R' U' R' D' R U2 R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-03",
+      "family": "S3",
+      "algorithms": [
+        "U' R' D U' R' U R U2 D' R2 U R' U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-04",
+      "family": "S3",
+      "algorithms": [
+        "U R' U' R' U R2 D' U2 R U R' U' D R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-05",
+      "family": "S3",
+      "algorithms": [
+        "R2 D R' U2 R D' R' U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-06",
+      "family": "S3",
+      "algorithms": [
+        "D' R U R' U R U' R' U' D R2 U' R U' R' U R' U R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-07",
+      "family": "S3",
+      "algorithms": [
+        "R U R' U R U R' U' R U R D R' U' R D' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-08",
+      "family": "S3",
+      "algorithms": [
+        "U' R' U2 R U R' U' R' D' R U' R' D R U R U' R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-09",
+      "family": "S3",
+      "algorithms": [
+        "U' R' U2 F' R U R' U' R' F R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-10",
+      "family": "S3",
+      "algorithms": [
+        "R2 U R U R' U' R' U' R' L' U R' U' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-11",
+      "family": "S3",
+      "algorithms": [
+        "U R U2 R' U2 R' F R2 U R' U' R U R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S3-12",
+      "family": "S3",
+      "algorithms": [
+        "R U R' U R U' R' U' R' F R2 U' R' U' R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-01",
+      "family": "S4",
+      "algorithms": [
+        "R' D R2 D' R2 U R2 D R2 D' R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-02",
+      "family": "S4",
+      "algorithms": [
+        "U' R U R' U R U' R D R' U' R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-03",
+      "family": "S4",
+      "algorithms": [
+        "U2 R U' R' U' R U' R' U2 R U R2 D' R U2 R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-04",
+      "family": "S4",
+      "algorithms": [
+        "U F U R U' R' U R U' l U' R2 D' R U R' x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-05",
+      "family": "S4",
+      "algorithms": [
+        "U2 R2 D' R U' R' D R U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-06",
+      "family": "S4",
+      "algorithms": [
+        "U R U2 R' L' U2 R U R' U2 L R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-07",
+      "family": "S4",
+      "algorithms": [
+        "R' D' R U R' D R2 U' R' U R U R' U' R U2 R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-08",
+      "family": "S4",
+      "algorithms": [
+        "R U' R' U' R U R D R' U2 R D' R2 U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-09",
+      "family": "S4",
+      "algorithms": [
+        "U' R' U2 R' D' R U R' D R U' R U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-10",
+      "family": "S4",
+      "algorithms": [
+        "U R' U' R U' R2 F' R U R U' R' F U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-11",
+      "family": "S4",
+      "algorithms": [
+        "U2 R U R' U R' D' R U R' D R U' R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S4-12",
+      "family": "S4",
+      "algorithms": [
+        "U2 R U2 R' U' R U R' U' R U R D R' U2 R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-01",
+      "family": "S5",
+      "algorithms": [
+        "f R' F' R U2 R U2 R' U2 S'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-02",
+      "family": "S5",
+      "algorithms": [
+        "U R' D' R U R' D R2 U R' U2 R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-03",
+      "family": "S5",
+      "algorithms": [
+        "R' D R' U R D' U R U' R' U' R2 U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-04",
+      "family": "S5",
+      "algorithms": [
+        "U R' U2 R U R2 D' R U' R' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-05",
+      "family": "S5",
+      "algorithms": [
+        "U2 R2 D' r U2 r' D R2 U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-06",
+      "family": "S5",
+      "algorithms": [
+        "R' U2 R U R' U R' D' R U2 R' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-07",
+      "family": "S5",
+      "algorithms": [
+        "R L' U R' U' L U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-08",
+      "family": "S5",
+      "algorithms": [
+        "U2 R2 D' R U2 R' D R2 U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-09",
+      "family": "S5",
+      "algorithms": [
+        "R2 F R U R U' R' F' R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-10",
+      "family": "S5",
+      "algorithms": [
+        "U R U R' U R' U' R' D' R U R' D R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-11",
+      "family": "S5",
+      "algorithms": [
+        "U' R' U' F U' R2 U R2 U F' R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S5-12",
+      "family": "S5",
+      "algorithms": [
+        "U' R' U' R' D' R U' R' D R' U R2 U R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-01",
+      "family": "S6",
+      "algorithms": [
+        "U2 R U R' U' R U R2 D' R U2 R' D R2 U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-02",
+      "family": "S6",
+      "algorithms": [
+        "R U R' U R U' R2 F' R U R U' R' F R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-03",
+      "family": "S6",
+      "algorithms": [
+        "U2 R U R' U R2 D r' U2 r D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-04",
+      "family": "S6",
+      "algorithms": [
+        "R' U R U2 R' U R2 D R' U R D' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-05",
+      "family": "S6",
+      "algorithms": [
+        "U' R' U' R U R2 U' R' U' R U D' R U R' D R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-06",
+      "family": "S6",
+      "algorithms": [
+        "U2 R U R' U R2 D R' U2 R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-07",
+      "family": "S6",
+      "algorithms": [
+        "U2 R' U2 R U2 L U' R' U L' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-08",
+      "family": "S6",
+      "algorithms": [
+        "R U2 R D R' U2 R D' R' U R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-09",
+      "family": "S6",
+      "algorithms": [
+        "R U R2 F' R U2 R U2 R' F R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-10",
+      "family": "S6",
+      "algorithms": [
+        "U R U R' U' R U R2 D' R U R' D R U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-11",
+      "family": "S6",
+      "algorithms": [
+        "F' R U R' U R U2 R' F U R U' R' U2 R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "S6-12",
+      "family": "S6",
+      "algorithms": [
+        "U R' F R U R' U' R' F' D' R U R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-01",
+      "family": "AS1",
+      "algorithms": [
+        "U R U' R2 U' R U' R' U2 R' U2 R' U' R U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-02",
+      "family": "AS1",
+      "algorithms": [
+        "U R U2 R2 U' R' U R U' R' U' R2 U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-03",
+      "family": "AS1",
+      "algorithms": [
+        "R' U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-04",
+      "family": "AS1",
+      "algorithms": [
+        "U R U2 R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-05",
+      "family": "AS1",
+      "algorithms": [
+        "R' U' R2 U R2 U R2 U2 R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-06",
+      "family": "AS1",
+      "algorithms": [
+        "U2 R U R' U R' U' R2 U' R2 U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-07",
+      "family": "AS1",
+      "algorithms": [
+        "U R' U' R U R U2 R' U' R' U R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-08",
+      "family": "AS1",
+      "algorithms": [
+        "U R U R' U' R' U' R U R U' R' U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-09",
+      "family": "AS1",
+      "algorithms": [
+        "U R U R' U R' U' R U R' U' R2 U' R2 U R U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-10",
+      "family": "AS1",
+      "algorithms": [
+        "R' U' R U' R' U' R' U' R' U' R' U R U R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-11",
+      "family": "AS1",
+      "algorithms": [
+        "U R U R' U' R U R2 U' R2 U' R' U R U' R' U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS1-12",
+      "family": "AS1",
+      "algorithms": [
+        "U2 R U R' U R' U' R' U R U' R' U' R' U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-01",
+      "family": "AS2",
+      "algorithms": [
+        "U' R U2 R2 U' R2 U' R' F U' R' U' R U F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-02",
+      "family": "AS2",
+      "algorithms": [
+        "U' R D R' U R D' R' U2 R' U' R U2 R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-03",
+      "family": "AS2",
+      "algorithms": [
+        "U' R U2 R' U' R U R' L' U R U' L U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-04",
+      "family": "AS2",
+      "algorithms": [
+        "R U' R' U2 R U' R' U2 R' D' R U R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-05",
+      "family": "AS2",
+      "algorithms": [
+        "U' F U' R' U R U F' R' U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-06",
+      "family": "AS2",
+      "algorithms": [
+        "U R U R' U L' U2 R U2 R' U2 R L U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-07",
+      "family": "AS2",
+      "algorithms": [
+        "R U R' F' R U2 R' U' R U' R' F R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-08",
+      "family": "AS2",
+      "algorithms": [
+        "R U R' U' R' U' F U R2 U' R' U R U' R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-09",
+      "family": "AS2",
+      "algorithms": [
+        "U R' U R2 U2 D R' U' R U' D' R2 U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-10",
+      "family": "AS2",
+      "algorithms": [
+        "R' U R U R' U r U' R' U R U r' R' F R F' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-11",
+      "family": "AS2",
+      "algorithms": [
+        "z D' R' D R U R' D' R U' R U R' D R U' z'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS2-12",
+      "family": "AS2",
+      "algorithms": [
+        "R U2 R' U' R U r' F r U2 R' U' r' F2 r"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-01",
+      "family": "AS3",
+      "algorithms": [
+        "R' U L U' R U L'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-02",
+      "family": "AS3",
+      "algorithms": [
+        "U' R U2 R' U' R U R D R' U2 R D' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-03",
+      "family": "AS3",
+      "algorithms": [
+        "U R D' U R U' R' U2 D R2 U' R U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-04",
+      "family": "AS3",
+      "algorithms": [
+        "U' R U R U' R2 D U2 R' U' R U D' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-05",
+      "family": "AS3",
+      "algorithms": [
+        "R2 D' R U2 R' D R U R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-06",
+      "family": "AS3",
+      "algorithms": [
+        "D R' U' R U' R' U R U D' R2 U R' U R U' R U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-07",
+      "family": "AS3",
+      "algorithms": [
+        "R' U' R U' R' U' R U R' U' R' D' R U R' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-08",
+      "family": "AS3",
+      "algorithms": [
+        "U R U2 R' U' R U R D R' U R D' R' U' R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-09",
+      "family": "AS3",
+      "algorithms": [
+        "U2 F U R U' R' U R U' R2 F' R U2 R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-10",
+      "family": "AS3",
+      "algorithms": [
+        "U2 F R U' R' U R U R2 F' R U R U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-11",
+      "family": "AS3",
+      "algorithms": [
+        "U2 R' U2 R' F' R U R U' R' F U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS3-12",
+      "family": "AS3",
+      "algorithms": [
+        "U2 L' U R U' L R U R U R U' R' U' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-01",
+      "family": "AS4",
+      "algorithms": [
+        "R D' R2 D R2 U' R2 D' R2 D R2 U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-02",
+      "family": "AS4",
+      "algorithms": [
+        "U R' U' R U' R' U R' D' R U R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-03",
+      "family": "AS4",
+      "algorithms": [
+        "l U' R' D R2 U l' U R' U' R U R' U' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-04",
+      "family": "AS4",
+      "algorithms": [
+        "U' R' D' R U2 R' D R2 U' R' U2 R U R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-05",
+      "family": "AS4",
+      "algorithms": [
+        "U2 R2 D R' U R D' R' U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-06",
+      "family": "AS4",
+      "algorithms": [
+        "U R U2 R' L' U2 R U' R' U2 L R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-07",
+      "family": "AS4",
+      "algorithms": [
+        "U' R U R' U' R' U' R U R U' R' U' R2 D' R U' R' D R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-08",
+      "family": "AS4",
+      "algorithms": [
+        "U' R U2 R' U' R2 D R' U2 R D' R' U' R' U R U R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-09",
+      "family": "AS4",
+      "algorithms": [
+        "U R U2 R' U R' D' R U' R' D R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-10",
+      "family": "AS4",
+      "algorithms": [
+        "U' R2 D R' U2 R D' R' U' R' U R U' R' U R U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-11",
+      "family": "AS4",
+      "algorithms": [
+        "U2 R' U' R U' R D R' U' R D' R' U R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS4-12",
+      "family": "AS4",
+      "algorithms": [
+        "U2 R' U2 F' R U R' U' R' F R2 U R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-01",
+      "family": "AS5",
+      "algorithms": [
+        "U' R U2 R2 D' R U2 R' D R2 U' R' U R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-02",
+      "family": "AS5",
+      "algorithms": [
+        "U' R D R' U' R D' R2 U' R U2 R' U' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-03",
+      "family": "AS5",
+      "algorithms": [
+        "R D' R U' R' D U' R' U R U R2 U' R' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-04",
+      "family": "AS5",
+      "algorithms": [
+        "R U R' F' R U R' U' R' F R2 U R' U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-05",
+      "family": "AS5",
+      "algorithms": [
+        "U2 R2 D r' U2 r D' R2 U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-06",
+      "family": "AS5",
+      "algorithms": [
+        "R U2 R' U' R U' R D R' U2 R D' R' U2 R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-07",
+      "family": "AS5",
+      "algorithms": [
+        "L R' U' R U L' U2 R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-08",
+      "family": "AS5",
+      "algorithms": [
+        "U2 R2 D R' U2 R D' R2 U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-09",
+      "family": "AS5",
+      "algorithms": [
+        "R U R' F' R U2 R' U2 R' F R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-10",
+      "family": "AS5",
+      "algorithms": [
+        "U' R' U' R U' R U R D R' U' R D' R U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-11",
+      "family": "AS5",
+      "algorithms": [
+        "U R U R' U2 R U R' U' F' R U2 R' U' R U' R' F"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS5-12",
+      "family": "AS5",
+      "algorithms": [
+        "R2 D' R U' R' D F R U R U' R' F' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-01",
+      "family": "AS6",
+      "algorithms": [
+        "U' R U2 R' U' F' R U R' U' R' F R2 U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-02",
+      "family": "AS6",
+      "algorithms": [
+        "U' R' U2 R' D' R U R' D R2 U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-03",
+      "family": "AS6",
+      "algorithms": [
+        "U2 R' U' R U' R2 D' r U2 r' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-04",
+      "family": "AS6",
+      "algorithms": [
+        "R U' R' U2 R U' R2 D' R U' R' D R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-05",
+      "family": "AS6",
+      "algorithms": [
+        "U R U R' U' R2 U R U R' U' D R' U' R D' R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-06",
+      "family": "AS6",
+      "algorithms": [
+        "U2 R' U' R U' R2 D' R U2 R' D R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-07",
+      "family": "AS6",
+      "algorithms": [
+        "U2 R U2 R' U2 L' U R U' R' L"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-08",
+      "family": "AS6",
+      "algorithms": [
+        "R' U2 R' D' R U2 R' D R U' R U' R' U2 R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-09",
+      "family": "AS6",
+      "algorithms": [
+        "R' U' R U R' F R U R' U' R' F' R2"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-10",
+      "family": "AS6",
+      "algorithms": [
+        "U R U2 R D' R U' R' D R U R U' R U' R'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-11",
+      "family": "AS6",
+      "algorithms": [
+        "U R U R' U R' F U' R2 U' R2 U F' U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "AS6-12",
+      "family": "AS6",
+      "algorithms": [
+        "U' R U R' U R' U' R2 U' R D' R U R' D R U R"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "PLL-Ua",
+      "family": "PLL",
+      "algorithms": [
+        "U2 R2 U' R' U' R U R U R U' R"
+      ],
+      "source_algorithm_count": 6
+    },
+    {
+      "case_id": "PLL-Ub",
+      "family": "PLL",
+      "algorithms": [
+        "R' U R' U' R' U' R' U R U R2"
+      ],
+      "source_algorithm_count": 3
+    },
+    {
+      "case_id": "PLL-H",
+      "family": "PLL",
+      "algorithms": [
+        "M2 U' M2 U2 M2 U' M2"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-Z",
+      "family": "PLL",
+      "algorithms": [
+        "M' U' M2 U' M2 U' M' U2 M2"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "PLL-Aa",
+      "family": "PLL",
+      "algorithms": [
+        "l' U R' D2 R U' R' D2 R2 x'"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-Ab",
+      "family": "PLL",
+      "algorithms": [
+        "x R2 D2 R U R' D2 R U' R x'"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-E",
+      "family": "PLL",
+      "algorithms": [
+        "x' R U' R' D R U R' D' R U R' D R U' R' D' x"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "PLL-Ga",
+      "family": "PLL",
+      "algorithms": [
+        "R2 u R' U R' U' R u' R2 y' R' U R"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-Gb",
+      "family": "PLL",
+      "algorithms": [
+        "U F' U' F R2 u R' U R U' R u' R2"
+      ],
+      "source_algorithm_count": 3
+    },
+    {
+      "case_id": "PLL-Gc",
+      "family": "PLL",
+      "algorithms": [
+        "R2 u' R U' R U R' u R2 y R U' R'"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "PLL-Gd",
+      "family": "PLL",
+      "algorithms": [
+        "R U R' y' R2 u' R U' R' U R' u R2"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-Ra",
+      "family": "PLL",
+      "algorithms": [
+        "R U R' F' R U2 R' U2 R' F R U R U2 R'"
+      ],
+      "source_algorithm_count": 3
+    },
+    {
+      "case_id": "PLL-Rb",
+      "family": "PLL",
+      "algorithms": [
+        "R' U2 R U2 R' F R U R' U' R' F' R2"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-Ja",
+      "family": "PLL",
+      "algorithms": [
+        "R' U L' U2 R U' R' U2 R L"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "PLL-Jb",
+      "family": "PLL",
+      "algorithms": [
+        "R U R' F' R U R' U' R' F R2 U' R' U'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "PLL-Na",
+      "family": "PLL",
+      "algorithms": [
+        "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'"
+      ],
+      "source_algorithm_count": 3
+    },
+    {
+      "case_id": "PLL-Nb",
+      "family": "PLL",
+      "algorithms": [
+        "z D' R U' R2 D R' U D' R U' R2 D R' U z'"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "PLL-Y",
+      "family": "PLL",
+      "algorithms": [
+        "F R U' R' U' R U R' F' R U R' U' R' F R F'"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-F",
+      "family": "PLL",
+      "algorithms": [
+        "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R"
+      ],
+      "source_algorithm_count": 2
+    },
+    {
+      "case_id": "PLL-T",
+      "family": "PLL",
+      "algorithms": [
+        "R U R' U' R' F R2 U' R' U' R U R' F'"
+      ],
+      "source_algorithm_count": 1
+    },
+    {
+      "case_id": "PLL-V",
+      "family": "PLL",
+      "algorithms": [
+        "R' U R' d' R' F' R2 U' R' U R' F R F"
+      ],
+      "source_algorithm_count": 5
+    }
+  ],
+  "source": {
+    "project": "Tao Yu Alg-Trainer",
+    "url": "https://github.com/tao-yu/Alg-Trainer",
+    "commit": "cb95945c3e4839ee1e4b058d4a79bc022615b220",
+    "license": "MIT",
+    "attribution": "MIT Alg-Trainer: ZBLL algorithm list credited to Jabari Nuruddin",
+    "source_variants_imported": 530,
+    "included_policy": "one source-primary algorithm per case; alternatives omitted from this verified baseline"
+  }
+}

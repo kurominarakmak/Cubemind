@@ -1,0 +1,57 @@
+{
+  "checkpoint": "artifacts/mlp-state-history.pt",
+  "model": "mlp_state_history",
+  "device": "mps",
+  "test_samples": 698,
+  "test_scrambles": 120,
+  "sample_kinds": [
+    "synthetic"
+  ],
+  "teacher_forced": {
+    "samples": 698,
+    "cross_entropy": 1.3756285506196555,
+    "top1_accuracy": 0.6060171919770774,
+    "top3_accuracy": 0.7936962750716332,
+    "top5_accuracy": 0.8653295128939829,
+    "batched_forward_ms_per_sample": 0.002032535546874978,
+    "latency_batch_size": 128,
+    "latency_warmup_batches": 5,
+    "latency_measurement_batches": 20
+  },
+  "frequency_baseline": {
+    "method": "global training-set move frequency with add-one smoothing",
+    "samples": 698,
+    "cross_entropy": 2.8124477438327693,
+    "top1_accuracy": 0.1017191977077364,
+    "top3_accuracy": 0.24355300859598855,
+    "top5_accuracy": 0.40257879656160456,
+    "ranked_moves": [
+      "R'",
+      "D'",
+      "F'",
+      "R",
+      "D",
+      "F",
+      "B'",
+      "B",
+      "L'",
+      "L",
+      "R2",
+      "L2",
+      "F2",
+      "D2",
+      "B2",
+      "U'",
+      "U",
+      "U2"
+    ]
+  },
+  "autoregressive_cross_rollout": {
+    "solves": 120,
+    "cross_completion_rate": 0.125,
+    "successful_cross_move_count_mean": 9.266666666666667,
+    "successful_cross_move_count_median": 10,
+    "rollout_move_limit": 20
+  },
+  "warning": "Synthetic-oracle results are not evidence of human imitation."
+}

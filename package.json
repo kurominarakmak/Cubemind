@@ -1,0 +1,11 @@
+{
+  "name": "cubemind-cfop-benchmark",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "benchmark:cfop": "node scripts/benchmark_cfop.mjs"
+  },
+  "dependencies": {
+    "@moishy/cfop": "0.4.0"
+  }
+}

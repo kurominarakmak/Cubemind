@@ -1,0 +1,3 @@
+# Generated datasets
+
+Files in this directory are generated locally and ignored by Git. `python -m cubemind.data.prepare` creates the original synthetic shortest-Cross splits grouped by scramble. `python -m cubemind.data.reco` creates local reco.nz human action rows grouped by solver under `reco_cfop/`. `python -m cubemind.train_zbll` creates separate simulator-generated algorithm-case poses under `zbll_algorithm_synthetic/`. `python -m cubemind.train_hierarchical_f2l` creates source-labeled pair-conditioned action/value examples under `hierarchical_f2l/`; expert reco rows and simulator teacher/recovery trajectories keep distinct `data_source` values. These sources must remain separate in provenance.

@@ -1,0 +1,226 @@
+{
+  "task": "hierarchical pair-conditioned F2L policy/value and learned pair-order model",
+  "sample_kind": "mixed: expert imitation and synthetic simulator trajectories",
+  "data_sources": [
+    "reco.nz 3x3 CFOP reconstructions",
+    "synthetic:cfop-teacher:@moishy/cfop@0.4.0",
+    "synthetic:dagger-reference-after-project-cross-mlp",
+    "synthetic:on-policy-f2l-recovery:@moishy/cfop@0.4.0"
+  ],
+  "human_filter": "reco.nz 3x3 CFOP; all recorded Cross colors normalized to Down; F2L rows with outer-face actions; replay-derived Cross and pair goals",
+  "human_split_policy": "original reco.nz solver-held-out train/validation/test; test used only for evaluation",
+  "synthetic_split_policy": "existing cfop_teacher and dagger records keep their train/validation split; on-policy recovery uses train scrambles only",
+  "pair_labels": "inferred only when simulator replay shows exactly one new solved slot while protected slots remain solved",
+  "synthetic_trajectories": 189,
+  "training_action_samples_by_source": {
+    "reco.nz 3x3 CFOP reconstructions": 102534,
+    "synthetic:cfop-teacher:@moishy/cfop@0.4.0": 3043,
+    "synthetic:dagger-reference-after-project-cross-mlp": 940,
+    "synthetic:on-policy-f2l-recovery:@moishy/cfop@0.4.0": 625
+  },
+  "training_pair_selection_samples_by_source": {
+    "reco.nz 3x3 CFOP reconstructions": 14606,
+    "synthetic:cfop-teacher:@moishy/cfop@0.4.0": 473,
+    "synthetic:dagger-reference-after-project-cross-mlp": 152,
+    "synthetic:on-policy-f2l-recovery:@moishy/cfop@0.4.0": 96
+  },
+  "validation": {
+    "action_samples": 21032,
+    "action_top1": 0.5983263598326359,
+    "action_top3": 0.8691993153290224,
+    "remaining_moves_mae": 1.96166663461876,
+    "pair_selection_samples": 3076,
+    "pair_selection_top1": 0.606631989596879
+  },
+  "heldout_expert_test": {
+    "action_samples": 18385,
+    "action_top1": 0.5830296437313027,
+    "action_top3": 0.8634212673375034,
+    "remaining_moves_mae": 2.1124328696277113,
+    "pair_selection_samples": 2589,
+    "pair_selection_top1": 0.5689455388180765
+  },
+  "old_reco_model_same_test_rows": {
+    "samples": 18385,
+    "top1": 0.6491705179214478,
+    "top3": 0.9021484851837158,
+    "training_samples": 237766,
+    "full_dataset_f2l_top1": 0.6142
+  },
+  "pre_recovery": {
+    "checkpoint": "artifacts/hierarchical-f2l-pre-recovery.pt",
+    "validation": {
+      "action_samples": 21032,
+      "action_top1": 0.5970426017497147,
+      "action_top3": 0.8703404336249525,
+      "remaining_moves_mae": 1.9711588964393358,
+      "pair_selection_samples": 3076,
+      "pair_selection_top1": 0.6046814044213265
+    },
+    "best_epoch": 8,
+    "validation_loss": 2.058161014318466,
+    "history": [
+      {
+        "epoch": 1,
+        "validation_action_loss": 1.7449493408203125,
+        "validation_value_loss": 1.7611002922058105,
+        "validation_pair_loss": 1.0425169467926025,
+        "seconds": 0.9357170420000003
+      },
+      {
+        "epoch": 2,
+        "validation_action_loss": 1.4173024892807007,
+        "validation_value_loss": 1.7405229806900024,
+        "validation_pair_loss": 0.8626881837844849,
+        "seconds": 0.5092264170000007
+      },
+      {
+        "epoch": 3,
+        "validation_action_loss": 1.4280695915222168,
+        "validation_value_loss": 1.6639163494110107,
+        "validation_pair_loss": 0.8232551217079163,
+        "seconds": 0.49135241700000165
+      },
+      {
+        "epoch": 4,
+        "validation_action_loss": 1.3417924642562866,
+        "validation_value_loss": 1.6266183853149414,
+        "validation_pair_loss": 0.7874605059623718,
+        "seconds": 0.47526329200000106
+      },
+      {
+        "epoch": 5,
+        "validation_action_loss": 1.2705519199371338,
+        "validation_value_loss": 1.59307062625885,
+        "validation_pair_loss": 0.7806523442268372,
+        "seconds": 0.4776387920000005
+      },
+      {
+        "epoch": 6,
+        "validation_action_loss": 1.233761191368103,
+        "validation_value_loss": 1.5679599046707153,
+        "validation_pair_loss": 0.7838060855865479,
+        "seconds": 0.46584437499999964
+      },
+      {
+        "epoch": 7,
+        "validation_action_loss": 1.2521672248840332,
+        "validation_value_loss": 1.5479050874710083,
+        "validation_pair_loss": 0.7615979313850403,
+        "seconds": 0.4738879589999989
+      },
+      {
+        "epoch": 8,
+        "validation_action_loss": 1.204471230506897,
+        "validation_value_loss": 1.5096687078475952,
+        "validation_pair_loss": 0.7782063484191895,
+        "seconds": 0.46589437499999775
+      }
+    ]
+  },
+  "on_policy_recovery": {
+    "requested": 24,
+    "verified": 24,
+    "action_samples": 625,
+    "rejected": [],
+    "data_path": "data/processed/hierarchical_f2l/on_policy_recovery.jsonl"
+  },
+  "final_training_seeds": [
+    {
+      "seed": 79,
+      "validation_loss": 2.0952276468276976,
+      "best_epoch": 8
+    },
+    {
+      "seed": 80,
+      "validation_loss": 2.0390626728534698,
+      "best_epoch": 8
+    }
+  ],
+  "selected_seed": 80,
+  "best_epoch": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "validation_action_loss": 1.6565648317337036,
+      "validation_value_loss": 1.840476393699646,
+      "validation_pair_loss": 1.0649724006652832,
+      "seconds": 0.5994985840000027
+    },
+    {
+      "epoch": 2,
+      "validation_action_loss": 1.4144724607467651,
+      "validation_value_loss": 1.6921741962432861,
+      "validation_pair_loss": 0.875027596950531,
+      "seconds": 0.5466920829999964
+    },
+    {
+      "epoch": 3,
+      "validation_action_loss": 1.2857569456100464,
+      "validation_value_loss": 1.6621955633163452,
+      "validation_pair_loss": 0.8333199620246887,
+      "seconds": 0.5122590000000002
+    },
+    {
+      "epoch": 4,
+      "validation_action_loss": 1.4389499425888062,
+      "validation_value_loss": 1.6331005096435547,
+      "validation_pair_loss": 0.8015029430389404,
+      "seconds": 0.4970920830000125
+    },
+    {
+      "epoch": 5,
+      "validation_action_loss": 1.32477867603302,
+      "validation_value_loss": 1.604857087135315,
+      "validation_pair_loss": 0.8039050698280334,
+      "seconds": 0.5048789580000062
+    },
+    {
+      "epoch": 6,
+      "validation_action_loss": 1.2498079538345337,
+      "validation_value_loss": 1.568440556526184,
+      "validation_pair_loss": 0.7820443511009216,
+      "seconds": 0.5667539580000067
+    },
+    {
+      "epoch": 7,
+      "validation_action_loss": 1.2415435314178467,
+      "validation_value_loss": 1.5493521690368652,
+      "validation_pair_loss": 0.76811683177948,
+      "seconds": 0.5019299589999946
+    },
+    {
+      "epoch": 8,
+      "validation_action_loss": 1.1978305578231812,
+      "validation_value_loss": 1.5140103101730347,
+      "validation_pair_loss": 0.765531599521637,
+      "seconds": 0.49331475000001035
+    }
+  ],
+  "architecture": {
+    "input_size": 916,
+    "hidden": [
+      256,
+      128
+    ],
+    "heads": [
+      "72-action policy",
+      "remaining moves",
+      "4-way pair selector"
+    ]
+  },
+  "training_config": {
+    "optimizer": "AdamW",
+    "batch_size": 256,
+    "epochs_max": 8,
+    "policy_loss": "cross entropy + 0.05 smooth L1 remaining moves",
+    "selector_loss": "cross entropy",
+    "initialization": "PyTorch random initialization"
+  },
+  "expert_split_sha256": {
+    "train": "0dae832aca95f213ed39775ee2e2b80ce7866dc32a08f9c6e9a60a550e8a6fa2",
+    "validation": "c67afe4529dd9612365770f30880cef49da9a1eab258aba932b24721327fc29e",
+    "test": "2efbe4b54fd92fac2bf2b94c65ce45bbe1b7c8fb46a516f34d2faaefb60672d8"
+  },
+  "device": "mps"
+}

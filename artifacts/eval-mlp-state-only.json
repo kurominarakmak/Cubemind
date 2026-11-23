@@ -1,0 +1,71 @@
+{
+  "checkpoint": "artifacts/mlp-state-only.pt",
+  "model": "mlp_state_only",
+  "device": "mps",
+  "test_samples": 698,
+  "test_scrambles": 120,
+  "sample_kinds": [
+    "synthetic"
+  ],
+  "teacher_forced": {
+    "samples": 698,
+    "cross_entropy": 1.4542711580380328,
+    "top1_accuracy": 0.5931232091690545,
+    "top3_accuracy": 0.7893982808022922,
+    "top5_accuracy": 0.8653295128939829,
+    "batched_forward_ms_per_sample": 0.0016315101562499983,
+    "latency_batch_size": 128,
+    "latency_warmup_batches": 5,
+    "latency_measurement_batches": 20
+  },
+  "frequency_baseline": {
+    "method": "global training-set move frequency with add-one smoothing",
+    "samples": 698,
+    "cross_entropy": 2.8124477438327693,
+    "top1_accuracy": 0.1017191977077364,
+    "top3_accuracy": 0.24355300859598855,
+    "top5_accuracy": 0.40257879656160456,
+    "ranked_moves": [
+      "R'",
+      "D'",
+      "F'",
+      "R",
+      "D",
+      "F",
+      "B'",
+      "B",
+      "L'",
+      "L",
+      "R2",
+      "L2",
+      "F2",
+      "D2",
+      "B2",
+      "U'",
+      "U",
+      "U2"
+    ]
+  },
+  "autoregressive_cross_rollout": {
+    "solves": 120,
+    "cross_completion_rate": 0.058333333333333334,
+    "successful_cross_move_count_mean": 6.714285714285714,
+    "successful_cross_move_count_median": 6,
+    "rollout_move_limit": 20
+  },
+  "warning": "Synthetic-oracle results are not evidence of human imitation.",
+  "policy_guided_beam_search": {
+    "method": "cumulative neural log-probability beam search; same-face turns pruned",
+    "solves": 120,
+    "beam_width": 256,
+    "move_limit": 10,
+    "cross_completion_rate": 0.9916666666666667,
+    "successful_cross_move_count_mean": 6.0588235294117645,
+    "successful_cross_move_count_median": 6,
+    "optimal_cross_length_rate_among_successes": 0.773109243697479,
+    "extra_moves_over_exact_shortest_mean": 0.25210084033613445,
+    "model_parent_states_scored": 127976,
+    "elapsed_seconds": 38.111310958,
+    "milliseconds_per_start": 317.5942579833333
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "task": "expert-aware hierarchical F2L action fusion and expert-only pair selector",
+  "sample_kind": "random-initialized human-only action and pair-order models; no simulator teacher actions",
+  "data_source": "reco.nz 3x3 CFOP reconstructions; human pair labels are simulator-verified",
+  "data_split": "solver-disjoint train/validation/test; validation tunes temperatures and fusion weight",
+  "seed": 1701,
+  "device": "mps",
+  "canonical_expert_action": {
+    "train_samples": 102534,
+    "validation_samples": 20266,
+    "best_epoch": 12,
+    "validation_loss": 0.9463642239570618,
+    "initialization": "PyTorch random initialization"
+  },
+  "pair_selector_best_epoch": 9,
+  "pair_selector_validation_loss": 0.6758713126182556,
+  "pair_selector": {
+    "train": {
+      "samples": 14606,
+      "top1": 0.7107353210449219,
+      "top2": 0.9205805659294128,
+      "cross_entropy": 0.6091679930686951
+    },
+    "validation": {
+      "expert_only": {
+        "samples": 2954,
+        "top1": 0.651320219039917,
+        "top2": 0.8970887064933777,
+        "cross_entropy": 0.6758713126182556
+      },
+      "mixed_planner": {
+        "samples": 2954,
+        "top1": 0.6069735884666443,
+        "top2": 0.8622207045555115,
+        "cross_entropy": 0.7584753036499023
+      }
+    },
+    "test": {
+      "expert_only": {
+        "samples": 2589,
+        "top1": 0.623406708240509,
+        "top2": 0.8748551607131958,
+        "cross_entropy": 0.7355068922042847
+      },
+      "mixed_planner": {
+        "samples": 2589,
+        "top1": 0.5689455270767212,
+        "top2": 0.8435689210891724,
+        "cross_entropy": 0.8297373056411743
+      }
+    }
+  },
+  "action_fusion": {
+    "calibration": {
+      "expert_temperature": 1.0,
+      "planner_temperature": 1.0,
+      "expert_weight": 1.0,
+      "adaptive_entropy_weight_scale": 0.0,
+      "adaptive_entropy_validation_nll": 1.0788201093673706
+    },
+    "validation_action_coverage": {
+      "pair_labeled_human_actions": 20266,
+      "legal_outer_turn_actions": 19833,
+      "fraction": 0.9786341655975526
+    },
+    "test_action_coverage": {
+      "pair_labeled_human_actions": 18385,
+      "legal_outer_turn_actions": 17754,
+      "fraction": 0.9656785422899102
+    },
+    "validation": {
+      "expert": {
+        "cross_entropy": 0.8517434000968933,
+        "top1": 0.7001966238021851,
+        "top3": 0.9263853430747986
+      },
+      "planner": {
+        "cross_entropy": 1.0788201093673706,
+        "top1": 0.6146321892738342,
+        "top3": 0.8961831331253052
+      },
+      "fused": {
+        "cross_entropy": 0.8517434000968933,
+        "top1": 0.7001966238021851,
+        "top3": 0.9263853430747986
+      },
+      "top1_prediction_agreement": 0.7358443140983582,
+      "adaptive_entropy": {
+        "cross_entropy": 1.0788201093673706,
+        "top1": 0.6146321892738342,
+        "top3": 0.8961831331253052
+      }
+    },
+    "test": {
+      "expert": {
+        "cross_entropy": 0.8721482157707214,
+        "top1": 0.6913371682167053,
+        "top3": 0.9260448217391968
+      },
+      "planner": {
+        "cross_entropy": 1.0824964046478271,
+        "top1": 0.6057226657867432,
+        "top3": 0.8963050842285156
+      },
+      "fused": {
+        "cross_entropy": 0.8721482157707214,
+        "top1": 0.6913371682167053,
+        "top3": 0.9260448217391968
+      },
+      "top1_prediction_agreement": 0.7138109803199768,
+      "adaptive_entropy": {
+        "cross_entropy": 1.0824964046478271,
+        "top1": 0.6057226657867432,
+        "top3": 0.8963050842285156
+      }
+    },
+    "legacy_reco_adapter_compatibility": {
+      "validation": {
+        "cross_entropy": 1.7926520109176636,
+        "top1": 0.48076438903808594,
+        "top3": 0.7283819913864136
+      },
+      "test": {
+        "cross_entropy": 1.893229365348816,
+        "top1": 0.45899516344070435,
+        "top3": 0.7147122025489807
+      }
+    },
+    "legacy_reco_adapter_calibration": {
+      "expert_temperature": 2.0,
+      "planner_temperature": 1.0,
+      "expert_weight": 0.25,
+      "adaptive_entropy_weight_scale": 0.0,
+      "adaptive_entropy_validation_nll": 1.0788201093673706
+    },
+    "action_filter": "human next action must be an outer turn allowed by the planner's history pruning"
+  },
+  "checkpoints": {
+    "legacy_expert_action": "/Users/yoyo/Desktop/Deepcube/artifacts/reco-cfop-context.pt",
+    "canonical_expert_action": "artifacts/canonical-expert-f2l.pt",
+    "planner": "/Users/yoyo/Desktop/Deepcube/artifacts/hierarchical-f2l.pt",
+    "expert_pair_selector": "artifacts/expert-aware-pair-selector.pt"
+  },
+  "expert_action_checkpoint_sha256": "0282a30fd3ce8f1a99f8583cce48c512d92e61e1a5638926e492180300bbe7ce",
+  "canonical_expert_checkpoint_sha256": "dd5a23c6a8ec5fa8e0620aa168a0c95a4e8f3a7889a94097cda795c8a73f4afc",
+  "planner_checkpoint_sha256": "6e4f99440ddb27b0a79e67858b3a0578c1ca12b965d056f2633c0c5a08039ee7",
+  "human_split_sha256": {
+    "train": "cbb5b56d63ba45e41b47141b083b82d74df0364265a91beadf146ffeb51aeab2",
+    "validation": "81c9c715fef101b2827f8ab45f5ccf401ef5c8db13e7c3bce698cfbc7d167673",
+    "test": "19b4dbda4df0bc3b873cc182c6a60fe20c680d52368d17e892640d586f8264d6"
+  },
+  "execution_time": "not measured; no timing labels are present"
+}

@@ -1,0 +1,3641 @@
+{
+  "schema_version": 2,
+  "dataset": "ZBLS",
+  "source": {
+    "name": "CubeRoot public algorithm API",
+    "page": "https://cuberoot.me/alg/3x3/zbls",
+    "endpoint": "https://api.cuberoot.me/v1/alg/sets/3x3/zbls",
+    "snapshot_scraped_at": "2026-05-04T00:13:11.000Z",
+    "snapshot_source_metadata": "D:/cube/CubeRoot/3x3/ZBLS.docx + external sheets",
+    "retrieved_payload_sha256": "c47043029699db03bb74eeebfe4bcb34403d2371ecf18f17bef000078404261a",
+    "selection": "First algorithm in the Front Right slot bucket per source case",
+    "normalization": "Expand parenthesized repetitions; omit bracketed optional tokens and arrow markers; remove CubeRoot '=' turn decoration; split adjacent Singmaster turns. Original text retained.",
+    "verification": "Apply setup to solved 3x3; require Cross plus exactly three F2L slots; apply normalized algorithm and require solved F2L plus oriented last-layer edges."
+  },
+  "cases": [
+    {
+      "case_id": "CubeRoot-6049",
+      "family": "EO",
+      "setup": "R U R' U'",
+      "algorithms": [
+        "U R U' R'"
+      ],
+      "source_algorithm": "U R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 6049,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6086",
+      "family": "Line",
+      "setup": "F' L' U L F U'",
+      "algorithms": [
+        "U F' L' U' L F"
+      ],
+      "source_algorithm": "U F' L' U' L F",
+      "source_variant_count": 8,
+      "source_case_id": 6086,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6088",
+      "family": "VP",
+      "setup": "R B U B' R' U'",
+      "algorithms": [
+        "U R B U' B' R'"
+      ],
+      "source_algorithm": "U R B U' B' R'",
+      "source_variant_count": 29,
+      "source_case_id": 6088,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6055",
+      "family": "VM",
+      "setup": "F R' F' R",
+      "algorithms": [
+        "R' F R F'"
+      ],
+      "source_algorithm": "R' F R F'",
+      "source_variant_count": 22,
+      "source_case_id": 6055,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6057",
+      "family": "IF",
+      "setup": "S' R U R' S U'",
+      "algorithms": [
+        "U S' R U' R' S"
+      ],
+      "source_algorithm": "U S' R U' R' S",
+      "source_variant_count": 28,
+      "source_case_id": 6057,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6059",
+      "family": "IL",
+      "setup": "F U R U' R2 F' R",
+      "algorithms": [
+        "R' F R2 U R' U' F'"
+      ],
+      "source_algorithm": "R' F R2 U R' U' F'",
+      "source_variant_count": 12,
+      "source_case_id": 6059,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6061",
+      "family": "IZ",
+      "setup": "F D f' U' f D' F' U",
+      "algorithms": [
+        "y' U B U B' U2 B' R B R'"
+      ],
+      "source_algorithm": "y' U (B U B' U2) (B' R B R')",
+      "source_variant_count": 12,
+      "source_case_id": 6061,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6098",
+      "family": "D",
+      "setup": "S' U S U2 B' R B",
+      "algorithms": [
+        "y' U2' B' R B R' U2' B' R B R'"
+      ],
+      "source_algorithm": "y' (U2' B' R B R')2",
+      "source_variant_count": 23,
+      "source_case_id": 6098,
+      "source_subgroup": "A+"
+    },
+    {
+      "case_id": "CubeRoot-6050",
+      "family": "EO",
+      "setup": "F' U' F U",
+      "algorithms": [
+        "U' F' U F"
+      ],
+      "source_algorithm": "U' F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 6050,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6052",
+      "family": "Line",
+      "setup": "R B U' B' R' U",
+      "algorithms": [
+        "U' R B U B' R'"
+      ],
+      "source_algorithm": "U' R B U B' R'",
+      "source_variant_count": 8,
+      "source_case_id": 6052,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6054",
+      "family": "VP",
+      "setup": "F' L' U' L F U",
+      "algorithms": [
+        "U' F' L' U L F"
+      ],
+      "source_algorithm": "U' F' L' U L F",
+      "source_variant_count": 27,
+      "source_case_id": 6054,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6056",
+      "family": "VM",
+      "setup": "R' F R F'",
+      "algorithms": [
+        "F R' F' R"
+      ],
+      "source_algorithm": "F R' F' R",
+      "source_variant_count": 18,
+      "source_case_id": 6056,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6058",
+      "family": "IF",
+      "setup": "M' F' U' F M U",
+      "algorithms": [
+        "U' M' F' U F M"
+      ],
+      "source_algorithm": "U' M' F' U F M",
+      "source_variant_count": 26,
+      "source_case_id": 6058,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6060",
+      "family": "IL",
+      "setup": "R' U' F' U F2 R F'",
+      "algorithms": [
+        "F R' F2' U' F U R"
+      ],
+      "source_algorithm": "F R' F2' U' F U R",
+      "source_variant_count": 10,
+      "source_case_id": 6060,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6062",
+      "family": "IZ",
+      "setup": "R' D' r U r' D R U'",
+      "algorithms": [
+        "y U' L' U' L U2 L F' L' F"
+      ],
+      "source_algorithm": "y U' (L' U' L U2) (L F' L' F)",
+      "source_variant_count": 12,
+      "source_case_id": 6062,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6064",
+      "family": "D",
+      "setup": "M' U' M U2 r U' r'",
+      "algorithms": [
+        "y2 U2 B L' B' L U2 B L' B' L"
+      ],
+      "source_algorithm": "y2 (U2 B L' B' L)2",
+      "source_variant_count": 21,
+      "source_case_id": 6064,
+      "source_subgroup": "A-"
+    },
+    {
+      "case_id": "CubeRoot-6065",
+      "family": "EO",
+      "setup": "R U' R'",
+      "algorithms": [
+        "R U R'"
+      ],
+      "source_algorithm": "R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 6065,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6067",
+      "family": "Line",
+      "setup": "L F' L' U L F L' U2",
+      "algorithms": [
+        "U2 L F' L' U' L F L'"
+      ],
+      "source_algorithm": "U2 (L F' L' U') L F L'",
+      "source_variant_count": 16,
+      "source_case_id": 6067,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6069",
+      "family": "VP",
+      "setup": "S U R U' R' S'",
+      "algorithms": [
+        "S R U R' U' S'"
+      ],
+      "source_algorithm": "S (R U R' U') S'",
+      "source_variant_count": 26,
+      "source_case_id": 6069,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6071",
+      "family": "VM",
+      "setup": "R U R' U' F' U2' F U",
+      "algorithms": [
+        "U' F' U2 F U R U' R'"
+      ],
+      "source_algorithm": "U' (F' U2 F U) R U' R'",
+      "source_variant_count": 24,
+      "source_case_id": 6071,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6073",
+      "family": "IP",
+      "setup": "R B U B' U2 R'",
+      "algorithms": [
+        "R U2' B U' B' R'"
+      ],
+      "source_algorithm": "R U2' B U' B' R'",
+      "source_variant_count": 20,
+      "source_case_id": 6073,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6075",
+      "family": "IZ",
+      "setup": "R U B U B' U' R' U2",
+      "algorithms": [
+        "y' U2 B U L U' L' U' B'"
+      ],
+      "source_algorithm": "y' U2 B U (L U' L' U') B'",
+      "source_variant_count": 18,
+      "source_case_id": 6075,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6077",
+      "family": "IY",
+      "setup": "S' R U' R' S",
+      "algorithms": [
+        "S' R U R' S"
+      ],
+      "source_algorithm": "S' R U R' S",
+      "source_variant_count": 20,
+      "source_case_id": 6077,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6079",
+      "family": "D",
+      "setup": "S U' S' U2' S F' U' S' F U",
+      "algorithms": [
+        "y' B' D' b U' b' D B2 U B'"
+      ],
+      "source_algorithm": "y' B' D' (b U' b' D) B2 U B'",
+      "source_variant_count": 19,
+      "source_case_id": 6079,
+      "source_subgroup": "B+"
+    },
+    {
+      "case_id": "CubeRoot-6066",
+      "family": "EO",
+      "setup": "F' U F",
+      "algorithms": [
+        "F' U' F"
+      ],
+      "source_algorithm": "F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 6066,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6068",
+      "family": "Line",
+      "setup": "B' R B U' B' R' B U2",
+      "algorithms": [
+        "U2 B' R B U B' R' B"
+      ],
+      "source_algorithm": "U2 (B' R B U) B' R' B",
+      "source_variant_count": 16,
+      "source_case_id": 6068,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6070",
+      "family": "VP",
+      "setup": "S R U R' U' S'",
+      "algorithms": [
+        "S U R U' R' S'"
+      ],
+      "source_algorithm": "S (U R U' R') S'",
+      "source_variant_count": 22,
+      "source_case_id": 6070,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6072",
+      "family": "VM",
+      "setup": "F' U' F U R U2' R' U'",
+      "algorithms": [
+        "y2 U L U2' L' U' B' U B"
+      ],
+      "source_algorithm": "y2 U (L U2' L' U') B' U B",
+      "source_variant_count": 21,
+      "source_case_id": 6072,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6074",
+      "family": "IP",
+      "setup": "F' L' U' L U2 F",
+      "algorithms": [
+        "F' U2 L' U L F"
+      ],
+      "source_algorithm": "F' U2 L' U L F",
+      "source_variant_count": 18,
+      "source_case_id": 6074,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6076",
+      "family": "IZ",
+      "setup": "F' U' L' U' L U F U2",
+      "algorithms": [
+        "y U2 L' U' B' U B U L"
+      ],
+      "source_algorithm": "y U2 L' U' (B' U B U) L",
+      "source_variant_count": 18,
+      "source_case_id": 6076,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6078",
+      "family": "IY",
+      "setup": "F' U' L' U L U F",
+      "algorithms": [
+        "y S L' U' L S'"
+      ],
+      "source_algorithm": "y S L' U' L S'",
+      "source_variant_count": 20,
+      "source_case_id": 6078,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-6080",
+      "family": "D",
+      "setup": "M U M' U2 M R U M' R' U'",
+      "algorithms": [
+        "y L D l' U' l D' L2' U' L"
+      ],
+      "source_algorithm": "y L D (l' U' l D') L2' U' L",
+      "source_variant_count": 19,
+      "source_case_id": 6080,
+      "source_subgroup": "B-"
+    },
+    {
+      "case_id": "CubeRoot-5141",
+      "family": "C T",
+      "setup": "R2 B U B' U' R' U R' U'",
+      "algorithms": [
+        "U R U' R U B U' B' R2'"
+      ],
+      "source_algorithm": "U (\u2193R U' R U) (B U' B' R2')",
+      "source_variant_count": 8,
+      "source_case_id": 5141,
+      "source_subgroup": "C+"
+    },
+    {
+      "case_id": "CubeRoot-5143",
+      "family": "C I",
+      "setup": "R B U2 B' R' F' U' F U2",
+      "algorithms": [
+        "U2 F' U F R B U2' B' R'"
+      ],
+      "source_algorithm": "U2 F' U F (R B U2' B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5143,
+      "source_subgroup": "C+"
+    },
+    {
+      "case_id": "CubeRoot-5142",
+      "family": "C T'",
+      "setup": "F2 L' U' L U F U' F U",
+      "algorithms": [
+        "U' F' U F' U' L' U L F2"
+      ],
+      "source_algorithm": "U' (\u2193F' U F' U') (L' U L F2)",
+      "source_variant_count": 6,
+      "source_case_id": 5142,
+      "source_subgroup": "C-"
+    },
+    {
+      "case_id": "CubeRoot-5144",
+      "family": "C I'",
+      "setup": "F' L' U2 L F R U R' U2",
+      "algorithms": [
+        "U2 R U' R' F' L' U2 L F"
+      ],
+      "source_algorithm": "U2 R U' R' (F' L' U2 L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5144,
+      "source_subgroup": "C-"
+    },
+    {
+      "case_id": "CubeRoot-5145",
+      "family": "D T",
+      "setup": "R U2 R U R' U R U2 R2",
+      "algorithms": [
+        "R2 U2' R' U' R U' R' U2 R'"
+      ],
+      "source_algorithm": "\u2193R2 U2' (R' U' R U') R' U2 R'",
+      "source_variant_count": 4,
+      "source_case_id": 5145,
+      "source_subgroup": "D+"
+    },
+    {
+      "case_id": "CubeRoot-5147",
+      "family": "D L",
+      "setup": "F' U L' U2' L U L' U2' L F U'",
+      "algorithms": [
+        "U F' L' U2 L U' L' U2 L U' F"
+      ],
+      "source_algorithm": "U F' (L' U2 L U')2 F",
+      "source_variant_count": 4,
+      "source_case_id": 5147,
+      "source_subgroup": "D+"
+    },
+    {
+      "case_id": "CubeRoot-5149",
+      "family": "D V",
+      "setup": "R' F R F2 U2 F U F' U' F U'",
+      "algorithms": [
+        "U F' U F U' F' U2 F2 R' F' R"
+      ],
+      "source_algorithm": "U (F' U F U') (F' U2 F2 R' F' R)",
+      "source_variant_count": 4,
+      "source_case_id": 5149,
+      "source_subgroup": "D+"
+    },
+    {
+      "case_id": "CubeRoot-5151",
+      "family": "D D",
+      "setup": "F R' F' R2 B r' U r B2 U2 R' U2",
+      "algorithms": [
+        "U2 R U2' B2 r' U' r B' R2' F R F'"
+      ],
+      "source_algorithm": "U2 R U2' B2 (r' U' r B') (R2' F R F')",
+      "source_variant_count": 4,
+      "source_case_id": 5151,
+      "source_subgroup": "D+"
+    },
+    {
+      "case_id": "CubeRoot-5146",
+      "family": "D T'",
+      "setup": "F' U2 F' U' F U' F' U2 F2",
+      "algorithms": [
+        "F2' U2 F U F' U F U2' F"
+      ],
+      "source_algorithm": "\u2193F2' U2 (F U F' U) F U2' F",
+      "source_variant_count": 4,
+      "source_case_id": 5146,
+      "source_subgroup": "D-"
+    },
+    {
+      "case_id": "CubeRoot-5148",
+      "family": "D L'",
+      "setup": "R U' B U2 B' U' B U2 B' R' U",
+      "algorithms": [
+        "U' R B U2' B' U B U2' B' U R'"
+      ],
+      "source_algorithm": "U' R (B U2' B' U)2 R'",
+      "source_variant_count": 4,
+      "source_case_id": 5148,
+      "source_subgroup": "D-"
+    },
+    {
+      "case_id": "CubeRoot-5150",
+      "family": "D V'",
+      "setup": "F R' F' R2 U2 R' U' R U R' U",
+      "algorithms": [
+        "U' R U' R' U R U2' R2' F R F'"
+      ],
+      "source_algorithm": "U' (R U' R' U) (R U2' R2' F R F')",
+      "source_variant_count": 4,
+      "source_case_id": 5150,
+      "source_subgroup": "D-"
+    },
+    {
+      "case_id": "CubeRoot-5152",
+      "family": "D D'",
+      "setup": "R' F R F2 L' f U' f' L2 U2 F U2",
+      "algorithms": [
+        "U2 F' U2 L2' f U f' L F2 R' F' R"
+      ],
+      "source_algorithm": "U2 F' U2 L2' (f U f' L) (F2 R' F' R)",
+      "source_variant_count": 4,
+      "source_case_id": 5152,
+      "source_subgroup": "D-"
+    },
+    {
+      "case_id": "CubeRoot-5153",
+      "family": "E T",
+      "setup": "B' E B U B' E' B",
+      "algorithms": [
+        "B' E B U' B' E' B"
+      ],
+      "source_algorithm": "(B' E B U') B' E' B",
+      "source_variant_count": 7,
+      "source_case_id": 5153,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5155",
+      "family": "E L",
+      "setup": "R U' R' F R' F' R U",
+      "algorithms": [
+        "U' R' F R F' R U R'"
+      ],
+      "source_algorithm": "U' (R' F R F') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5155,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5157",
+      "family": "E VB",
+      "setup": "R U' R' U' F' U F U",
+      "algorithms": [
+        "U' F' U' F U R U R'"
+      ],
+      "source_algorithm": "U' (F' U' F U) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5157,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-6116",
+      "family": "E VF",
+      "setup": "R U R' U' F' U' F U",
+      "algorithms": [
+        "U' F' U F U R U' R'"
+      ],
+      "source_algorithm": "U' (F' U F U) R U' R'",
+      "source_variant_count": 8,
+      "source_case_id": 6116,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5161",
+      "family": "E IV",
+      "setup": "f' U2' L' U' L U2' f U'",
+      "algorithms": [
+        "U f' U2' L' U L U2' f"
+      ],
+      "source_algorithm": "U [U] f' U2' (L' U L U2') f",
+      "source_variant_count": 19,
+      "source_case_id": 5161,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5163",
+      "family": "E II",
+      "setup": "f' U2 L' U L U2 f",
+      "algorithms": [
+        "f' U2' L' U' L U2' f"
+      ],
+      "source_algorithm": "f' U2' (L' U' L U2') f",
+      "source_variant_count": 4,
+      "source_case_id": 5163,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5165",
+      "family": "E IB",
+      "setup": "U2' R U2' B U2 B' U2 R' U2",
+      "algorithms": [
+        "U2 R U2' B U2' B' U2 R'"
+      ],
+      "source_algorithm": "U2 R U2' B U2' B' U2 R' [U2]",
+      "source_variant_count": 8,
+      "source_case_id": 5165,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5167",
+      "family": "E D",
+      "setup": "R U M B U' B' M' R' U'",
+      "algorithms": [
+        "U R M B U B' M' U' R'"
+      ],
+      "source_algorithm": "U [U] (R M B U B' M') U' R'",
+      "source_variant_count": 18,
+      "source_case_id": 5167,
+      "source_subgroup": "E+"
+    },
+    {
+      "case_id": "CubeRoot-5154",
+      "family": "E T'",
+      "setup": "R S' R' U' R S R'",
+      "algorithms": [
+        "R S' R' U R S R'"
+      ],
+      "source_algorithm": "(R S' R' U) R S R'",
+      "source_variant_count": 7,
+      "source_case_id": 5154,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5156",
+      "family": "E L'",
+      "setup": "F' U F R' F R F' U'",
+      "algorithms": [
+        "U F R' F' R F' U' F"
+      ],
+      "source_algorithm": "U (F R' F' R) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5156,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5158",
+      "family": "E VB'",
+      "setup": "F' U F U R U' R' U'",
+      "algorithms": [
+        "U R U R' U' F' U' F"
+      ],
+      "source_algorithm": "U (R U R' U') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5158,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-6117",
+      "family": "E VF'",
+      "setup": "F' U' F U R U R' U'",
+      "algorithms": [
+        "U R U' R' U' F' U F"
+      ],
+      "source_algorithm": "U (R U' R' U') F' U F",
+      "source_variant_count": 8,
+      "source_case_id": 6117,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5162",
+      "family": "E IV'",
+      "setup": "r U2 B U B' U2 r' U",
+      "algorithms": [
+        "U' r U2 B U' B' U2 r'"
+      ],
+      "source_algorithm": "U' [U'] r U2 (B U' B' U2) r'",
+      "source_variant_count": 19,
+      "source_case_id": 5162,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5164",
+      "family": "E II'",
+      "setup": "r U2 B U' B' U2 r'",
+      "algorithms": [
+        "r U2 B U B' U2 r'"
+      ],
+      "source_algorithm": "r U2 (B U B' U2) r'",
+      "source_variant_count": 4,
+      "source_case_id": 5164,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5166",
+      "family": "E IB'",
+      "setup": "U2' F' U2 L' U2' L U2' F U2'",
+      "algorithms": [
+        "U2 F' U2 L' U2 L U2' F"
+      ],
+      "source_algorithm": "U2 F' U2 L' U2 L U2' F [U2]",
+      "source_variant_count": 8,
+      "source_case_id": 5166,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5168",
+      "family": "E D'",
+      "setup": "F' U' S L' U L S' F U",
+      "algorithms": [
+        "U' F' S L' U' L S' U F"
+      ],
+      "source_algorithm": "U' [U'] (F' S L' U' L S') U F",
+      "source_variant_count": 18,
+      "source_case_id": 5168,
+      "source_subgroup": "E-"
+    },
+    {
+      "case_id": "CubeRoot-5169",
+      "family": "F T",
+      "setup": "R U' R U2 F R2 F' U2 R2 U'",
+      "algorithms": [
+        "U R2' U2' F R2 F' U2' R' U R'"
+      ],
+      "source_algorithm": "U (\u2191R2' U2' F R2 F') (U2' R' U R')",
+      "source_variant_count": 6,
+      "source_case_id": 5169,
+      "source_subgroup": "F"
+    },
+    {
+      "case_id": "CubeRoot-5170",
+      "family": "F I",
+      "setup": "R2 B' R' U' B2 U' B2 U2 B R' U2",
+      "algorithms": [
+        "U' y U' F R' U2' R2 U R2' U F R F2'"
+      ],
+      "source_algorithm": "U' y U' F R' U2' (R2 U R2' U) F R F2'",
+      "source_variant_count": 6,
+      "source_case_id": 5170,
+      "source_subgroup": "F"
+    },
+    {
+      "case_id": "CubeRoot-5171",
+      "family": "G T",
+      "setup": "R2 U R' U R U2 R2 U2",
+      "algorithms": [
+        "U2 R2 U2' R' U' R U' R2'"
+      ],
+      "source_algorithm": "U2 R2 U2' (R' U' R U') R2'",
+      "source_variant_count": 4,
+      "source_case_id": 5171,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5173",
+      "family": "G L",
+      "setup": "F' U F r B U B' U' r' U",
+      "algorithms": [
+        "U' r U B U' B' r' F' U' F"
+      ],
+      "source_algorithm": "U' (r U B U' B' r') F' U' F",
+      "source_variant_count": 6,
+      "source_case_id": 5173,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5175",
+      "family": "G VP",
+      "setup": "F' U F R B U B' R' U",
+      "algorithms": [
+        "U' R B U' B' R' F' U' F"
+      ],
+      "source_algorithm": "U' (R B U' B' R') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5175,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5177",
+      "family": "G VM",
+      "setup": "b' R2 S' R' U' R U B U",
+      "algorithms": [
+        "U' B' U' R' U R S R2 b"
+      ],
+      "source_algorithm": "U' (B' U' R' U R S) R2 b",
+      "source_variant_count": 4,
+      "source_case_id": 5177,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5179",
+      "family": "G IO",
+      "setup": "F' U F R B U B' U R' U",
+      "algorithms": [
+        "U' R U' B U' B' R' F' U' F"
+      ],
+      "source_algorithm": "U' (R U' B U' B' R') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5179,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5181",
+      "family": "G IL",
+      "setup": "R U2 B' R B R' U' R'",
+      "algorithms": [
+        "y2 L U L F' L' F U2' L'"
+      ],
+      "source_algorithm": "y2\u2191L U (L F' L' F) U2' L'",
+      "source_variant_count": 6,
+      "source_case_id": 5181,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5183",
+      "family": "G IZ",
+      "setup": "R U' R' U' R' F R F' U'",
+      "algorithms": [
+        "U F R' F' R U R U R'"
+      ],
+      "source_algorithm": "U (F R' F' R) (U R U R')",
+      "source_variant_count": 4,
+      "source_case_id": 5183,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5185",
+      "family": "G D",
+      "setup": "R U M B U B' R' M'",
+      "algorithms": [
+        "R M B U' B' M' U' R'"
+      ],
+      "source_algorithm": "R M (B U' B' M') U' R'",
+      "source_variant_count": 8,
+      "source_case_id": 5185,
+      "source_subgroup": "G+"
+    },
+    {
+      "case_id": "CubeRoot-5172",
+      "family": "G T'",
+      "setup": "F2 U' F U' F' U2 F2 U2",
+      "algorithms": [
+        "U2 F2' U2 F U F' U F2"
+      ],
+      "source_algorithm": "U2 F2' U2 (F U F' U) F2",
+      "source_variant_count": 4,
+      "source_case_id": 5172,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5174",
+      "family": "G L'",
+      "setup": "R U' R' f' L' U' L U f U'",
+      "algorithms": [
+        "U f' U' L' U L f R U R'"
+      ],
+      "source_algorithm": "U (f' U' L' U L f) R U R'",
+      "source_variant_count": 8,
+      "source_case_id": 5174,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5176",
+      "family": "G VP'",
+      "setup": "R U' R' F' L' U' L F U'",
+      "algorithms": [
+        "U F' L' U L F R U R'"
+      ],
+      "source_algorithm": "U (F' L' U L F) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5176,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5178",
+      "family": "G VM'",
+      "setup": "l F2 M' F U F' U' L' U'",
+      "algorithms": [
+        "U L U F U' F' M F2' l'"
+      ],
+      "source_algorithm": "U (L U F U' F' M) F2' l'",
+      "source_variant_count": 4,
+      "source_case_id": 5178,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5180",
+      "family": "G IO'",
+      "setup": "R U' R' F' L' U' L U' F U'",
+      "algorithms": [
+        "U F' U L' U L F R U R'"
+      ],
+      "source_algorithm": "U (F' U L' U L F) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5180,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5182",
+      "family": "G IL'",
+      "setup": "F' U2 L F' L' F U F",
+      "algorithms": [
+        "y y2 R' U' R' F R F' U2 R"
+      ],
+      "source_algorithm": "y y2\u2191R' U' (R' F R F') U2 R",
+      "source_variant_count": 6,
+      "source_case_id": 5182,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5184",
+      "family": "G IZ'",
+      "setup": "F' U F U F R' F' R U",
+      "algorithms": [
+        "U' R' F R F' U' F' U' F"
+      ],
+      "source_algorithm": "U' (R' F R F') (U' F' U' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5184,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5186",
+      "family": "G D'",
+      "setup": "F' U' S L' U' L F S'",
+      "algorithms": [
+        "F' S L' U L S' U F"
+      ],
+      "source_algorithm": "F' S (L' U L S') U F",
+      "source_variant_count": 8,
+      "source_case_id": 5186,
+      "source_subgroup": "G-"
+    },
+    {
+      "case_id": "CubeRoot-5187",
+      "family": "H T",
+      "setup": "R U' R' U R U2 R'",
+      "algorithms": [
+        "R U2' R' U' R U R'"
+      ],
+      "source_algorithm": "(R U2' R' U') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5187,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5189",
+      "family": "H L",
+      "setup": "F' L U F U' F' L' U2 F",
+      "algorithms": [
+        "y' R' U2' F R U R' U' F' R"
+      ],
+      "source_algorithm": "y' R' U2' (F R U R' U' F') R",
+      "source_variant_count": 6,
+      "source_case_id": 5189,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5191",
+      "family": "H VP",
+      "setup": "S' R U' R' S U R U2 R'",
+      "algorithms": [
+        "R U2' R' U' S' R U R' S"
+      ],
+      "source_algorithm": "(R U2' R' U') (S' R U R' S)",
+      "source_variant_count": 4,
+      "source_case_id": 5191,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5193",
+      "family": "H VM",
+      "setup": "R U' R2 F R F' U R U' R'",
+      "algorithms": [
+        "R U R' U' F R' F' R2 U R'"
+      ],
+      "source_algorithm": "(R U R' U') (F R' F' R2 U R')",
+      "source_variant_count": 4,
+      "source_case_id": 5193,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5195",
+      "family": "H IO",
+      "setup": "R U2 B' R' B U2 B U2 B' U2",
+      "algorithms": [
+        "U2 B U2' B' U2 B' R B U2' R'"
+      ],
+      "source_algorithm": "U2 (B U2' B' U2) (B' R B U2' R')",
+      "source_variant_count": 6,
+      "source_case_id": 5195,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5197",
+      "family": "H IL",
+      "setup": "R2 B' R' B R' U R U2 R' U",
+      "algorithms": [
+        "y2 U' L U2 L' U' L F' L F L2'"
+      ],
+      "source_algorithm": "y2 U' (L U2 L' U') (L F' L F L2')",
+      "source_variant_count": 6,
+      "source_case_id": 5197,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5199",
+      "family": "H IZ",
+      "setup": "M R U' R' U r U2 R'",
+      "algorithms": [
+        "R U2' r' U' R U M' R'"
+      ],
+      "source_algorithm": "(R U2' r' U') (R U M' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5199,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5201",
+      "family": "H D",
+      "setup": "R B L U L' U B' U R' U",
+      "algorithms": [
+        "U' R U' B U' L U' L' B' R'"
+      ],
+      "source_algorithm": "U' R U' (B U' L U' L' B') R'",
+      "source_variant_count": 4,
+      "source_case_id": 5201,
+      "source_subgroup": "H+"
+    },
+    {
+      "case_id": "CubeRoot-5188",
+      "family": "H T'",
+      "setup": "F' U F U' F' U2 F",
+      "algorithms": [
+        "F' U2 F U F' U' F"
+      ],
+      "source_algorithm": "(F' U2 F U) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5188,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5190",
+      "family": "H L'",
+      "setup": "R B' U' R' U R B U2 R'",
+      "algorithms": [
+        "y y L U2 F' L' U' L U F L'"
+      ],
+      "source_algorithm": "y y L U2 (F' L' U' L U F) L'",
+      "source_variant_count": 6,
+      "source_case_id": 5190,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5192",
+      "family": "H VP'",
+      "setup": "M' F' U F M U' F' U2 F",
+      "algorithms": [
+        "F' U2 F U M' F' U' F M"
+      ],
+      "source_algorithm": "(F' U2 F U) (M' F' U' F M)",
+      "source_variant_count": 4,
+      "source_case_id": 5192,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5194",
+      "family": "H VM'",
+      "setup": "F' U F2 R' F' R U' F' U F",
+      "algorithms": [
+        "F' U' F U R' F R F2' U' F"
+      ],
+      "source_algorithm": "(F' U' F U) (R' F R F2' U' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5194,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5196",
+      "family": "H IO'",
+      "setup": "F' U2 L F L' U2 L' U2 L U2",
+      "algorithms": [
+        "U2 L' U2 L U2' L F' L' U2 F"
+      ],
+      "source_algorithm": "U2 (L' U2 L U2') (L F' L' U2 F)",
+      "source_variant_count": 8,
+      "source_case_id": 5196,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5198",
+      "family": "H IL'",
+      "setup": "F2 L F L' F U' F' U2 F U'",
+      "algorithms": [
+        "y y2 U R' U2' R U R' F R' F' R2"
+      ],
+      "source_algorithm": "y y2 U (R' U2' R U) (R' F R' F' R2)",
+      "source_variant_count": 6,
+      "source_case_id": 5198,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5200",
+      "family": "H IZ'",
+      "setup": "S F' U F U' f' U2 F",
+      "algorithms": [
+        "F' U2 f U F' U' S' F"
+      ],
+      "source_algorithm": "(F' U2 f U) (F' U' S' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5200,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5202",
+      "family": "H D'",
+      "setup": "F' L' B' U' B U' L U' F U'",
+      "algorithms": [
+        "U F' U L' U B' U B L F"
+      ],
+      "source_algorithm": "U F' U (L' U B' U B L) F",
+      "source_variant_count": 4,
+      "source_case_id": 5202,
+      "source_subgroup": "H-"
+    },
+    {
+      "case_id": "CubeRoot-5203",
+      "family": "I T",
+      "setup": "R U F R' U R U' F' R'",
+      "algorithms": [
+        "R F U R' U' R F' U' R'"
+      ],
+      "source_algorithm": "R F (U R' U' R F') U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5203,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5205",
+      "family": "I L",
+      "setup": "M U r U r' U' M'",
+      "algorithms": [
+        "M U r U' r' U' M'"
+      ],
+      "source_algorithm": "M U (r U' r' U') M'",
+      "source_variant_count": 6,
+      "source_case_id": 5205,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5207",
+      "family": "I VP",
+      "setup": "r R B U B' U' R' r'",
+      "algorithms": [
+        "r R U B U' B' R' r'"
+      ],
+      "source_algorithm": "r (R U B U' B' R') r'",
+      "source_variant_count": 4,
+      "source_case_id": 5207,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5209",
+      "family": "I VY",
+      "setup": "R U' R' U2 F' U' F",
+      "algorithms": [
+        "F' U F U2' R U R'"
+      ],
+      "source_algorithm": "(F' U F U2') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5209,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5211",
+      "family": "I IO",
+      "setup": "R U2 R B' R' B U' R'",
+      "algorithms": [
+        "R U B' R B R' U2 R'"
+      ],
+      "source_algorithm": "R U (B' R B R') U2 R'",
+      "source_variant_count": 4,
+      "source_case_id": 5211,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5213",
+      "family": "I IL",
+      "setup": "S' R U' R' S U2 F' U' F",
+      "algorithms": [
+        "F' U F U2 S' R U R' S"
+      ],
+      "source_algorithm": "(F' U F U2) (S' R U R' S)",
+      "source_variant_count": 4,
+      "source_case_id": 5213,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5215",
+      "family": "I IZ",
+      "setup": "R B U2 B' R' F' U F U2",
+      "algorithms": [
+        "U2 F' U' F R B U2' B' R'"
+      ],
+      "source_algorithm": "U2 F' U' F (R B U2' B' R')",
+      "source_variant_count": 8,
+      "source_case_id": 5215,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5217",
+      "family": "I D",
+      "setup": "R B U2 B' R' F' U2 F U",
+      "algorithms": [
+        "U' F' U2 F R B U2 B' R'"
+      ],
+      "source_algorithm": "U' F' U2 F (R B U2 B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5217,
+      "source_subgroup": "I+"
+    },
+    {
+      "case_id": "CubeRoot-5204",
+      "family": "I T'",
+      "setup": "F' U' R' F U' F' U R F",
+      "algorithms": [
+        "F' R' U' F U F' R U F"
+      ],
+      "source_algorithm": "F' R' (U' F U F' R) U F",
+      "source_variant_count": 4,
+      "source_case_id": 5204,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5206",
+      "family": "I L'",
+      "setup": "S U' B' R' B U S'",
+      "algorithms": [
+        "S U' B' R B U S'"
+      ],
+      "source_algorithm": "S U' (B' R B U) S'",
+      "source_variant_count": 7,
+      "source_case_id": 5206,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5208",
+      "family": "I VP'",
+      "setup": "f' F' L' U' L U F f",
+      "algorithms": [
+        "f' F' U' L' U L F f"
+      ],
+      "source_algorithm": "f' (F' U' L' U L F) f",
+      "source_variant_count": 4,
+      "source_case_id": 5208,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5210",
+      "family": "I VY'",
+      "setup": "F' U F U2 R U R'",
+      "algorithms": [
+        "R U' R' U2 F' U' F"
+      ],
+      "source_algorithm": "(R U' R' U2) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5210,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5212",
+      "family": "I IO'",
+      "setup": "F' U2 F' L F L' U F",
+      "algorithms": [
+        "F' U' L F' L' F U2' F"
+      ],
+      "source_algorithm": "F' U' (L F' L' F) U2' F",
+      "source_variant_count": 4,
+      "source_case_id": 5212,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5214",
+      "family": "I IL'",
+      "setup": "M' F' U F M U2 R U R'",
+      "algorithms": [
+        "R U' R' U2' M' F' U' F M"
+      ],
+      "source_algorithm": "(R U' R' U2') (M' F' U' F M)",
+      "source_variant_count": 4,
+      "source_case_id": 5214,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5216",
+      "family": "I IZ'",
+      "setup": "F' L' U2 L F R U' R' U2",
+      "algorithms": [
+        "U2 R U R' F' L' U2 L F"
+      ],
+      "source_algorithm": "U2 R U R' (F' L' U2 L F)",
+      "source_variant_count": 8,
+      "source_case_id": 5216,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5218",
+      "family": "I D'",
+      "setup": "F' L' U2 L F R U2 R' U'",
+      "algorithms": [
+        "U R U2' R' F' L' U2 L F"
+      ],
+      "source_algorithm": "U R U2' R' (F' L' U2 L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5218,
+      "source_subgroup": "I-"
+    },
+    {
+      "case_id": "CubeRoot-5219",
+      "family": "J T",
+      "setup": "R U R' U' R U R'",
+      "algorithms": [
+        "R U' R' U R U' R'"
+      ],
+      "source_algorithm": "(R U' R' U) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5219,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5221",
+      "family": "J L",
+      "setup": "R U2 R' U F' U F",
+      "algorithms": [
+        "F' U' F U' R U2' R'"
+      ],
+      "source_algorithm": "(F' U' F U') R U2' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5221,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5223",
+      "family": "J VB",
+      "setup": "R U2 R' F' U2 F",
+      "algorithms": [
+        "F' U2 F R U2 R'"
+      ],
+      "source_algorithm": "(F' U2 F) R U2 R'",
+      "source_variant_count": 4,
+      "source_case_id": 5223,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5225",
+      "family": "J VF",
+      "setup": "F' L F' L' F U2 F",
+      "algorithms": [
+        "y' R' U2' R' F R F' R"
+      ],
+      "source_algorithm": "y'\u2191R' U2' (R' F R F') R",
+      "source_variant_count": 6,
+      "source_case_id": 5225,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5227",
+      "family": "J IF",
+      "setup": "R U' B U' B' U' R' U2",
+      "algorithms": [
+        "U2 R U B U B' U R'"
+      ],
+      "source_algorithm": "U2 R U (B U B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5227,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5229",
+      "family": "J IB",
+      "setup": "F R' F' R2 U R'",
+      "algorithms": [
+        "R U' R2' F R F'"
+      ],
+      "source_algorithm": "R U' R2' F R F'",
+      "source_variant_count": 4,
+      "source_case_id": 5229,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5231",
+      "family": "J II",
+      "setup": "F' L' U L F U' R U R'",
+      "algorithms": [
+        "R U' R' U F' L' U' L F"
+      ],
+      "source_algorithm": "(R U' R' U) (F' L' U' L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5231,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5233",
+      "family": "J D",
+      "setup": "S' R U R' S U F' U2 F",
+      "algorithms": [
+        "F' U2' F U' S' R U' R' S"
+      ],
+      "source_algorithm": "(F' U2' F U') (S' R U' R' S)",
+      "source_variant_count": 4,
+      "source_case_id": 5233,
+      "source_subgroup": "J+"
+    },
+    {
+      "case_id": "CubeRoot-5220",
+      "family": "J T'",
+      "setup": "F' U' F U F' U' F",
+      "algorithms": [
+        "F' U F U' F' U F"
+      ],
+      "source_algorithm": "(F' U F U') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5220,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5222",
+      "family": "J L'",
+      "setup": "F' U2 F U' R U' R'",
+      "algorithms": [
+        "R U R' U F' U2 F"
+      ],
+      "source_algorithm": "(R U R' U) F' U2 F",
+      "source_variant_count": 4,
+      "source_case_id": 5222,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5224",
+      "family": "J VB'",
+      "setup": "F' U2 F R U2 R'",
+      "algorithms": [
+        "R U2' R' F' U2' F"
+      ],
+      "source_algorithm": "(R U2' R') F' U2' F",
+      "source_variant_count": 4,
+      "source_case_id": 5224,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5226",
+      "family": "J VF'",
+      "setup": "R B' R B R' U2 R'",
+      "algorithms": [
+        "y y L U2 L F' L' F L'"
+      ],
+      "source_algorithm": "y y\u2191L U2 (L F' L' F) L'",
+      "source_variant_count": 6,
+      "source_case_id": 5226,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5228",
+      "family": "J IF'",
+      "setup": "F' U L' U L U F U2",
+      "algorithms": [
+        "U2 F' U' L' U' L U' F"
+      ],
+      "source_algorithm": "U2 F' U' (L' U' L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5228,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5230",
+      "family": "J IB'",
+      "setup": "R' F R F2' U' F",
+      "algorithms": [
+        "F' U F2 R' F' R"
+      ],
+      "source_algorithm": "F' U F2 R' F' R",
+      "source_variant_count": 4,
+      "source_case_id": 5230,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5232",
+      "family": "J II'",
+      "setup": "R B U' B' R' U F' U' F",
+      "algorithms": [
+        "F' U F U' R B U B' R'"
+      ],
+      "source_algorithm": "(F' U F U') (R B U B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5232,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5234",
+      "family": "J D'",
+      "setup": "M' F' U' F M U' R U2 R'",
+      "algorithms": [
+        "R U2 R' U M' F' U F M"
+      ],
+      "source_algorithm": "(R U2 R' U) (M' F' U F M)",
+      "source_variant_count": 4,
+      "source_case_id": 5234,
+      "source_subgroup": "J-"
+    },
+    {
+      "case_id": "CubeRoot-5235",
+      "family": "K T",
+      "setup": "R U' R' U' R U R' U",
+      "algorithms": [
+        "U' R U' R' U R U R'"
+      ],
+      "source_algorithm": "U' (R U' R' U) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5235,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5237",
+      "family": "K L",
+      "setup": "R' F R U R U' R2 F' R U",
+      "algorithms": [
+        "U' R' F R2 U R' U' R' F' R"
+      ],
+      "source_algorithm": "U' (R' F R2 U R' U') R' F' R",
+      "source_variant_count": 4,
+      "source_case_id": 5237,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5239",
+      "family": "K VP",
+      "setup": "R2 B' R2 b U B U' b'",
+      "algorithms": [
+        "b U B' U' b' R2 B R2'"
+      ],
+      "source_algorithm": "(b U B' U') (b' R2 B R2')",
+      "source_variant_count": 6,
+      "source_case_id": 5239,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5241",
+      "family": "K VY",
+      "setup": "S' R U' R' S U' R U R' U",
+      "algorithms": [
+        "U' R U' R' U S' R U R' S"
+      ],
+      "source_algorithm": "U' (R U' R' U) (S' R U R' S)",
+      "source_variant_count": 4,
+      "source_case_id": 5241,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5243",
+      "family": "K IO",
+      "setup": "l F2 U2' L' U' L U' l'",
+      "algorithms": [
+        "l U L' U L U2 F2' l'"
+      ],
+      "source_algorithm": "l U L' U L U2 F2' l'",
+      "source_variant_count": 4,
+      "source_case_id": 5243,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5245",
+      "family": "K IL",
+      "setup": "F' U2 S L' U L F S' U2",
+      "algorithms": [
+        "U2 F' S L' U' L S' U2 F"
+      ],
+      "source_algorithm": "U2 (F' S L' U' L S') U2 F",
+      "source_variant_count": 4,
+      "source_case_id": 5245,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5247",
+      "family": "K IZ",
+      "setup": "R U' R2' F' U' F U R U",
+      "algorithms": [
+        "U' R' U' F' U F R2 U R'"
+      ],
+      "source_algorithm": "U' R' U' F' U\u2193F R2 U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5247,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5249",
+      "family": "K D",
+      "setup": "r U' R' U2 M U' r U r' U2",
+      "algorithms": [
+        "U2 r U' r' U M' U2 R U r'"
+      ],
+      "source_algorithm": "U2 (r U' r' U) M' U2 R U r'",
+      "source_variant_count": 6,
+      "source_case_id": 5249,
+      "source_subgroup": "K+"
+    },
+    {
+      "case_id": "CubeRoot-5236",
+      "family": "K T'",
+      "setup": "F' U F U F' U' F U'",
+      "algorithms": [
+        "U F' U F U' F' U' F"
+      ],
+      "source_algorithm": "U (F' U F U') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5236,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5238",
+      "family": "K L'",
+      "setup": "F R' F' U' F' U F2 R F' U'",
+      "algorithms": [
+        "U F R' F2' U' F U F R F'"
+      ],
+      "source_algorithm": "U (F R' F2' U' F U) F R F'",
+      "source_variant_count": 4,
+      "source_case_id": 5238,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5240",
+      "family": "K VP'",
+      "setup": "F2 r U2 R' U' r' F R",
+      "algorithms": [
+        "R' F' r U R U2' r' F2"
+      ],
+      "source_algorithm": "(R' F' r U) (R U2' r' F2)",
+      "source_variant_count": 6,
+      "source_case_id": 5240,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5242",
+      "family": "K VY'",
+      "setup": "M' F' U F M U F' U' F U'",
+      "algorithms": [
+        "U F' U F U' M' F' U' F M"
+      ],
+      "source_algorithm": "U (F' U F U') (M' F' U' F M)",
+      "source_variant_count": 4,
+      "source_case_id": 5242,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5244",
+      "family": "K IO'",
+      "setup": "b' R2' U2 B U B' U b",
+      "algorithms": [
+        "b' U' B U' B' U2' R2 b"
+      ],
+      "source_algorithm": "b' U' B U' B' U2' R2 b",
+      "source_variant_count": 4,
+      "source_case_id": 5244,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5246",
+      "family": "K IL'",
+      "setup": "R U2 M B U' B' R' M' U2",
+      "algorithms": [
+        "U2 R M B U B' M' U2' R'"
+      ],
+      "source_algorithm": "U2 (R M B U B' M') U2' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5246,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5248",
+      "family": "K IZ'",
+      "setup": "F' U F2 R U R' U' F' U'",
+      "algorithms": [
+        "U F U R U' R' F2' U' F"
+      ],
+      "source_algorithm": "U F U R U'\u2193R' F2' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5248,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5250",
+      "family": "K D'",
+      "setup": "B' R b U2 S U B' R' B U2",
+      "algorithms": [
+        "U2 B' R B U' S' U2 b' R' B"
+      ],
+      "source_algorithm": "U2 (B' R B U') S' U2 b' R' B",
+      "source_variant_count": 7,
+      "source_case_id": 5250,
+      "source_subgroup": "K-"
+    },
+    {
+      "case_id": "CubeRoot-5251",
+      "family": "L T",
+      "setup": "R U' R' U R U' R'",
+      "algorithms": [
+        "R U R' U' R U R'"
+      ],
+      "source_algorithm": "(R U R' U') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5251,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5253",
+      "family": "L L",
+      "setup": "R U' R' F' U' F U2'",
+      "algorithms": [
+        "U2 F' U F R U R'"
+      ],
+      "source_algorithm": "U2 F' U F R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5253,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5255",
+      "family": "L VB",
+      "setup": "F' U' F U M' F' U' F M U2",
+      "algorithms": [
+        "U2 M' F' U F M U' F' U F"
+      ],
+      "source_algorithm": "U2 (M' F' U F M) (U' F' U F)",
+      "source_variant_count": 4,
+      "source_case_id": 5255,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5257",
+      "family": "L VF",
+      "setup": "R' F R F' R' F R F'",
+      "algorithms": [
+        "F R' F' R F R' F' R"
+      ],
+      "source_algorithm": "(F R' F' R)2",
+      "source_variant_count": 7,
+      "source_case_id": 5257,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5259",
+      "family": "L IF",
+      "setup": "M R U' R' U r U' R'",
+      "algorithms": [
+        "R U r' U' R U M' R'"
+      ],
+      "source_algorithm": "(R U r' U') (R U M' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5259,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5261",
+      "family": "L IB",
+      "setup": "R U' R2' F R F' U",
+      "algorithms": [
+        "U' F R' F' R2 U R'"
+      ],
+      "source_algorithm": "U' F R' F' R2 U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5261,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5263",
+      "family": "L II",
+      "setup": "R B U2 B' U R' U",
+      "algorithms": [
+        "U' R U' B U2' B' R'"
+      ],
+      "source_algorithm": "U' R U' B U2' B' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5263,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5265",
+      "family": "L D",
+      "setup": "R U' R' M' F' U' F M U",
+      "algorithms": [
+        "U' M' F' U F M R U R'"
+      ],
+      "source_algorithm": "U' (M' F' U F M)R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5265,
+      "source_subgroup": "L+"
+    },
+    {
+      "case_id": "CubeRoot-5252",
+      "family": "L T'",
+      "setup": "F' U F U' F' U F",
+      "algorithms": [
+        "F' U' F U F' U' F"
+      ],
+      "source_algorithm": "(F' U' F U) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5252,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5254",
+      "family": "L L'",
+      "setup": "F' U F R U R' U2'",
+      "algorithms": [
+        "U2 R U' R' F' U' F"
+      ],
+      "source_algorithm": "U2 R U' R' F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5254,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5256",
+      "family": "L VB'",
+      "setup": "R U R' U' S' R U R' S U2",
+      "algorithms": [
+        "U2 S' R U' R' S U R U' R'"
+      ],
+      "source_algorithm": "U2 (S' R U' R' S) (U R U' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5256,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5258",
+      "family": "L VF'",
+      "setup": "F R' F' R F R' F' R",
+      "algorithms": [
+        "R' F R F' R' F R F'"
+      ],
+      "source_algorithm": "(R' F R F')2",
+      "source_variant_count": 8,
+      "source_case_id": 5258,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5260",
+      "family": "L IF'",
+      "setup": "S F' U F U' f' U F",
+      "algorithms": [
+        "F' U' f U F' U' S' F"
+      ],
+      "source_algorithm": "(F' U' f U) (F' U' S' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5260,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5262",
+      "family": "L IB'",
+      "setup": "F' U F2 R' F' R U'",
+      "algorithms": [
+        "U R' F R F2' U' F"
+      ],
+      "source_algorithm": "U R' F R F2' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5262,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5264",
+      "family": "L II'",
+      "setup": "F' L' U2' L U' F U'",
+      "algorithms": [
+        "U F' U L' U2 L F"
+      ],
+      "source_algorithm": "U F' U L' U2 L F",
+      "source_variant_count": 4,
+      "source_case_id": 5264,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5266",
+      "family": "L D'",
+      "setup": "F' U F S' R U R' S U'",
+      "algorithms": [
+        "U S' R U' R' S F' U' F"
+      ],
+      "source_algorithm": "U (S' R U' R' S)F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5266,
+      "source_subgroup": "L-"
+    },
+    {
+      "case_id": "CubeRoot-5267",
+      "family": "M T",
+      "setup": "R U R' U2 R U2 R' U",
+      "algorithms": [
+        "U' R U2' R' U2 R U' R'"
+      ],
+      "source_algorithm": "U' (R U2' R' U2) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5267,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5269",
+      "family": "M L",
+      "setup": "R U' B U2 B' U' R'",
+      "algorithms": [
+        "R U B U2' B' U R'"
+      ],
+      "source_algorithm": "R U (B U2' B' U) R'",
+      "source_variant_count": 6,
+      "source_case_id": 5269,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5271",
+      "family": "M VP",
+      "setup": "f U F2' U F2 U2' f'",
+      "algorithms": [
+        "f U2 F2' U' F2 U' f'"
+      ],
+      "source_algorithm": "f U2 F2' U' F2 U' f'",
+      "source_variant_count": 4,
+      "source_case_id": 5271,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5273",
+      "family": "M VM",
+      "setup": "F R' F' D' r U2 r' D R",
+      "algorithms": [
+        "R' D' r U2 r' D F R F'"
+      ],
+      "source_algorithm": "R' D' (r U2 r' D) F R F'",
+      "source_variant_count": 4,
+      "source_case_id": 5273,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5275",
+      "family": "M IL",
+      "setup": "R U' B U B' U2 R' U",
+      "algorithms": [
+        "U' R U2 B U' B' U R'"
+      ],
+      "source_algorithm": "U' R U2 (B U' B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5275,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5277",
+      "family": "M IZ",
+      "setup": "l F M' F U F' U' L' U2",
+      "algorithms": [
+        "y' U2 F U R U' R' S R' f'"
+      ],
+      "source_algorithm": "y' U2 (F U R U' R' S) R' f'",
+      "source_variant_count": 6,
+      "source_case_id": 5277,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5279",
+      "family": "M IY",
+      "setup": "R U' R' U' F' U F U' R U R' U'",
+      "algorithms": [
+        "U R U' R' U F' U' F U R U R'"
+      ],
+      "source_algorithm": "U (R U' R' U) (F' U' F U R U R')",
+      "source_variant_count": 4,
+      "source_case_id": 5279,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5281",
+      "family": "M D",
+      "setup": "r U r' U2 M' U M",
+      "algorithms": [
+        "M' U' M U2 r U' r'"
+      ],
+      "source_algorithm": "(M' U' M U2) r U' r'",
+      "source_variant_count": 6,
+      "source_case_id": 5281,
+      "source_subgroup": "M+"
+    },
+    {
+      "case_id": "CubeRoot-5268",
+      "family": "M T'",
+      "setup": "F' U' F U2 F' U2 F U'",
+      "algorithms": [
+        "U F' U2 F U2' F' U F"
+      ],
+      "source_algorithm": "U (F' U2 F U2') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5268,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5270",
+      "family": "M L'",
+      "setup": "F' U L' U2 L U F",
+      "algorithms": [
+        "F' U' L' U2 L U' F"
+      ],
+      "source_algorithm": "F' U' (L' U2 L U') F",
+      "source_variant_count": 8,
+      "source_case_id": 5270,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5272",
+      "family": "M VP'",
+      "setup": "r' U' R2 U' R2' U2 r",
+      "algorithms": [
+        "r' U2' R2 U R2' U r"
+      ],
+      "source_algorithm": "r' U2' R2 U R2' U r",
+      "source_variant_count": 4,
+      "source_case_id": 5272,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5274",
+      "family": "M VM'",
+      "setup": "R' F R D f' U2 f D' F'",
+      "algorithms": [
+        "F D f' U2' f D' R' F' R"
+      ],
+      "source_algorithm": "F D (f' U2' f D') R' F' R",
+      "source_variant_count": 4,
+      "source_case_id": 5274,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5276",
+      "family": "M IL'",
+      "setup": "F' U L' U' L U2 F U'",
+      "algorithms": [
+        "U F' U2 L' U L U' F"
+      ],
+      "source_algorithm": "U F' U2 (L' U L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5276,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5278",
+      "family": "M IZ'",
+      "setup": "b' R' S' R' U' R U B U2",
+      "algorithms": [
+        "y y U2 F' U' L' U L S' L f"
+      ],
+      "source_algorithm": "y y U2 (F' U' L' U L S') L f",
+      "source_variant_count": 6,
+      "source_case_id": 5278,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5280",
+      "family": "M IY'",
+      "setup": "F' U F U R U' R' U F' U' F U",
+      "algorithms": [
+        "U' F' U F U' R U R' U' F' U' F"
+      ],
+      "source_algorithm": "U' (F' U F U') (R U R' U' F' U' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5280,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5282",
+      "family": "M D'",
+      "setup": "B' R' B U2 S' U' S",
+      "algorithms": [
+        "S' U S U2' B' R B"
+      ],
+      "source_algorithm": "(S' U S U2') B' R B",
+      "source_variant_count": 7,
+      "source_case_id": 5282,
+      "source_subgroup": "M-"
+    },
+    {
+      "case_id": "CubeRoot-5283",
+      "family": "P T",
+      "setup": "R U R' U' R U' R' U2",
+      "algorithms": [
+        "U2 R U R' U R U' R'"
+      ],
+      "source_algorithm": "U2 (R U R' U) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5283,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5285",
+      "family": "P L",
+      "setup": "R U' R' F' U F U2'",
+      "algorithms": [
+        "U2 F' U' F R U R'"
+      ],
+      "source_algorithm": "U2 F' U' F R U R'",
+      "source_variant_count": 8,
+      "source_case_id": 5285,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5287",
+      "family": "P VP",
+      "setup": "F R' F' R U' F R' F' R U'",
+      "algorithms": [
+        "U R' F R F' U R' F R F'"
+      ],
+      "source_algorithm": "U (R' F R F') U (R' F R F')",
+      "source_variant_count": 4,
+      "source_case_id": 5287,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5289",
+      "family": "P VM",
+      "setup": "F R' F' R2 U' R' U2",
+      "algorithms": [
+        "U2 R U R2' F R F'"
+      ],
+      "source_algorithm": "U2 R U R2' F R F'",
+      "source_variant_count": 4,
+      "source_case_id": 5289,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5291",
+      "family": "P IP",
+      "setup": "R U' B U' B' R' U'",
+      "algorithms": [
+        "U R B U B' U R'"
+      ],
+      "source_algorithm": "U R (B U B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5291,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5293",
+      "family": "P IZ",
+      "setup": "R' U' F U R2 U' R' F' U'",
+      "algorithms": [
+        "U F R U R2' U' F' U R"
+      ],
+      "source_algorithm": "U F R U R2' U' F' U R",
+      "source_variant_count": 4,
+      "source_case_id": 5293,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5295",
+      "family": "P IY",
+      "setup": "R B U2 B' R'",
+      "algorithms": [
+        "R B U2' B' R'"
+      ],
+      "source_algorithm": "R B U2' B' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5295,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5297",
+      "family": "P D",
+      "setup": "F2 L F L2 U2 L F U2",
+      "algorithms": [
+        "U2 F' L' U2 L2 F' L' F2"
+      ],
+      "source_algorithm": "U2 F' (L' U2 L2 F' L' F2)",
+      "source_variant_count": 4,
+      "source_case_id": 5297,
+      "source_subgroup": "P+"
+    },
+    {
+      "case_id": "CubeRoot-5284",
+      "family": "P T'",
+      "setup": "F' U' F U F' U F U2",
+      "algorithms": [
+        "U2 F' U' F U' F' U F"
+      ],
+      "source_algorithm": "U2 (F' U' F U') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5284,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5286",
+      "family": "P L'",
+      "setup": "F' U F R U' R' U2'",
+      "algorithms": [
+        "U2 R U R' F' U' F"
+      ],
+      "source_algorithm": "U2 R U R' F' U' F",
+      "source_variant_count": 8,
+      "source_case_id": 5286,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5288",
+      "family": "P VP'",
+      "setup": "R' F R F' U R' F R F' U",
+      "algorithms": [
+        "U' F R' F' R U' F R' F' R"
+      ],
+      "source_algorithm": "U' (F R' F' R) U' (F R' F' R)",
+      "source_variant_count": 4,
+      "source_case_id": 5288,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5290",
+      "family": "P VM'",
+      "setup": "R' F R F2' U F U2",
+      "algorithms": [
+        "U2 F' U' F2 R' F' R"
+      ],
+      "source_algorithm": "U2 F' U' F2 R' F' R",
+      "source_variant_count": 4,
+      "source_case_id": 5290,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5292",
+      "family": "P IP'",
+      "setup": "F' U L' U L F U",
+      "algorithms": [
+        "U' F' L' U' L U' F"
+      ],
+      "source_algorithm": "U' F' (L' U' L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5292,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5294",
+      "family": "P IZ'",
+      "setup": "F U R' U' F2' U F R U",
+      "algorithms": [
+        "U' R' F' U' F2 U R U' F'"
+      ],
+      "source_algorithm": "U' R' F' U' F2 U R U' F'",
+      "source_variant_count": 4,
+      "source_case_id": 5294,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5296",
+      "family": "P IY'",
+      "setup": "F' L' U2' L F",
+      "algorithms": [
+        "F' L' U2 L F"
+      ],
+      "source_algorithm": "F' L' U2 L F",
+      "source_variant_count": 4,
+      "source_case_id": 5296,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5298",
+      "family": "P D'",
+      "setup": "R2 B' R' B2 U2 B' R' U2",
+      "algorithms": [
+        "U2 R B U2' B2' R B R2'"
+      ],
+      "source_algorithm": "U2 R (B U2' B2' R B R2')",
+      "source_variant_count": 4,
+      "source_case_id": 5298,
+      "source_subgroup": "P-"
+    },
+    {
+      "case_id": "CubeRoot-5299",
+      "family": "Q T",
+      "setup": "R U R' U' R U2 R' U'",
+      "algorithms": [
+        "U R U2' R' U R U' R'"
+      ],
+      "source_algorithm": "U (R U2' R' U) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5299,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5301",
+      "family": "Q L",
+      "setup": "F' L' U L F U' R U2 R' U'",
+      "algorithms": [
+        "U R U2' R' U F' L' U' L F"
+      ],
+      "source_algorithm": "U (R U2' R' U) (F' L' U' L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5301,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5303",
+      "family": "Q VP",
+      "setup": "F' U' F R' F R F2 U' F U'",
+      "algorithms": [
+        "U F' U F2 R' F' R F' U F"
+      ],
+      "source_algorithm": "U (F' U F2) (R' F' R F' U F)",
+      "source_variant_count": 4,
+      "source_case_id": 5303,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5305",
+      "family": "Q VM",
+      "setup": "f' U F S' R U2 R' S2 U'",
+      "algorithms": [
+        "U S2 R U2' R' S F' U' f"
+      ],
+      "source_algorithm": "U (S2 R U2' R' S)F' U' f",
+      "source_variant_count": 4,
+      "source_case_id": 5305,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5307",
+      "family": "Q IP",
+      "setup": "R U' R' F U R U' R' F' U'",
+      "algorithms": [
+        "U F R U R' U' F' R U R'"
+      ],
+      "source_algorithm": "U (F R U R' U' F') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5307,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5309",
+      "family": "Q IZ",
+      "setup": "F R' F' R2 U2 R' U'",
+      "algorithms": [
+        "U R U2' R2' F R F'"
+      ],
+      "source_algorithm": "U R U2' R2' F R F'",
+      "source_variant_count": 8,
+      "source_case_id": 5309,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5311",
+      "family": "Q IY",
+      "setup": "R B U B' R' U' R U2 R' U'",
+      "algorithms": [
+        "U R U2' R' U R B U' B' R'"
+      ],
+      "source_algorithm": "U (R U2' R' U) (R B U' B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5311,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5313",
+      "family": "Q D",
+      "setup": "R B U2 B2 R B R2 U",
+      "algorithms": [
+        "U' R2 B' R' B2 U2' B' R'"
+      ],
+      "source_algorithm": "U' (R2 B' R' B2 U2' B') R'",
+      "source_variant_count": 4,
+      "source_case_id": 5313,
+      "source_subgroup": "Q+"
+    },
+    {
+      "case_id": "CubeRoot-5300",
+      "family": "Q T'",
+      "setup": "F' U' F U F' U2 F U",
+      "algorithms": [
+        "U' F' U2 F U' F' U F"
+      ],
+      "source_algorithm": "U' (F' U2 F U') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5300,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5302",
+      "family": "Q L'",
+      "setup": "R B U' B' R' U F' U2 F U",
+      "algorithms": [
+        "U' F' U2 F U' R B U B' R'"
+      ],
+      "source_algorithm": "U' (F' U2 F U') (R B U B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5302,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5304",
+      "family": "Q VP'",
+      "setup": "R U R' F R' F' R2 U R' U",
+      "algorithms": [
+        "U' R U' R2' F R F' R U' R'"
+      ],
+      "source_algorithm": "U' (R U' R2') (F R F' R U' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5304,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5306",
+      "family": "Q VM'",
+      "setup": "r U' R' M' F' U2 F M2' U",
+      "algorithms": [
+        "U' M2 F' U2 F M R U r'"
+      ],
+      "source_algorithm": "U' (M2 F' U2 F M)R U r'",
+      "source_variant_count": 4,
+      "source_case_id": 5306,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5308",
+      "family": "Q IP'",
+      "setup": "F' U F R' U' F' U F R U",
+      "algorithms": [
+        "U' R' F' U' F U R F' U' F"
+      ],
+      "source_algorithm": "U' (R' F' U' F U R) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5308,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5310",
+      "family": "Q IZ'",
+      "setup": "R' F R F2' U2' F U",
+      "algorithms": [
+        "U' F' U2 F2 R' F' R"
+      ],
+      "source_algorithm": "U' F' U2 F2 R' F' R",
+      "source_variant_count": 8,
+      "source_case_id": 5310,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5312",
+      "family": "Q IY'",
+      "setup": "F' L' U' L F U F' U2 F U",
+      "algorithms": [
+        "U' F' U2 F U' F' L' U L F"
+      ],
+      "source_algorithm": "U' (F' U2 F U') (F' L' U L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5312,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5314",
+      "family": "Q D'",
+      "setup": "F' L' U2 L2 F' L' F2 U'",
+      "algorithms": [
+        "U F2' L F L2' U2 L F"
+      ],
+      "source_algorithm": "U (F2' L F L2' U2 L) F",
+      "source_variant_count": 4,
+      "source_case_id": 5314,
+      "source_subgroup": "Q-"
+    },
+    {
+      "case_id": "CubeRoot-5315",
+      "family": "R T",
+      "setup": "R U' R' U' R U' R' U",
+      "algorithms": [
+        "U' R U R' U R U R'"
+      ],
+      "source_algorithm": "U' (R U R' U) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5315,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5317",
+      "family": "R L",
+      "setup": "F' U' F R' U' F' U F R",
+      "algorithms": [
+        "R' F' U' F U R F' U F"
+      ],
+      "source_algorithm": "(R' F' U' F U R) F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5317,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5319",
+      "family": "R VP",
+      "setup": "r U' R' U R U r' U2",
+      "algorithms": [
+        "U2 r U' R' U' R U r'"
+      ],
+      "source_algorithm": "U2 (r U' R' U') R U r'",
+      "source_variant_count": 6,
+      "source_case_id": 5319,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5321",
+      "family": "R VM",
+      "setup": "F' U' S' F U' F' U f U",
+      "algorithms": [
+        "U' f' U' F U S F' U F"
+      ],
+      "source_algorithm": "U' (f' U' F U) (S F' U F)",
+      "source_variant_count": 4,
+      "source_case_id": 5321,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5323",
+      "family": "R IZ",
+      "setup": "R U2 B U' B' U R'",
+      "algorithms": [
+        "R U' B U B' U2 R'"
+      ],
+      "source_algorithm": "R U' (B U B' U2) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5323,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5325",
+      "family": "R IL",
+      "setup": "F' U' L' B' U2 B L F U",
+      "algorithms": [
+        "U' F' L' B' U2 B L U F"
+      ],
+      "source_algorithm": "U' F' (L' B' U2 B L) U F",
+      "source_variant_count": 4,
+      "source_case_id": 5325,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5327",
+      "family": "R IY",
+      "setup": "F' U S L' U' L F S' U'",
+      "algorithms": [
+        "U F' S L' U L S' U' F"
+      ],
+      "source_algorithm": "U (F' S L' U L S') U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5327,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5329",
+      "family": "R D",
+      "setup": "r U' R' U' M U2 r U r' U2",
+      "algorithms": [
+        "U2 r U' r' U2 M' U R U r'"
+      ],
+      "source_algorithm": "U2 (r U' r' U2) (M' U R U r')",
+      "source_variant_count": 4,
+      "source_case_id": 5329,
+      "source_subgroup": "R+"
+    },
+    {
+      "case_id": "CubeRoot-5316",
+      "family": "R T'",
+      "setup": "F' U F U F' U F U'",
+      "algorithms": [
+        "U F' U' F U' F' U' F"
+      ],
+      "source_algorithm": "U (F' U' F U') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5316,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5318",
+      "family": "R L'",
+      "setup": "R U R' F U R U' R' F'",
+      "algorithms": [
+        "F R U R' U' F' R U' R'"
+      ],
+      "source_algorithm": "(F R U R' U' F') R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5318,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5320",
+      "family": "R VP'",
+      "setup": "f' U F U' F' U' f U2",
+      "algorithms": [
+        "U2 f' U F U F' U' f"
+      ],
+      "source_algorithm": "U2 (f' U F U) F' U' f",
+      "source_variant_count": 8,
+      "source_case_id": 5320,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5322",
+      "family": "R VM'",
+      "setup": "R U M' R' U R U' r' U'",
+      "algorithms": [
+        "U r U R' U' M R U' R'"
+      ],
+      "source_algorithm": "U (r U R' U') (M R U' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5322,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5324",
+      "family": "R IZ'",
+      "setup": "F' U2 L' U L U' F",
+      "algorithms": [
+        "F' U L' U' L U2' F"
+      ],
+      "source_algorithm": "F' U (L' U' L U2') F",
+      "source_variant_count": 4,
+      "source_case_id": 5324,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5326",
+      "family": "R IL'",
+      "setup": "R U B L U2 L' B' R' U'",
+      "algorithms": [
+        "U R B L U2' L' B' U' R'"
+      ],
+      "source_algorithm": "U R (B L U2' L' B') U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5326,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5328",
+      "family": "R IY'",
+      "setup": "R U' M B U B' R' M' U",
+      "algorithms": [
+        "U' R M B U' B' M' U R'"
+      ],
+      "source_algorithm": "U' (R M B U' B' M') U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5328,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5330",
+      "family": "R D'",
+      "setup": "f' U F U S U2 f' U' f U2",
+      "algorithms": [
+        "U2 f' U f U2' S' U' F' U' f"
+      ],
+      "source_algorithm": "U2 (f' U f U2') (S' U' F' U' f)",
+      "source_variant_count": 4,
+      "source_case_id": 5330,
+      "source_subgroup": "R-"
+    },
+    {
+      "case_id": "CubeRoot-5331",
+      "family": "S T",
+      "setup": "R2 U2 R2' U' R2 U' R2'",
+      "algorithms": [
+        "R2 U R2' U R2 U2' R2'"
+      ],
+      "source_algorithm": "\u2193R2 U R2' U R2 U2' R2'",
+      "source_variant_count": 7,
+      "source_case_id": 5331,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5332",
+      "family": "S VO",
+      "setup": "M' U R U' B U' B' U r' U2",
+      "algorithms": [
+        "U2 r U' B U B' U R' U' M"
+      ],
+      "source_algorithm": "U2 r U' (B U B' U) R' U' M",
+      "source_variant_count": 6,
+      "source_case_id": 5332,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5333",
+      "family": "S VY",
+      "setup": "R B L U L' B' U' R' U2",
+      "algorithms": [
+        "U2 R U B L U' L' B' R'"
+      ],
+      "source_algorithm": "U2 R U (B L U' L' B') R'",
+      "source_variant_count": 5,
+      "source_case_id": 5333,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5334",
+      "family": "S D",
+      "setup": "R U B L U2 L' U B' R'",
+      "algorithms": [
+        "R B U' L U2' L' B' U' R'"
+      ],
+      "source_algorithm": "R B U' L U2' L' B' U' R'",
+      "source_variant_count": 5,
+      "source_case_id": 5334,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5335",
+      "family": "S L",
+      "setup": "R U' B U2 B' U R' U'",
+      "algorithms": [
+        "U R U' B U2' B' U R'"
+      ],
+      "source_algorithm": "U R U' (B U2' B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5335,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5336",
+      "family": "S L'",
+      "setup": "F' U L' U2 L U' F U",
+      "algorithms": [
+        "U' F' U L' U2 L U' F"
+      ],
+      "source_algorithm": "U' F' U (L' U2 L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5336,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5337",
+      "family": "S VZ",
+      "setup": "R U' B U' B' U R' U2",
+      "algorithms": [
+        "U2 R U' B U B' U R'"
+      ],
+      "source_algorithm": "U2 R U' (B U B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5337,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5338",
+      "family": "S VZ'",
+      "setup": "F' U L' U L U' F U2",
+      "algorithms": [
+        "U2 F' U L' U' L U' F"
+      ],
+      "source_algorithm": "U2 F' U (L' U' L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5338,
+      "source_subgroup": "S"
+    },
+    {
+      "case_id": "CubeRoot-5339",
+      "family": "T TP",
+      "setup": "R U R' F R' F' R U",
+      "algorithms": [
+        "U' R' F R F' R U' R'"
+      ],
+      "source_algorithm": "U' (R' F R F') R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5339,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5340",
+      "family": "T TP'",
+      "setup": "F' U' F R' F R F' U'",
+      "algorithms": [
+        "U F R' F' R F' U F"
+      ],
+      "source_algorithm": "U (F R' F' R) F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5340,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5341",
+      "family": "T TM",
+      "setup": "F' U2' F R U R'",
+      "algorithms": [
+        "R U' R' F' U2 F"
+      ],
+      "source_algorithm": "R U' R' F' U2 F",
+      "source_variant_count": 4,
+      "source_case_id": 5341,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5342",
+      "family": "T TM'",
+      "setup": "R U2 R' F' U' F",
+      "algorithms": [
+        "F' U F R U2' R'"
+      ],
+      "source_algorithm": "F' U F R U2' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5342,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5343",
+      "family": "T IF",
+      "setup": "F' U S L' U L F S' U",
+      "algorithms": [
+        "U' F' S L' U' L S' U' F"
+      ],
+      "source_algorithm": "U' (F' S L' U' L S') U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5343,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5344",
+      "family": "T IF'",
+      "setup": "R U' M B U' B' R' M' U'",
+      "algorithms": [
+        "U R M B U B' M' U R'"
+      ],
+      "source_algorithm": "U (R M B U B' M') U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5344,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5345",
+      "family": "T IB",
+      "setup": "F' U F2 R' F' R2 U2 R' U2",
+      "algorithms": [
+        "U2 R U2' R2' F R F2' U' F"
+      ],
+      "source_algorithm": "U2 (R U2' R2' F R F2') U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5345,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5346",
+      "family": "T IB'",
+      "setup": "R U' R2 F R F2 U2 F U2",
+      "algorithms": [
+        "U2 F' U2 F2 R' F' R2 U R'"
+      ],
+      "source_algorithm": "U2 (F' U2 F2 R' F' R2) U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5346,
+      "source_subgroup": "T"
+    },
+    {
+      "case_id": "CubeRoot-5347",
+      "family": "U T",
+      "setup": "R U R' U2 R U R' U",
+      "algorithms": [
+        "U' R U' R' U2 R U' R'"
+      ],
+      "source_algorithm": "U' (R U' R' U2) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5347,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5349",
+      "family": "U D",
+      "setup": "F' U' S L' U L S' U F",
+      "algorithms": [
+        "F' U' S L' U' L S' U F"
+      ],
+      "source_algorithm": "F' U' (S L' U' L S') U F",
+      "source_variant_count": 4,
+      "source_case_id": 5349,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5351",
+      "family": "U L",
+      "setup": "F' U' L' U' L U2 F U",
+      "algorithms": [
+        "U' F' U2 L' U L U F"
+      ],
+      "source_algorithm": "U' F' U2 (L' U L U) F",
+      "source_variant_count": 4,
+      "source_case_id": 5351,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-6118",
+      "family": "U Lb",
+      "setup": "R' U' D' F' U F D R U",
+      "algorithms": [
+        "U' R' D' F' U' F U D R"
+      ],
+      "source_algorithm": "U' \u2193R' D' (F' U' F UD) R",
+      "source_variant_count": 19,
+      "source_case_id": 6118,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5355",
+      "family": "U VZ",
+      "setup": "R U2 B U' B' U' R' U'",
+      "algorithms": [
+        "U R U B U B' U2 R'"
+      ],
+      "source_algorithm": "U R U (B U B' U2) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5355,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-6120",
+      "family": "U VZb",
+      "setup": "R U' B U B' U R' U",
+      "algorithms": [
+        "U' R U' B U' B' U R'"
+      ],
+      "source_algorithm": "U' R U' (B U' B' U) R'",
+      "source_variant_count": 8,
+      "source_case_id": 6120,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5359",
+      "family": "U VO",
+      "setup": "R U2 B U2 B' R' U2",
+      "algorithms": [
+        "U2 R B U2' B' U2 R'"
+      ],
+      "source_algorithm": "U2 R (B U2' B' U2) R'",
+      "source_variant_count": 6,
+      "source_case_id": 5359,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5361",
+      "family": "U VY",
+      "setup": "R S R' U' R U S' R' U'",
+      "algorithms": [
+        "U R S U' R' U R S' R'"
+      ],
+      "source_algorithm": "U R S (U'\u2191R' U R) S' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5361,
+      "source_subgroup": "U+"
+    },
+    {
+      "case_id": "CubeRoot-5348",
+      "family": "U T'",
+      "setup": "F' U' F U2 F' U' F U'",
+      "algorithms": [
+        "U F' U F U2' F' U F"
+      ],
+      "source_algorithm": "U (F' U F U2') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5348,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5350",
+      "family": "U D'",
+      "setup": "R U M B U' B' M' U' R'",
+      "algorithms": [
+        "R U M B U B' M' U' R'"
+      ],
+      "source_algorithm": "R U (M B U B' M') U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5350,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5352",
+      "family": "U L'",
+      "setup": "R U B U B' U2 R' U'",
+      "algorithms": [
+        "U R U2 B U' B' U' R'"
+      ],
+      "source_algorithm": "U R U2 (B U' B' U') R'",
+      "source_variant_count": 4,
+      "source_case_id": 5352,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-6119",
+      "family": "U Lb'",
+      "setup": "F U D R U' R' D' F' U'",
+      "algorithms": [
+        "U F D R U R' U' D' F'"
+      ],
+      "source_algorithm": "U \u2193F D (R U R' U'D') F'",
+      "source_variant_count": 17,
+      "source_case_id": 6119,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5356",
+      "family": "U VZ'",
+      "setup": "F' U2 L' U L U F U",
+      "algorithms": [
+        "U' F' U' L' U' L U2 F"
+      ],
+      "source_algorithm": "U' F' U' (L' U' L U2) F",
+      "source_variant_count": 4,
+      "source_case_id": 5356,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-6121",
+      "family": "U VZb'",
+      "setup": "F' U L' U' L U' F U'",
+      "algorithms": [
+        "U F' U L' U L U' F"
+      ],
+      "source_algorithm": "U F' U (L' U L U') F",
+      "source_variant_count": 8,
+      "source_case_id": 6121,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5360",
+      "family": "U VO'",
+      "setup": "F' U2 L' U2 L F U2",
+      "algorithms": [
+        "U2 F' L' U2 L U2' F"
+      ],
+      "source_algorithm": "U2 F' (L' U2 L U2') F",
+      "source_variant_count": 8,
+      "source_case_id": 5360,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5362",
+      "family": "U VY'",
+      "setup": "F' M F U F' U' M' F U",
+      "algorithms": [
+        "U' F' M U F U' F' M' F"
+      ],
+      "source_algorithm": "U' F' M (U\u2191F U' F') M' F",
+      "source_variant_count": 4,
+      "source_case_id": 5362,
+      "source_subgroup": "U-"
+    },
+    {
+      "case_id": "CubeRoot-5363",
+      "family": "V T",
+      "setup": "F' U F U' R U' R' U",
+      "algorithms": [
+        "U' R U R' U F' U' F"
+      ],
+      "source_algorithm": "U' (R U R' U) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5363,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6122",
+      "family": "V Tb",
+      "setup": "F' U F U R U R' U2",
+      "algorithms": [
+        "U2 R U' R' U' F' U' F"
+      ],
+      "source_algorithm": "U2 (R U' R' U') F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 6122,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6123",
+      "family": "V Tc",
+      "setup": "R' F R F' R U' R' U2",
+      "algorithms": [
+        "U2 R U R' F R' F' R"
+      ],
+      "source_algorithm": "U2 R U R' (F R' F' R)",
+      "source_variant_count": 12,
+      "source_case_id": 6123,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6124",
+      "family": "V Td",
+      "setup": "F' U' F U R U' R' U2",
+      "algorithms": [
+        "U2 R U R' U' F' U F"
+      ],
+      "source_algorithm": "U2 (R U R' U') F' U\u2193F",
+      "source_variant_count": 6,
+      "source_case_id": 6124,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-5371",
+      "family": "V I",
+      "setup": "F' U F2 R' F' R U' R U' R'",
+      "algorithms": [
+        "R U R' U R' F R F2' U' F"
+      ],
+      "source_algorithm": "(R U R' U) (R' F R F2' U' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5371,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6126",
+      "family": "V Ib",
+      "setup": "R M B U B' M' U R' U2",
+      "algorithms": [
+        "U2 R U' M B U' B' M' R'"
+      ],
+      "source_algorithm": "U2 R U' (M B U' B' M')R'",
+      "source_variant_count": 15,
+      "source_case_id": 6126,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6128",
+      "family": "V Ic",
+      "setup": "F' U2' S L' U L S' U' F",
+      "algorithms": [
+        "F' U S L' U' L S' U2 F"
+      ],
+      "source_algorithm": "F' U (S L' U' L S') U2 F",
+      "source_variant_count": 17,
+      "source_case_id": 6128,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-6130",
+      "family": "V Id",
+      "setup": "M' F' U' F M U R U' R' U2'",
+      "algorithms": [
+        "U2 R U R' U' M' F' U F M"
+      ],
+      "source_algorithm": "U2 (R U R' U') (M' F' U F M)",
+      "source_variant_count": 23,
+      "source_case_id": 6130,
+      "source_subgroup": "V+"
+    },
+    {
+      "case_id": "CubeRoot-5364",
+      "family": "V T'",
+      "setup": "R U' R' U F' U F U'",
+      "algorithms": [
+        "U F' U' F U' R U R'"
+      ],
+      "source_algorithm": "U (F' U' F U') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5364,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-5366",
+      "family": "V Tb'",
+      "setup": "R U' R' U' F' U' F U2",
+      "algorithms": [
+        "U2 F' U F U R U R'"
+      ],
+      "source_algorithm": "U2 (F' U F U) R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5366,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-5368",
+      "family": "V Tc'",
+      "setup": "F R' F' R F' U F U2",
+      "algorithms": [
+        "U2 F' U' F R' F R F'"
+      ],
+      "source_algorithm": "U2 F' U' F (R' F R F')",
+      "source_variant_count": 14,
+      "source_case_id": 5368,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-6125",
+      "family": "V Td'",
+      "setup": "R U R' U' F' U F U2'",
+      "algorithms": [
+        "U2 F' U' F U R U' R'"
+      ],
+      "source_algorithm": "U2 (F' U' F U) R U'\u2193R'",
+      "source_variant_count": 8,
+      "source_case_id": 6125,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-5372",
+      "family": "V I'",
+      "setup": "R U' R2 F R F' U F' U F",
+      "algorithms": [
+        "F' U' F U' F R' F' R2 U R'"
+      ],
+      "source_algorithm": "(F' U' F U') (F R' F' R2 U R')",
+      "source_variant_count": 4,
+      "source_case_id": 5372,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-6127",
+      "family": "V Ib'",
+      "setup": "F' S L' U' L S' U' F U2",
+      "algorithms": [
+        "U2 F' U S L' U L S' F"
+      ],
+      "source_algorithm": "U2 F' U (S L' U L S')F",
+      "source_variant_count": 14,
+      "source_case_id": 6127,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-6129",
+      "family": "V Ic'",
+      "setup": "R U2 M B U' B' M' U R'",
+      "algorithms": [
+        "R U' M B U B' M' U2' R'"
+      ],
+      "source_algorithm": "R U' (M B U B' M') U2' R'",
+      "source_variant_count": 16,
+      "source_case_id": 6129,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-6131",
+      "family": "V Id'",
+      "setup": "S' R U R' S U' F' U F U2'",
+      "algorithms": [
+        "U2 F' U' F U S' R U' R' S"
+      ],
+      "source_algorithm": "U2 (F' U' F U) (S' R U' R' S)",
+      "source_variant_count": 25,
+      "source_case_id": 6131,
+      "source_subgroup": "V-"
+    },
+    {
+      "case_id": "CubeRoot-5379",
+      "family": "W T",
+      "setup": "R U R' U2 R U' R' U",
+      "algorithms": [
+        "U' R U R' U2 R U' R'"
+      ],
+      "source_algorithm": "U' (R U R' U2) R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5379,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5381",
+      "family": "W L",
+      "setup": "F' U' F2 U R U' R' F' U2",
+      "algorithms": [
+        "U2 F R U R' U' F2 U F"
+      ],
+      "source_algorithm": "U2 (\u2193F R U R' U' F2) U F",
+      "source_variant_count": 4,
+      "source_case_id": 5381,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5383",
+      "family": "W VP",
+      "setup": "f' U F U F' U' f U'",
+      "algorithms": [
+        "U f' U F U' F' U' f"
+      ],
+      "source_algorithm": "U f' U (F U' F' U') f",
+      "source_variant_count": 4,
+      "source_case_id": 5383,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5385",
+      "family": "W VY",
+      "setup": "f' F' U' L' U L F f",
+      "algorithms": [
+        "f' F' L' U' L U F f"
+      ],
+      "source_algorithm": "f' (F' L' U' L U F) f",
+      "source_variant_count": 4,
+      "source_case_id": 5385,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5387",
+      "family": "W IL",
+      "setup": "R U2 B U' B' R' U2",
+      "algorithms": [
+        "U2 R B U B' U2 R'"
+      ],
+      "source_algorithm": "U2 R (B U B' U2) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5387,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5389",
+      "family": "W IZ",
+      "setup": "R U2 M' R' U R U' r' U",
+      "algorithms": [
+        "U' r U R' U' M R U2' R'"
+      ],
+      "source_algorithm": "U' (r U R' U') (M R U2' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5389,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5391",
+      "family": "W IY",
+      "setup": "R U' B U B' U' R' U",
+      "algorithms": [
+        "U' R U B U' B' U R'"
+      ],
+      "source_algorithm": "U' R U (B U' B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5391,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5393",
+      "family": "W D",
+      "setup": "R U' B U2 B' R' F' U' F U",
+      "algorithms": [
+        "U' F' U F R B U2' B' U R'"
+      ],
+      "source_algorithm": "U' F' U F (R B U2' B' U R')",
+      "source_variant_count": 4,
+      "source_case_id": 5393,
+      "source_subgroup": "W+"
+    },
+    {
+      "case_id": "CubeRoot-5380",
+      "family": "W T'",
+      "setup": "F' U' F U2 F' U F U'",
+      "algorithms": [
+        "U F' U' F U2' F' U F"
+      ],
+      "source_algorithm": "U (F' U' F U2') F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5380,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5382",
+      "family": "W L'",
+      "setup": "R U R2 U' F' U F R U2",
+      "algorithms": [
+        "U2 R' F' U' F U R2' U' R'"
+      ],
+      "source_algorithm": "U2 (\u2193R' F' U' F U R2') U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5382,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5384",
+      "family": "W VP'",
+      "setup": "r U' R' U' R U r' U",
+      "algorithms": [
+        "U' r U' R' U R U r'"
+      ],
+      "source_algorithm": "U' r U' (R' U R U) r'",
+      "source_variant_count": 4,
+      "source_case_id": 5384,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5386",
+      "family": "W VY'",
+      "setup": "r R U B U' B' R' r'",
+      "algorithms": [
+        "r R B U B' U' R' r'"
+      ],
+      "source_algorithm": "r (R B U B' U' R') r'",
+      "source_variant_count": 4,
+      "source_case_id": 5386,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5388",
+      "family": "W IL'",
+      "setup": "F' U2 L' U L F U2",
+      "algorithms": [
+        "U2 F' L' U' L U2 F"
+      ],
+      "source_algorithm": "U2 F' (L' U' L U2) F",
+      "source_variant_count": 4,
+      "source_case_id": 5388,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5390",
+      "family": "W IZ'",
+      "setup": "F' U2 S' F U' F' U f U'",
+      "algorithms": [
+        "U f' U' F U S F' U2 F"
+      ],
+      "source_algorithm": "U (f' U' F U) (S F' U2 F)",
+      "source_variant_count": 4,
+      "source_case_id": 5390,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5392",
+      "family": "W IY'",
+      "setup": "F' U L' U' L U F U'",
+      "algorithms": [
+        "U F' U' L' U L U' F"
+      ],
+      "source_algorithm": "U F' U' (L' U L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5392,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5394",
+      "family": "W D'",
+      "setup": "F' U L' U2 L F R U R' U'",
+      "algorithms": [
+        "U R U' R' F' L' U2 L U' F"
+      ],
+      "source_algorithm": "U R U' R' (F' L' U2 L U' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5394,
+      "source_subgroup": "W-"
+    },
+    {
+      "case_id": "CubeRoot-5395",
+      "family": "X T",
+      "setup": "R' U' R2 U' R2' U2 R",
+      "algorithms": [
+        "R' U2' R2 U R2' U R"
+      ],
+      "source_algorithm": "R' U2' R2 U R2' U R",
+      "source_variant_count": 4,
+      "source_case_id": 5395,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5397",
+      "family": "X L",
+      "setup": "R U R' F U2 F2 U' F2 U' F'",
+      "algorithms": [
+        "F U F2' U F2 U2 F' R U' R'"
+      ],
+      "source_algorithm": "(F U F2' U F2 U2 F') R U' R'",
+      "source_variant_count": 4,
+      "source_case_id": 5397,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5399",
+      "family": "X VP",
+      "setup": "R U' R' U F' U2 F U'",
+      "algorithms": [
+        "U F' U2 F U' R U R'"
+      ],
+      "source_algorithm": "U (F' U2 F U') R U R'",
+      "source_variant_count": 4,
+      "source_case_id": 5399,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5401",
+      "family": "X VY",
+      "setup": "S' R' U' R2 U' R2 U2 R S",
+      "algorithms": [
+        "S' R' U2' R2 U R2' U R S"
+      ],
+      "source_algorithm": "S' (R' U2' R2 U R2' U R) S",
+      "source_variant_count": 4,
+      "source_case_id": 5401,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5403",
+      "family": "X IO",
+      "setup": "R B U2 B' R' U' F' U2 F",
+      "algorithms": [
+        "F' U2 F U R B U2' B' R'"
+      ],
+      "source_algorithm": "(F' U2 F U) (R B U2' B' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5403,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5405",
+      "family": "X IZ",
+      "setup": "R U' B U B' U' B U' B' R'",
+      "algorithms": [
+        "R B U B' U B U' B' U R'"
+      ],
+      "source_algorithm": "R (B U B' U) (B U' B' U) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5405,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5407",
+      "family": "X IP",
+      "setup": "R U2 B U2 B' U R'",
+      "algorithms": [
+        "R U' B U2' B' U2 R'"
+      ],
+      "source_algorithm": "R U' (B U2' B' U2) R'",
+      "source_variant_count": 4,
+      "source_case_id": 5407,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5409",
+      "family": "X D",
+      "setup": "M R U' M' R' U2 M U' M' U'",
+      "algorithms": [
+        "U M U M' U2 M R U M' R'"
+      ],
+      "source_algorithm": "U (M U M' U2) (M R U M' R')",
+      "source_variant_count": 4,
+      "source_case_id": 5409,
+      "source_subgroup": "X+"
+    },
+    {
+      "case_id": "CubeRoot-5396",
+      "family": "X T'",
+      "setup": "F U F2' U F2 U2' F'",
+      "algorithms": [
+        "F U2 F2' U' F2 U' F'"
+      ],
+      "source_algorithm": "F U2 F2' U' F2 U' F'",
+      "source_variant_count": 4,
+      "source_case_id": 5396,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5398",
+      "family": "X L'",
+      "setup": "F' U' F R' U2 R2 U R2 U R",
+      "algorithms": [
+        "R' U' R2 U' R2' U2' R F' U F"
+      ],
+      "source_algorithm": "(R' U' R2 U' R2' U2' R) F' U F",
+      "source_variant_count": 4,
+      "source_case_id": 5398,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5400",
+      "family": "X VP'",
+      "setup": "F' U F U' R U2 R' U",
+      "algorithms": [
+        "U' R U2' R' U F' U' F"
+      ],
+      "source_algorithm": "U' (R U2' R' U) F' U' F",
+      "source_variant_count": 4,
+      "source_case_id": 5400,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5402",
+      "family": "X VY'",
+      "setup": "M' F U F2 U F2 U2 F' M",
+      "algorithms": [
+        "M' F U2 F2' U' F2 U' F' M"
+      ],
+      "source_algorithm": "M' (F U2 F2' U' F2 U' F') M",
+      "source_variant_count": 4,
+      "source_case_id": 5402,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5404",
+      "family": "X IO'",
+      "setup": "F' L' U2 L F U R U2 R'",
+      "algorithms": [
+        "R U2' R' U' F' L' U2 L F"
+      ],
+      "source_algorithm": "(R U2' R' U') (F' L' U2 L F)",
+      "source_variant_count": 4,
+      "source_case_id": 5404,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5406",
+      "family": "X IZ'",
+      "setup": "F' U L' U' L U L' U L F",
+      "algorithms": [
+        "F' L' U' L U' L' U L U' F"
+      ],
+      "source_algorithm": "F' (L' U' L U') (L' U L U') F",
+      "source_variant_count": 4,
+      "source_case_id": 5406,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5408",
+      "family": "X IP'",
+      "setup": "F' U2 L' U2 L U' F",
+      "algorithms": [
+        "F' U L' U2 L U2' F"
+      ],
+      "source_algorithm": "F' U (L' U2 L U2') F",
+      "source_variant_count": 4,
+      "source_case_id": 5408,
+      "source_subgroup": "X-"
+    },
+    {
+      "case_id": "CubeRoot-5410",
+      "family": "X D'",
+      "setup": "S F' U S' F U2 S U S' U",
+      "algorithms": [
+        "U' S U' S' U2' S F' U' S' F"
+      ],
+      "source_algorithm": "U' (S U' S' U2') (S F' U' S' F)",
+      "source_variant_count": 4,
+      "source_case_id": 5410,
+      "source_subgroup": "X-"
+    }
+  ]
+}

@@ -1,0 +1,3617 @@
+{
+  "task": "expert-aware neural OLL/PLL/ZBLL action and value prediction",
+  "model": "random-initialized SolverPolicyValue MLP; 920 inputs, 256/128 hidden units, 72 move logits and value",
+  "training_data": {
+    "manifest": "/Users/yoyo/Desktop/Deepcube/data/processed/last_layer/manifest.json",
+    "human_actions_by_phase": {
+      "OLL": 43227,
+      "PLL": 69613,
+      "ZBLL": 375
+    },
+    "synthetic_actions_by_phase": {
+      "OLL": 9364,
+      "PLL": 14750,
+      "ZBLL": 25050
+    },
+    "human_train_solvers": 277,
+    "human_test_solvers": 35,
+    "test_human_solver_ids_disjoint": true,
+    "synthetic_train_data_separate": true
+  },
+  "seed_results": [
+    {
+      "seed": 73,
+      "best_epoch": 11,
+      "validation_cross_entropy": 0.8786842235834426,
+      "validation": {
+        "oll": {
+          "samples": 9778,
+          "top1_accuracy": 0.7622213131519738,
+          "top3_accuracy": 0.9116383718551851,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 8508,
+              "top1_accuracy": 0.748119417019276,
+              "top3_accuracy": 0.9045604137282558
+            },
+            "synthetic": {
+              "samples": 1270,
+              "top1_accuracy": 0.8566929133858268,
+              "top3_accuracy": 0.9590551181102362
+            }
+          }
+        },
+        "pll": {
+          "samples": 15852,
+          "top1_accuracy": 0.7829295987887964,
+          "top3_accuracy": 0.9149634115569013,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 13904,
+              "top1_accuracy": 0.7672612197928653,
+              "top3_accuracy": 0.9075805523590333
+            },
+            "synthetic": {
+              "samples": 1948,
+              "top1_accuracy": 0.8947638603696099,
+              "top3_accuracy": 0.9676591375770021
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3316,
+          "top1_accuracy": 0.7334137515078407,
+          "top3_accuracy": 0.9098311218335344,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 173,
+              "top1_accuracy": 0.7225433526011561,
+              "top3_accuracy": 0.8959537572254336
+            },
+            "synthetic": {
+              "samples": 3143,
+              "top1_accuracy": 0.7340120903595291,
+              "top3_accuracy": 0.9105949729557747
+            }
+          }
+        }
+      },
+      "human_solver_held_out_action_agreement": {
+        "oll": {
+          "samples": 5702,
+          "top1_accuracy": 0.706068046299544,
+          "top3_accuracy": 0.8868817958611014,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 5702,
+              "top1_accuracy": 0.706068046299544,
+              "top3_accuracy": 0.8868817958611014
+            }
+          }
+        },
+        "pll": {
+          "samples": 10343,
+          "top1_accuracy": 0.7383737793676883,
+          "top3_accuracy": 0.897031808952915,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 10343,
+              "top1_accuracy": 0.7383737793676883,
+              "top3_accuracy": 0.897031808952915
+            }
+          }
+        },
+        "zbll": {
+          "samples": 69,
+          "top1_accuracy": 0.6956521739130435,
+          "top3_accuracy": 0.9130434782608695,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 69,
+              "top1_accuracy": 0.6956521739130435,
+              "top3_accuracy": 0.9130434782608695
+            }
+          }
+        }
+      },
+      "synthetic_held_out_policy_accuracy": {
+        "oll": {
+          "samples": 1259,
+          "top1_accuracy": 0.8800635424940428,
+          "top3_accuracy": 0.9563145353455124,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1259,
+              "top1_accuracy": 0.8800635424940428,
+              "top3_accuracy": 0.9563145353455124
+            }
+          }
+        },
+        "pll": {
+          "samples": 1922,
+          "top1_accuracy": 0.9094693028095734,
+          "top3_accuracy": 0.9745057232049948,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1922,
+              "top1_accuracy": 0.9094693028095734,
+              "top3_accuracy": 0.9745057232049948
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3110,
+          "top1_accuracy": 0.6755627009646302,
+          "top3_accuracy": 0.8929260450160772,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 3110,
+              "top1_accuracy": 0.6755627009646302,
+              "top3_accuracy": 0.8929260450160772
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 2.3401942300591334,
+          "validation_macro_cross_entropy": 1.8582848532920038,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3482307220290448,
+              "top3_accuracy": 0.6566782573123338,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.34379407616361074,
+                  "top3_accuracy": 0.653737658674189
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.3779527559055118,
+                  "top3_accuracy": 0.6763779527559055
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.5673101185970224,
+              "top3_accuracy": 0.820779712339137,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.5500575373993095,
+                  "top3_accuracy": 0.8105581127733027
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.6904517453798767,
+                  "top3_accuracy": 0.8937371663244353
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.4734620024125452,
+              "top3_accuracy": 0.8027744270205066,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4161849710982659,
+                  "top3_accuracy": 0.791907514450867
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.4766146993318486,
+                  "top3_accuracy": 0.8033725739739103
+                }
+              }
+            }
+          },
+          "seconds": 1.8500165000000006
+        },
+        {
+          "epoch": 2,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.3877281350948625,
+          "validation_macro_cross_entropy": 1.7842333329789504,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3714461034976478,
+              "top3_accuracy": 0.6522806299856821,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.3680065820404325,
+                  "top3_accuracy": 0.6482134461683122
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.39448818897637794,
+                  "top3_accuracy": 0.6795275590551181
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6413070905879384,
+              "top3_accuracy": 0.85963916225082,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6199654775604143,
+                  "top3_accuracy": 0.8501869965477561
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.7936344969199178,
+                  "top3_accuracy": 0.9271047227926078
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5054282267792521,
+              "top3_accuracy": 0.8000603136308806,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.47398843930635837,
+                  "top3_accuracy": 0.8092485549132948
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5071587655106586,
+                  "top3_accuracy": 0.799554565701559
+                }
+              }
+            }
+          },
+          "seconds": 1.5306712499999993
+        },
+        {
+          "epoch": 3,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.120436658275719,
+          "validation_macro_cross_entropy": 1.7154104957565115,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.38760482716301903,
+              "top3_accuracy": 0.6693597872775618,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.38469675599435826,
+                  "top3_accuracy": 0.6654913023037141
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.40708661417322833,
+                  "top3_accuracy": 0.6952755905511812
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6898814029775423,
+              "top3_accuracy": 0.8830431491294474,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6713895281933256,
+                  "top3_accuracy": 0.8755753739930955
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8218685831622177,
+                  "top3_accuracy": 0.9363449691991786
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5211097708082026,
+              "top3_accuracy": 0.8145355850422196,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4913294797687861,
+                  "top3_accuracy": 0.815028901734104
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5227489659560929,
+                  "top3_accuracy": 0.8145084314349348
+                }
+              }
+            }
+          },
+          "seconds": 1.202645167
+        },
+        {
+          "epoch": 4,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 1.206435268590134,
+          "validation_macro_cross_entropy": 1.2681807434073251,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.6472693802413582,
+              "top3_accuracy": 0.8479239108202087,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.6275270333803479,
+                  "top3_accuracy": 0.8400329102021626
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.7795275590551181,
+                  "top3_accuracy": 0.9007874015748032
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7077971233913701,
+              "top3_accuracy": 0.8887837496845824,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6906645569620253,
+                  "top3_accuracy": 0.882120253164557
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.830082135523614,
+                  "top3_accuracy": 0.9363449691991786
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5663449939686369,
+              "top3_accuracy": 0.8082026537997588,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.630057803468208,
+                  "top3_accuracy": 0.838150289017341
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5628380528157811,
+                  "top3_accuracy": 0.806554247534203
+                }
+              }
+            }
+          },
+          "seconds": 2.300286917000001
+        },
+        {
+          "epoch": 5,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.8853827001069186,
+          "validation_macro_cross_entropy": 1.1916744069641514,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.700245448967069,
+              "top3_accuracy": 0.8782982204949887,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.6818288669487541,
+                  "top3_accuracy": 0.8684767277856136
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8236220472440945,
+                  "top3_accuracy": 0.9440944881889763
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7365632096896291,
+              "top3_accuracy": 0.8991294473883422,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7202243958573072,
+                  "top3_accuracy": 0.8924769850402762
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8531827515400411,
+                  "top3_accuracy": 0.946611909650924
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5787092882991556,
+              "top3_accuracy": 0.8196622436670687,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6242774566473989,
+                  "top3_accuracy": 0.8497109826589595
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5762010817690105,
+                  "top3_accuracy": 0.8180082723512567
+                }
+              }
+            }
+          },
+          "seconds": 1.8659726670000012
+        },
+        {
+          "epoch": 6,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.7500337589550797,
+          "validation_macro_cross_entropy": 1.1670740818205376,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7295970546123952,
+              "top3_accuracy": 0.8932296993250154,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.711683121767748,
+                  "top3_accuracy": 0.8849318288669488
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8496062992125984,
+                  "top3_accuracy": 0.9488188976377953
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7532803431743629,
+              "top3_accuracy": 0.9035452939692152,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7369102416570771,
+                  "top3_accuracy": 0.8965046029919448
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8701232032854209,
+                  "top3_accuracy": 0.9537987679671458
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5636308805790109,
+              "top3_accuracy": 0.8118214716525934,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6184971098265896,
+                  "top3_accuracy": 0.861271676300578
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5606108813235762,
+                  "top3_accuracy": 0.8090995863824372
+                }
+              }
+            }
+          },
+          "seconds": 2.097397959000002
+        },
+        {
+          "epoch": 7,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.7485493906874003,
+          "validation_macro_cross_entropy": 0.9576746082923681,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7366537124156269,
+              "top3_accuracy": 0.8992636530987932,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7194405265632347,
+                  "top3_accuracy": 0.891631405735778
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8519685039370078,
+                  "top3_accuracy": 0.9503937007874016
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7523971738581883,
+              "top3_accuracy": 0.9046177138531416,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7366225546605294,
+                  "top3_accuracy": 0.8982307249712314
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8649897330595483,
+                  "top3_accuracy": 0.9502053388090349
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6749095295536791,
+              "top3_accuracy": 0.9037997587454765,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.653179190751445,
+                  "top3_accuracy": 0.9132947976878613
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6761056315622017,
+                  "top3_accuracy": 0.9032771237671015
+                }
+              }
+            }
+          },
+          "seconds": 2.3468209159999986
+        },
+        {
+          "epoch": 8,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.5937915609712103,
+          "validation_macro_cross_entropy": 0.9375060266655204,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7384945796686438,
+              "top3_accuracy": 0.9016158723665372,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7236718382698637,
+                  "top3_accuracy": 0.8942172073342737
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8377952755905512,
+                  "top3_accuracy": 0.9511811023622048
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7654554630330558,
+              "top3_accuracy": 0.9094751450921019,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7501438434982739,
+                  "top3_accuracy": 0.9021864211737629
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8747433264887063,
+                  "top3_accuracy": 0.9614989733059548
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6920989143546441,
+              "top3_accuracy": 0.9173703256936068,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6878612716763006,
+                  "top3_accuracy": 0.8901734104046243
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6923321667196946,
+                  "top3_accuracy": 0.9188673242125358
+                }
+              }
+            }
+          },
+          "seconds": 2.4707742500000016
+        },
+        {
+          "epoch": 9,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.5305965398321414,
+          "validation_macro_cross_entropy": 0.8914824393269088,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7540396809163428,
+              "top3_accuracy": 0.907138474125588,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7387165021156559,
+                  "top3_accuracy": 0.8988011283497884
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8566929133858268,
+                  "top3_accuracy": 0.962992125984252
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7732778198334594,
+              "top3_accuracy": 0.9115569013373707,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7576237054085155,
+                  "top3_accuracy": 0.9052790563866513
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8850102669404517,
+                  "top3_accuracy": 0.9563655030800822
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7150180940892642,
+              "top3_accuracy": 0.9146562123039808,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6936416184971098,
+                  "top3_accuracy": 0.8786127167630058
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7161947184218899,
+                  "top3_accuracy": 0.916640152720331
+                }
+              }
+            }
+          },
+          "seconds": 2.012557083000001
+        },
+        {
+          "epoch": 10,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.4885466006903823,
+          "validation_macro_cross_entropy": 0.8998395170490694,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7560850889752505,
+              "top3_accuracy": 0.910002045408059,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7405970850963799,
+                  "top3_accuracy": 0.902327221438646
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8598425196850393,
+                  "top3_accuracy": 0.9614173228346456
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.774224072672218,
+              "top3_accuracy": 0.9127554882664648,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7581271576524741,
+                  "top3_accuracy": 0.9059982738780207
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8891170431211499,
+                  "top3_accuracy": 0.9609856262833676
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7147165259348612,
+              "top3_accuracy": 0.9101326899879373,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6936416184971098,
+                  "top3_accuracy": 0.9075144508670521
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7158765510658607,
+                  "top3_accuracy": 0.9102768055997454
+                }
+              }
+            }
+          },
+          "seconds": 2.423999875
+        },
+        {
+          "epoch": 11,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.4499204066752718,
+          "validation_macro_cross_entropy": 0.8786842235834426,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7622213131519738,
+              "top3_accuracy": 0.9116383718551851,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.748119417019276,
+                  "top3_accuracy": 0.9045604137282558
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8566929133858268,
+                  "top3_accuracy": 0.9590551181102362
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7829295987887964,
+              "top3_accuracy": 0.9149634115569013,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7672612197928653,
+                  "top3_accuracy": 0.9075805523590333
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8947638603696099,
+                  "top3_accuracy": 0.9676591375770021
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7334137515078407,
+              "top3_accuracy": 0.9098311218335344,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7225433526011561,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7340120903595291,
+                  "top3_accuracy": 0.9105949729557747
+                }
+              }
+            }
+          },
+          "seconds": 2.1483582919999975
+        },
+        {
+          "epoch": 12,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.4189144823980563,
+          "validation_macro_cross_entropy": 0.8962931938838533,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.768868889343424,
+              "top3_accuracy": 0.9138883207199836,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7543488481429244,
+                  "top3_accuracy": 0.9071462153267513
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8661417322834646,
+                  "top3_accuracy": 0.9590551181102362
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.780027756749937,
+              "top3_accuracy": 0.91704516780217,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7635932105868815,
+                  "top3_accuracy": 0.9100258918296893
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8973305954825462,
+                  "top3_accuracy": 0.9671457905544147
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7258745476477684,
+              "top3_accuracy": 0.9056091676718938,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7167630057803468,
+                  "top3_accuracy": 0.8786127167630058
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7263760738148266,
+                  "top3_accuracy": 0.9070951320394528
+                }
+              }
+            }
+          },
+          "seconds": 2.0128449999999987
+        },
+        {
+          "epoch": 13,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.38963159903863653,
+          "validation_macro_cross_entropy": 0.8969183041537964,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7736755982818573,
+              "top3_accuracy": 0.9174677848230722,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7592853784673249,
+                  "top3_accuracy": 0.9103196991067231
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8700787401574803,
+                  "top3_accuracy": 0.9653543307086614
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7853898561695685,
+              "top3_accuracy": 0.9189376734796871,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7690592635212888,
+                  "top3_accuracy": 0.9114643268124281
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9019507186858317,
+                  "top3_accuracy": 0.9722792607802875
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.729794933655006,
+              "top3_accuracy": 0.9010856453558505,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7341040462427746,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7295577473751194,
+                  "top3_accuracy": 0.9013681196309259
+                }
+              }
+            }
+          },
+          "seconds": 2.412008
+        },
+        {
+          "epoch": 14,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.36541526394674034,
+          "validation_macro_cross_entropy": 0.9062739963632517,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7722438126406218,
+              "top3_accuracy": 0.9167518920024544,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7603432063939821,
+                  "top3_accuracy": 0.9105547719793136
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8519685039370078,
+                  "top3_accuracy": 0.9582677165354331
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7900580368407771,
+              "top3_accuracy": 0.9212086802927075,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7736622554660529,
+                  "top3_accuracy": 0.9136219792865362
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9070841889117043,
+                  "top3_accuracy": 0.9753593429158111
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7316043425814234,
+              "top3_accuracy": 0.9028950542822678,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6994219653179191,
+                  "top3_accuracy": 0.9017341040462428
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7333757556474706,
+                  "top3_accuracy": 0.9029589564110723
+                }
+              }
+            }
+          },
+          "seconds": 2.1262330830000025
+        },
+        {
+          "epoch": 15,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.3496873753074458,
+          "validation_macro_cross_entropy": 0.9046300288510497,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7782777664143997,
+              "top3_accuracy": 0.9154223767641645,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7648095909732017,
+                  "top3_accuracy": 0.9094969440526564
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.868503937007874,
+                  "top3_accuracy": 0.9551181102362205
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7966187231895029,
+              "top3_accuracy": 0.9225965177895533,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7798475258918297,
+                  "top3_accuracy": 0.9154200230149597
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9163244353182751,
+                  "top3_accuracy": 0.9738193018480493
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7346200241254524,
+              "top3_accuracy": 0.9019903498190591,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6994219653179191,
+                  "top3_accuracy": 0.8786127167630058
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7365574292077632,
+                  "top3_accuracy": 0.9032771237671015
+                }
+              }
+            }
+          },
+          "seconds": 2.3330585
+        },
+        {
+          "epoch": 16,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.32991575818882335,
+          "validation_macro_cross_entropy": 0.9311724613349005,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7813458785027613,
+              "top3_accuracy": 0.9185927592554715,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7689233662435355,
+                  "top3_accuracy": 0.9124353549600376
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8645669291338582,
+                  "top3_accuracy": 0.9598425196850394
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7932752964925561,
+              "top3_accuracy": 0.9248675246025738,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7761795166858458,
+                  "top3_accuracy": 0.9170023014959724
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9152977412731006,
+                  "top3_accuracy": 0.981006160164271
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7273823884197829,
+              "top3_accuracy": 0.8998793727382388,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7052023121387283,
+                  "top3_accuracy": 0.884393063583815
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7286032453070315,
+                  "top3_accuracy": 0.9007317849188673
+                }
+              }
+            }
+          },
+          "seconds": 2.1897278750000027
+        },
+        {
+          "epoch": 17,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.3126205697001649,
+          "validation_macro_cross_entropy": 0.9434428731153877,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7752096543260381,
+              "top3_accuracy": 0.9205358969114338,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.763046544428773,
+                  "top3_accuracy": 0.9150211565585331
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8566929133858268,
+                  "top3_accuracy": 0.9574803149606299
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7995836487509462,
+              "top3_accuracy": 0.9250567751703255,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.783084004602992,
+                  "top3_accuracy": 0.9180092059838896
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9173511293634496,
+                  "top3_accuracy": 0.9753593429158111
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7451749095295537,
+              "top3_accuracy": 0.9056091676718938,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7109826589595376,
+                  "top3_accuracy": 0.8901734104046243
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7470569519567293,
+                  "top3_accuracy": 0.9064587973273942
+                }
+              }
+            }
+          },
+          "seconds": 2.365764375000005
+        }
+      ],
+      "checkpoint": "/Users/yoyo/Desktop/Deepcube/artifacts/last-layer-policy-seed73.pt"
+    },
+    {
+      "seed": 74,
+      "best_epoch": 10,
+      "validation_cross_entropy": 0.9029119893384485,
+      "validation": {
+        "oll": {
+          "samples": 9778,
+          "top1_accuracy": 0.7528124360809981,
+          "top3_accuracy": 0.9035590100224995,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 8508,
+              "top1_accuracy": 0.7353079454630935,
+              "top3_accuracy": 0.8968030089327692
+            },
+            "synthetic": {
+              "samples": 1270,
+              "top1_accuracy": 0.8700787401574803,
+              "top3_accuracy": 0.9488188976377953
+            }
+          }
+        },
+        "pll": {
+          "samples": 15852,
+          "top1_accuracy": 0.776810497098158,
+          "top3_accuracy": 0.9159727479182438,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 13904,
+              "top1_accuracy": 0.7595655926352128,
+              "top3_accuracy": 0.9088751438434983
+            },
+            "synthetic": {
+              "samples": 1948,
+              "top1_accuracy": 0.8998973305954825,
+              "top3_accuracy": 0.9666324435318275
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3316,
+          "top1_accuracy": 0.7041616405307599,
+          "top3_accuracy": 0.9170687575392038,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 173,
+              "top1_accuracy": 0.7109826589595376,
+              "top3_accuracy": 0.9017341040462428
+            },
+            "synthetic": {
+              "samples": 3143,
+              "top1_accuracy": 0.7037861915367484,
+              "top3_accuracy": 0.917912822144448
+            }
+          }
+        }
+      },
+      "human_solver_held_out_action_agreement": {
+        "oll": {
+          "samples": 5702,
+          "top1_accuracy": 0.7030866362679762,
+          "top3_accuracy": 0.884075762890214,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 5702,
+              "top1_accuracy": 0.7030866362679762,
+              "top3_accuracy": 0.884075762890214
+            }
+          }
+        },
+        "pll": {
+          "samples": 10343,
+          "top1_accuracy": 0.7331528570047375,
+          "top3_accuracy": 0.8977085951851493,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 10343,
+              "top1_accuracy": 0.7331528570047375,
+              "top3_accuracy": 0.8977085951851493
+            }
+          }
+        },
+        "zbll": {
+          "samples": 69,
+          "top1_accuracy": 0.6666666666666666,
+          "top3_accuracy": 0.927536231884058,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 69,
+              "top1_accuracy": 0.6666666666666666,
+              "top3_accuracy": 0.927536231884058
+            }
+          }
+        }
+      },
+      "synthetic_held_out_policy_accuracy": {
+        "oll": {
+          "samples": 1259,
+          "top1_accuracy": 0.8633836378077839,
+          "top3_accuracy": 0.9523431294678316,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1259,
+              "top1_accuracy": 0.8633836378077839,
+              "top3_accuracy": 0.9523431294678316
+            }
+          }
+        },
+        "pll": {
+          "samples": 1922,
+          "top1_accuracy": 0.9058272632674298,
+          "top3_accuracy": 0.9729448491155047,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1922,
+              "top1_accuracy": 0.9058272632674298,
+              "top3_accuracy": 0.9729448491155047
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3110,
+          "top1_accuracy": 0.6832797427652733,
+          "top3_accuracy": 0.8964630225080386,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 3110,
+              "top1_accuracy": 0.6832797427652733,
+              "top3_accuracy": 0.8964630225080386
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 2.3503653538687312,
+          "validation_macro_cross_entropy": 1.8596972913483463,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3607077111883821,
+              "top3_accuracy": 0.656473716506443,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.3562529384109074,
+                  "top3_accuracy": 0.655618241654913
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.3905511811023622,
+                  "top3_accuracy": 0.6622047244094488
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.5721675498359828,
+              "top3_accuracy": 0.8189502901842038,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.553006329113924,
+                  "top3_accuracy": 0.8093354430379747
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.7089322381930184,
+                  "top3_accuracy": 0.8875770020533881
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.49668275030156817,
+              "top3_accuracy": 0.7892038600723763,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4277456647398844,
+                  "top3_accuracy": 0.791907514450867
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.500477251034044,
+                  "top3_accuracy": 0.7890550429525931
+                }
+              }
+            }
+          },
+          "seconds": 1.1966690829999962
+        },
+        {
+          "epoch": 2,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.361748169935873,
+          "validation_macro_cross_entropy": 1.7617971610565173,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3655144201268153,
+              "top3_accuracy": 0.6575986909388423,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.36283497884344146,
+                  "top3_accuracy": 0.655618241654913
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.38346456692913383,
+                  "top3_accuracy": 0.6708661417322834
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6481201110269997,
+              "top3_accuracy": 0.8619732525864244,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6265103567318757,
+                  "top3_accuracy": 0.8526323360184119
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8023613963039015,
+                  "top3_accuracy": 0.9286447638603696
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5129674306393245,
+              "top3_accuracy": 0.8181544028950543,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4393063583815029,
+                  "top3_accuracy": 0.8265895953757225
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.517021953547566,
+                  "top3_accuracy": 0.8176901049952275
+                }
+              }
+            }
+          },
+          "seconds": 1.2121336249999999
+        },
+        {
+          "epoch": 3,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.0944622375773423,
+          "validation_macro_cross_entropy": 1.729415263478062,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3902638576395991,
+              "top3_accuracy": 0.6839844548987523,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.3877527033380348,
+                  "top3_accuracy": 0.6831217677480019
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.40708661417322833,
+                  "top3_accuracy": 0.6897637795275591
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6902599041130457,
+              "top3_accuracy": 0.8803305576583397,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.669735327963176,
+                  "top3_accuracy": 0.8724827387802071
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8367556468172485,
+                  "top3_accuracy": 0.9363449691991786
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5018094089264173,
+              "top3_accuracy": 0.7997587454764777,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.48554913294797686,
+                  "top3_accuracy": 0.8554913294797688
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5027044225262488,
+                  "top3_accuracy": 0.7966910594972956
+                }
+              }
+            }
+          },
+          "seconds": 1.539676
+        },
+        {
+          "epoch": 4,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 1.204731410301628,
+          "validation_macro_cross_entropy": 1.276481463768651,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.6388832071998364,
+              "top3_accuracy": 0.8486398036408264,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.6171838269863658,
+                  "top3_accuracy": 0.8380347907851434
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.784251968503937,
+                  "top3_accuracy": 0.9196850393700787
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7195306585919757,
+              "top3_accuracy": 0.8897300025233409,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7023158803222095,
+                  "top3_accuracy": 0.8831271576524741
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8424024640657084,
+                  "top3_accuracy": 0.936858316221766
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5747889022919179,
+              "top3_accuracy": 0.8193606755126659,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.5838150289017341,
+                  "top3_accuracy": 0.8786127167630058
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5742920776328349,
+                  "top3_accuracy": 0.8160992682150812
+                }
+              }
+            }
+          },
+          "seconds": 1.8844540420000016
+        },
+        {
+          "epoch": 5,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.88603120813937,
+          "validation_macro_cross_entropy": 1.2002409920098736,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.6910411127019841,
+              "top3_accuracy": 0.8724688075271017,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.6697226140103432,
+                  "top3_accuracy": 0.8631875881523272
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8338582677165355,
+                  "top3_accuracy": 0.9346456692913386
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7370047943477164,
+              "top3_accuracy": 0.9010219530658592,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7198647871116226,
+                  "top3_accuracy": 0.8941311852704258
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8593429158110883,
+                  "top3_accuracy": 0.9502053388090349
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5799155609167672,
+              "top3_accuracy": 0.8190591073582629,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6242774566473989,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5774737511931276,
+                  "top3_accuracy": 0.8148265987909641
+                }
+              }
+            }
+          },
+          "seconds": 1.7440258750000055
+        },
+        {
+          "epoch": 6,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.7622739342105168,
+          "validation_macro_cross_entropy": 1.166781926307477,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.719779095929638,
+              "top3_accuracy": 0.8861730415217836,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7003996238834038,
+                  "top3_accuracy": 0.8769393511988717
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8496062992125984,
+                  "top3_accuracy": 0.9480314960629921
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7527125914711077,
+              "top3_accuracy": 0.9045546303305576,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7352560414269275,
+                  "top3_accuracy": 0.8970080552359033
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8773100616016427,
+                  "top3_accuracy": 0.9584188911704312
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5768998793727382,
+              "top3_accuracy": 0.8151387213510254,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6011560693641619,
+                  "top3_accuracy": 0.8728323699421965
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5755647470569519,
+                  "top3_accuracy": 0.8119630925867006
+                }
+              }
+            }
+          },
+          "seconds": 2.104715249999998
+        },
+        {
+          "epoch": 7,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.7430671494092373,
+          "validation_macro_cross_entropy": 0.9686576617001549,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7215176927797096,
+              "top3_accuracy": 0.8928206177132338,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7027503526093088,
+                  "top3_accuracy": 0.885049365303244
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8472440944881889,
+                  "top3_accuracy": 0.9448818897637795
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7547943477163764,
+              "top3_accuracy": 0.9071410547564976,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7379171461449943,
+                  "top3_accuracy": 0.8995972382048332
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8752566735112937,
+                  "top3_accuracy": 0.9609856262833676
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6658624849215923,
+              "top3_accuracy": 0.9068154402895054,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6647398843930635,
+                  "top3_accuracy": 0.8670520231213873
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6659242761692651,
+                  "top3_accuracy": 0.9090041361756284
+                }
+              }
+            }
+          },
+          "seconds": 2.048235875000003
+        },
+        {
+          "epoch": 8,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.5964388238670038,
+          "validation_macro_cross_entropy": 0.91801044243121,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7390059316833708,
+              "top3_accuracy": 0.8974227858457763,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7201457451810062,
+                  "top3_accuracy": 0.8898683591913493
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8653543307086614,
+                  "top3_accuracy": 0.9480314960629921
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.766527882916982,
+              "top3_accuracy": 0.9110522331566995,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7502876869965478,
+                  "top3_accuracy": 0.9038406214039125
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8824435318275154,
+                  "top3_accuracy": 0.9625256673511293
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6936067551266586,
+              "top3_accuracy": 0.9185765983112183,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6705202312138728,
+                  "top3_accuracy": 0.9017341040462428
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6948775055679287,
+                  "top3_accuracy": 0.9195036589245943
+                }
+              }
+            }
+          },
+          "seconds": 2.4215369169999974
+        },
+        {
+          "epoch": 9,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.5416508047178071,
+          "validation_macro_cross_entropy": 0.9175038036242499,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7409490693393332,
+              "top3_accuracy": 0.9001840867253017,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7228490832157969,
+                  "top3_accuracy": 0.8924541607898449
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8622047244094488,
+                  "top3_accuracy": 0.9519685039370078
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.771700731768862,
+              "top3_accuracy": 0.9121246530406258,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.754746835443038,
+                  "top3_accuracy": 0.9043440736478712
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8927104722792608,
+                  "top3_accuracy": 0.9676591375770021
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7017490952955368,
+              "top3_accuracy": 0.9149577804583836,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6936416184971098,
+                  "top3_accuracy": 0.884393063583815
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.702195354756602,
+                  "top3_accuracy": 0.916640152720331
+                }
+              }
+            }
+          },
+          "seconds": 2.5056247500000097
+        },
+        {
+          "epoch": 10,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.48569020722312034,
+          "validation_macro_cross_entropy": 0.9029119893384485,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7528124360809981,
+              "top3_accuracy": 0.9035590100224995,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7353079454630935,
+                  "top3_accuracy": 0.8968030089327692
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8700787401574803,
+                  "top3_accuracy": 0.9488188976377953
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.776810497098158,
+              "top3_accuracy": 0.9159727479182438,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7595655926352128,
+                  "top3_accuracy": 0.9088751438434983
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8998973305954825,
+                  "top3_accuracy": 0.9666324435318275
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7041616405307599,
+              "top3_accuracy": 0.9170687575392038,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7109826589595376,
+                  "top3_accuracy": 0.9017341040462428
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7037861915367484,
+                  "top3_accuracy": 0.917912822144448
+                }
+              }
+            }
+          },
+          "seconds": 1.9994842910000017
+        },
+        {
+          "epoch": 11,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.4512430775280011,
+          "validation_macro_cross_entropy": 0.9114741355246201,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7578236858253221,
+              "top3_accuracy": 0.9041726324401718,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7423601316408086,
+                  "top3_accuracy": 0.8983309826046074
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8614173228346457,
+                  "top3_accuracy": 0.9433070866141732
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7790184203885945,
+              "top3_accuracy": 0.9162881655311632,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7620828538550057,
+                  "top3_accuracy": 0.9088032220943614
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8998973305954825,
+                  "top3_accuracy": 0.9697125256673511
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7144149577804584,
+              "top3_accuracy": 0.911037394451146,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6936416184971098,
+                  "top3_accuracy": 0.884393063583815
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7155583837098314,
+                  "top3_accuracy": 0.9125039770919504
+                }
+              }
+            }
+          },
+          "seconds": 2.0659137079999965
+        },
+        {
+          "epoch": 12,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.41550156961400403,
+          "validation_macro_cross_entropy": 0.9120914013213829,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7632440171814276,
+              "top3_accuracy": 0.9059112292902434,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7484720263281617,
+                  "top3_accuracy": 0.8993888105312647
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8622047244094488,
+                  "top3_accuracy": 0.9496062992125984
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7874085288922533,
+              "top3_accuracy": 0.9210194297249559,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7707853855005754,
+                  "top3_accuracy": 0.9137658227848101
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9060574948665298,
+                  "top3_accuracy": 0.9727926078028748
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7138118214716526,
+              "top3_accuracy": 0.9119420989143546,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6994219653179191,
+                  "top3_accuracy": 0.8901734104046243
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7146038816417436,
+                  "top3_accuracy": 0.9131403118040089
+                }
+              }
+            }
+          },
+          "seconds": 2.020596917000006
+        },
+        {
+          "epoch": 13,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.3868110792337297,
+          "validation_macro_cross_entropy": 0.9338347494916878,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7598690938842299,
+              "top3_accuracy": 0.9083657189609327,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7437705688763516,
+                  "top3_accuracy": 0.902797367183827
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8677165354330708,
+                  "top3_accuracy": 0.9456692913385827
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7916351249053747,
+              "top3_accuracy": 0.9210825132475398,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7757479861910241,
+                  "top3_accuracy": 0.9135500575373993
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9050308008213552,
+                  "top3_accuracy": 0.9748459958932238
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7098914354644149,
+              "top3_accuracy": 0.9113389626055488,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7225433526011561,
+                  "top3_accuracy": 0.8901734104046243
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.709195036589246,
+                  "top3_accuracy": 0.9125039770919504
+                }
+              }
+            }
+          },
+          "seconds": 2.3959995419999984
+        },
+        {
+          "epoch": 14,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.36756995249383634,
+          "validation_macro_cross_entropy": 0.9309114245857891,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7636530987932092,
+              "top3_accuracy": 0.908979341378605,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7498824635637047,
+                  "top3_accuracy": 0.9038551951104843
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8559055118110236,
+                  "top3_accuracy": 0.9433070866141732
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.796555639666919,
+              "top3_accuracy": 0.9229119354024728,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7799913693901036,
+                  "top3_accuracy": 0.9154200230149597
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9147843942505134,
+                  "top3_accuracy": 0.9763860369609856
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7080820265379976,
+              "top3_accuracy": 0.9104342581423401,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6878612716763006,
+                  "top3_accuracy": 0.8786127167630058
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.709195036589246,
+                  "top3_accuracy": 0.9121858097359211
+                }
+              }
+            }
+          },
+          "seconds": 2.27799779099999
+        },
+        {
+          "epoch": 15,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.34504077564615127,
+          "validation_macro_cross_entropy": 0.9486398777852324,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7655962364491716,
+              "top3_accuracy": 0.9077520965432604,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7508227550540668,
+                  "top3_accuracy": 0.901386929948284
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8645669291338582,
+                  "top3_accuracy": 0.9503937007874016
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7975649760282614,
+              "top3_accuracy": 0.9258137774413323,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7797756041426928,
+                  "top3_accuracy": 0.9181530494821634
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9245379876796714,
+                  "top3_accuracy": 0.9804928131416838
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7165259348612787,
+              "top3_accuracy": 0.9185765983112183,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.7052023121387283,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7171492204899778,
+                  "top3_accuracy": 0.9198218262806236
+                }
+              }
+            }
+          },
+          "seconds": 2.5078095829999967
+        },
+        {
+          "epoch": 16,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.32621455462216375,
+          "validation_macro_cross_entropy": 0.9882271236845875,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7658007772550623,
+              "top3_accuracy": 0.9051953364696257,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7516455101081335,
+                  "top3_accuracy": 0.8984485190409027
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8606299212598425,
+                  "top3_accuracy": 0.9503937007874016
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7992682311380267,
+              "top3_accuracy": 0.9241736058541509,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.781861334867664,
+                  "top3_accuracy": 0.9167146144994246
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9235112936344969,
+                  "top3_accuracy": 0.9774127310061602
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.721049457177322,
+              "top3_accuracy": 0.9125452352231604,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6647398843930635,
+                  "top3_accuracy": 0.8901734104046243
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7241489023226217,
+                  "top3_accuracy": 0.9137766465160675
+                }
+              }
+            }
+          },
+          "seconds": 2.3908377919999992
+        }
+      ],
+      "checkpoint": "/Users/yoyo/Desktop/Deepcube/artifacts/last-layer-policy-seed74.pt"
+    },
+    {
+      "seed": 75,
+      "best_epoch": 9,
+      "validation_cross_entropy": 0.9064976873075389,
+      "validation": {
+        "oll": {
+          "samples": 9778,
+          "top1_accuracy": 0.7577214154223768,
+          "top3_accuracy": 0.9017181427694825,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 8508,
+              "top1_accuracy": 0.7428302773859896,
+              "top3_accuracy": 0.8940996708979784
+            },
+            "synthetic": {
+              "samples": 1270,
+              "top1_accuracy": 0.8574803149606299,
+              "top3_accuracy": 0.952755905511811
+            }
+          }
+        },
+        "pll": {
+          "samples": 15852,
+          "top1_accuracy": 0.7713222306333586,
+          "top3_accuracy": 0.9102952308856926,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 13904,
+              "top1_accuracy": 0.7549626006904487,
+              "top3_accuracy": 0.9034090909090909
+            },
+            "synthetic": {
+              "samples": 1948,
+              "top1_accuracy": 0.8880903490759754,
+              "top3_accuracy": 0.9594455852156057
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3316,
+          "top1_accuracy": 0.7047647768395657,
+          "top3_accuracy": 0.9170687575392038,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 173,
+              "top1_accuracy": 0.6936416184971098,
+              "top3_accuracy": 0.9190751445086706
+            },
+            "synthetic": {
+              "samples": 3143,
+              "top1_accuracy": 0.7053770283168946,
+              "top3_accuracy": 0.9169583200763601
+            }
+          }
+        }
+      },
+      "human_solver_held_out_action_agreement": {
+        "oll": {
+          "samples": 5702,
+          "top1_accuracy": 0.6878288319887759,
+          "top3_accuracy": 0.8754822869168712,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 5702,
+              "top1_accuracy": 0.6878288319887759,
+              "top3_accuracy": 0.8754822869168712
+            }
+          }
+        },
+        "pll": {
+          "samples": 10343,
+          "top1_accuracy": 0.7225176447839118,
+          "top3_accuracy": 0.8899738953881853,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 10343,
+              "top1_accuracy": 0.7225176447839118,
+              "top3_accuracy": 0.8899738953881853
+            }
+          }
+        },
+        "zbll": {
+          "samples": 69,
+          "top1_accuracy": 0.6376811594202898,
+          "top3_accuracy": 0.8840579710144928,
+          "by_sample_kind": {
+            "expert": {
+              "samples": 69,
+              "top1_accuracy": 0.6376811594202898,
+              "top3_accuracy": 0.8840579710144928
+            }
+          }
+        }
+      },
+      "synthetic_held_out_policy_accuracy": {
+        "oll": {
+          "samples": 1259,
+          "top1_accuracy": 0.8649722001588562,
+          "top3_accuracy": 0.9547259729944401,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1259,
+              "top1_accuracy": 0.8649722001588562,
+              "top3_accuracy": 0.9547259729944401
+            }
+          }
+        },
+        "pll": {
+          "samples": 1922,
+          "top1_accuracy": 0.9042663891779397,
+          "top3_accuracy": 0.9729448491155047,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 1922,
+              "top1_accuracy": 0.9042663891779397,
+              "top3_accuracy": 0.9729448491155047
+            }
+          }
+        },
+        "zbll": {
+          "samples": 3110,
+          "top1_accuracy": 0.6562700964630225,
+          "top3_accuracy": 0.8906752411575563,
+          "by_sample_kind": {
+            "synthetic": {
+              "samples": 3110,
+              "top1_accuracy": 0.6562700964630225,
+              "top3_accuracy": 0.8906752411575563
+            }
+          }
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 2.3656397107250497,
+          "validation_macro_cross_entropy": 1.861008829137042,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.36019635917365517,
+              "top3_accuracy": 0.6556555532828799,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.35660554771979314,
+                  "top3_accuracy": 0.6540902679830748
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.384251968503937,
+                  "top3_accuracy": 0.6661417322834645
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.5689502901842038,
+              "top3_accuracy": 0.8222937168811506,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.550704833141542,
+                  "top3_accuracy": 0.8140822784810127
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.6991786447638604,
+                  "top3_accuracy": 0.8809034907597536
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.4686369119420989,
+              "top3_accuracy": 0.7937273823884198,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4161849710982659,
+                  "top3_accuracy": 0.7803468208092486
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.4715240216353802,
+                  "top3_accuracy": 0.7944638880050907
+                }
+              }
+            }
+          },
+          "seconds": 1.2362240409999998
+        },
+        {
+          "epoch": 2,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.3850427799172966,
+          "validation_macro_cross_entropy": 1.7625215292007999,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3704233994681939,
+              "top3_accuracy": 0.6752914706483943,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.36694875411377526,
+                  "top3_accuracy": 0.6730136342266102
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.3937007874015748,
+                  "top3_accuracy": 0.6905511811023622
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6433257633106233,
+              "top3_accuracy": 0.8659475145092101,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6211881472957422,
+                  "top3_accuracy": 0.8563722669735327
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8013347022587269,
+                  "top3_accuracy": 0.9342915811088296
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.49939686369119424,
+              "top3_accuracy": 0.7952352231604343,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.44508670520231214,
+                  "top3_accuracy": 0.8034682080924855
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5023862551702195,
+                  "top3_accuracy": 0.7947820553611199
+                }
+              }
+            }
+          },
+          "seconds": 1.2146268330000112
+        },
+        {
+          "epoch": 3,
+          "active_phases": [
+            "PLL"
+          ],
+          "train_loss": 1.103394984994082,
+          "validation_macro_cross_entropy": 1.7157230426051762,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.3863775823276744,
+              "top3_accuracy": 0.6852116997340969,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.38281617301363424,
+                  "top3_accuracy": 0.6824165491302304
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.41023622047244096,
+                  "top3_accuracy": 0.7039370078740157
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.6869795609386828,
+              "top3_accuracy": 0.8797628059550845,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.6675776754890679,
+                  "top3_accuracy": 0.8714039125431531
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8254620123203286,
+                  "top3_accuracy": 0.9394250513347022
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5193003618817853,
+              "top3_accuracy": 0.8127261761158022,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.4797687861271676,
+                  "top3_accuracy": 0.8497109826589595
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5214762965319758,
+                  "top3_accuracy": 0.8106904231625836
+                }
+              }
+            }
+          },
+          "seconds": 1.2069774999999936
+        },
+        {
+          "epoch": 4,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 1.2198551598557845,
+          "validation_macro_cross_entropy": 1.2489917965654467,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.6423604008999796,
+              "top3_accuracy": 0.8506852116997341,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.6202397743300423,
+                  "top3_accuracy": 0.8414433474377057
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.7905511811023622,
+                  "top3_accuracy": 0.9125984251968504
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7190259904113045,
+              "top3_accuracy": 0.8918748422911935,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7023158803222095,
+                  "top3_accuracy": 0.8842059838895282
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8382956878850103,
+                  "top3_accuracy": 0.946611909650924
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5738841978287093,
+              "top3_accuracy": 0.8296139927623642,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.630057803468208,
+                  "top3_accuracy": 0.8497109826589595
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5707922367165129,
+                  "top3_accuracy": 0.8285077951002228
+                }
+              }
+            }
+          },
+          "seconds": 2.1229429589999995
+        },
+        {
+          "epoch": 5,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.8965423027798539,
+          "validation_macro_cross_entropy": 1.188421277625017,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.6949273880139087,
+              "top3_accuracy": 0.8749232971977909,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.67524682651622,
+                  "top3_accuracy": 0.8660084626234132
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8267716535433071,
+                  "top3_accuracy": 0.9346456692913386
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.73851879888973,
+              "top3_accuracy": 0.8998864496593489,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7213751438434983,
+                  "top3_accuracy": 0.8921892980437284
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8608829568788501,
+                  "top3_accuracy": 0.9548254620123203
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5696622436670687,
+              "top3_accuracy": 0.8160434258142341,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6011560693641619,
+                  "top3_accuracy": 0.8728323699421965
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5679287305122495,
+                  "top3_accuracy": 0.8129175946547884
+                }
+              }
+            }
+          },
+          "seconds": 1.7959105409999978
+        },
+        {
+          "epoch": 6,
+          "active_phases": [
+            "OLL",
+            "PLL"
+          ],
+          "train_loss": 0.7582742623490951,
+          "validation_macro_cross_entropy": 1.1684860692116152,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7209040703620372,
+              "top3_accuracy": 0.8871957455512375,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7026328161730137,
+                  "top3_accuracy": 0.8795251527973672
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8433070866141732,
+                  "top3_accuracy": 0.9385826771653544
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7564345193035579,
+              "top3_accuracy": 0.907582639414585,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7395713463751439,
+                  "top3_accuracy": 0.9007479861910241
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8767967145790554,
+                  "top3_accuracy": 0.9563655030800822
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.5874547647768396,
+              "top3_accuracy": 0.8130277442702051,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.630057803468208,
+                  "top3_accuracy": 0.8554913294797688
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.5851097677378301,
+                  "top3_accuracy": 0.8106904231625836
+                }
+              }
+            }
+          },
+          "seconds": 2.0657670829999972
+        },
+        {
+          "epoch": 7,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.7470660442077867,
+          "validation_macro_cross_entropy": 0.9493962000722687,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7369605236244631,
+              "top3_accuracy": 0.8941501329515238,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7202632816173014,
+                  "top3_accuracy": 0.8865773389750823
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8488188976377953,
+                  "top3_accuracy": 0.9448818897637795
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7547312641937926,
+              "top3_accuracy": 0.9053116326015644,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7400028768699655,
+                  "top3_accuracy": 0.8989499424626007
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8598562628336756,
+                  "top3_accuracy": 0.9507186858316222
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6927020506634499,
+              "top3_accuracy": 0.9149577804583836,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6647398843930635,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6942411708558702,
+                  "top3_accuracy": 0.9160038180082724
+                }
+              }
+            }
+          },
+          "seconds": 2.115483417000007
+        },
+        {
+          "epoch": 8,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.6109866848449549,
+          "validation_macro_cross_entropy": 0.9335434567626796,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.746983023113111,
+              "top3_accuracy": 0.8969114338310493,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7304889515749883,
+                  "top3_accuracy": 0.888810531264692
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8574803149606299,
+                  "top3_accuracy": 0.9511811023622048
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7639414584910421,
+              "top3_accuracy": 0.905627050214484,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.748849252013809,
+                  "top3_accuracy": 0.8984464902186421
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8716632443531828,
+                  "top3_accuracy": 0.9568788501026694
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.6908926417370326,
+              "top3_accuracy": 0.9161640530759951,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6647398843930635,
+                  "top3_accuracy": 0.9017341040462428
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.6923321667196946,
+                  "top3_accuracy": 0.9169583200763601
+                }
+              }
+            }
+          },
+          "seconds": 2.3341174579999944
+        },
+        {
+          "epoch": 9,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.5397632227695717,
+          "validation_macro_cross_entropy": 0.9064976873075389,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7577214154223768,
+              "top3_accuracy": 0.9017181427694825,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7428302773859896,
+                  "top3_accuracy": 0.8940996708979784
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8574803149606299,
+                  "top3_accuracy": 0.952755905511811
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7713222306333586,
+              "top3_accuracy": 0.9102952308856926,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7549626006904487,
+                  "top3_accuracy": 0.9034090909090909
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8880903490759754,
+                  "top3_accuracy": 0.9594455852156057
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7047647768395657,
+              "top3_accuracy": 0.9170687575392038,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6936416184971098,
+                  "top3_accuracy": 0.9190751445086706
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7053770283168946,
+                  "top3_accuracy": 0.9169583200763601
+                }
+              }
+            }
+          },
+          "seconds": 2.09475866599999
+        },
+        {
+          "epoch": 10,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.49307539389368366,
+          "validation_macro_cross_entropy": 0.9210272859902386,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7600736346901207,
+              "top3_accuracy": 0.9012067907547556,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7443582510578279,
+                  "top3_accuracy": 0.8936295251527974
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8653543307086614,
+                  "top3_accuracy": 0.9519685039370078
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7714483976785264,
+              "top3_accuracy": 0.9107998990663638,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7552502876869965,
+                  "top3_accuracy": 0.9034810126582279
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8870636550308009,
+                  "top3_accuracy": 0.9630390143737166
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7056694813027744,
+              "top3_accuracy": 0.9104342581423401,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6763005780346821,
+                  "top3_accuracy": 0.9132947976878613
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7072860324530703,
+                  "top3_accuracy": 0.9102768055997454
+                }
+              }
+            }
+          },
+          "seconds": 2.0156006249999905
+        },
+        {
+          "epoch": 11,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.45626403365932383,
+          "validation_macro_cross_entropy": 0.9174364577675576,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7691757005522601,
+              "top3_accuracy": 0.9064225813049703,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7534085566525623,
+                  "top3_accuracy": 0.8991537376586742
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8748031496062992,
+                  "top3_accuracy": 0.9551181102362205
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7790815039111784,
+              "top3_accuracy": 0.9136386575826394,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7627301495972382,
+                  "top3_accuracy": 0.9060701956271576
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8957905544147844,
+                  "top3_accuracy": 0.9676591375770021
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7080820265379976,
+              "top3_accuracy": 0.9125452352231604,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6820809248554913,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7095132039452752,
+                  "top3_accuracy": 0.9134584791600382
+                }
+              }
+            }
+          },
+          "seconds": 2.3584794589999944
+        },
+        {
+          "epoch": 12,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.4248620784025955,
+          "validation_macro_cross_entropy": 0.929559603642338,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7642667212108816,
+              "top3_accuracy": 0.9120474534669667,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7497649271274095,
+                  "top3_accuracy": 0.9052656323460273
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8614173228346457,
+                  "top3_accuracy": 0.9574803149606299
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7813525107241989,
+              "top3_accuracy": 0.9178021700731769,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7652474108170311,
+                  "top3_accuracy": 0.9103135788262371
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.8963039014373717,
+                  "top3_accuracy": 0.971252566735113
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7107961399276237,
+              "top3_accuracy": 0.9116405307599518,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.653179190751445,
+                  "top3_accuracy": 0.9190751445086706
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.713967546929685,
+                  "top3_accuracy": 0.9112313076678333
+                }
+              }
+            }
+          },
+          "seconds": 2.407861084000004
+        },
+        {
+          "epoch": 13,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.40206426414660734,
+          "validation_macro_cross_entropy": 0.9261509004883681,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.773368787073021,
+              "top3_accuracy": 0.9124565350787482,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7597555242125059,
+                  "top3_accuracy": 0.906088387400094
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8645669291338582,
+                  "top3_accuracy": 0.9551181102362205
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7868407771889983,
+              "top3_accuracy": 0.9186853393893515,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.770066168009206,
+                  "top3_accuracy": 0.9110327963176065
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9065708418891171,
+                  "top3_accuracy": 0.973305954825462
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7044632086851629,
+              "top3_accuracy": 0.9125452352231604,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6473988439306358,
+                  "top3_accuracy": 0.884393063583815
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7076041998090996,
+                  "top3_accuracy": 0.9140948138720967
+                }
+              }
+            }
+          },
+          "seconds": 2.025422582999994
+        },
+        {
+          "epoch": 14,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.37827350458530795,
+          "validation_macro_cross_entropy": 0.9315354807394268,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7721415422376764,
+              "top3_accuracy": 0.912149723869912,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7574047954866009,
+                  "top3_accuracy": 0.9052656323460273
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8708661417322835,
+                  "top3_accuracy": 0.9582677165354331
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7910042896795357,
+              "top3_accuracy": 0.9219025990411305,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7738060989643268,
+                  "top3_accuracy": 0.9141973532796318
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9137577002053389,
+                  "top3_accuracy": 0.9768993839835729
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7044632086851629,
+              "top3_accuracy": 0.9101326899879373,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6994219653179191,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7047406936048362,
+                  "top3_accuracy": 0.910913140311804
+                }
+              }
+            }
+          },
+          "seconds": 2.4289256670000015
+        },
+        {
+          "epoch": 15,
+          "active_phases": [
+            "OLL",
+            "PLL",
+            "ZBLL"
+          ],
+          "train_loss": 0.35741796544090654,
+          "validation_macro_cross_entropy": 0.9480246448201927,
+          "validation": {
+            "oll": {
+              "samples": 9778,
+              "top1_accuracy": 0.7736755982818573,
+              "top3_accuracy": 0.915831458375946,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 8508,
+                  "top1_accuracy": 0.7605782792665726,
+                  "top3_accuracy": 0.9099670897978374
+                },
+                "synthetic": {
+                  "samples": 1270,
+                  "top1_accuracy": 0.8614173228346457,
+                  "top3_accuracy": 0.9551181102362205
+                }
+              }
+            },
+            "pll": {
+              "samples": 15852,
+              "top1_accuracy": 0.7948523845571537,
+              "top3_accuracy": 0.9222811001766339,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 13904,
+                  "top1_accuracy": 0.7779775604142692,
+                  "top3_accuracy": 0.9147008055235903
+                },
+                "synthetic": {
+                  "samples": 1948,
+                  "top1_accuracy": 0.9152977412731006,
+                  "top3_accuracy": 0.9763860369609856
+                }
+              }
+            },
+            "zbll": {
+              "samples": 3316,
+              "top1_accuracy": 0.7201447527141134,
+              "top3_accuracy": 0.9101326899879373,
+              "by_sample_kind": {
+                "expert": {
+                  "samples": 173,
+                  "top1_accuracy": 0.6589595375722543,
+                  "top3_accuracy": 0.8959537572254336
+                },
+                "synthetic": {
+                  "samples": 3143,
+                  "top1_accuracy": 0.7235125676105632,
+                  "top3_accuracy": 0.910913140311804
+                }
+              }
+            }
+          },
+          "seconds": 2.3408203330000106
+        }
+      ],
+      "checkpoint": "/Users/yoyo/Desktop/Deepcube/artifacts/last-layer-policy-seed75.pt"
+    }
+  ],
+  "selected_seed": 73,
+  "selected_validation": {
+    "oll": {
+      "samples": 9778,
+      "top1_accuracy": 0.7622213131519738,
+      "top3_accuracy": 0.9116383718551851,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 8508,
+          "top1_accuracy": 0.748119417019276,
+          "top3_accuracy": 0.9045604137282558
+        },
+        "synthetic": {
+          "samples": 1270,
+          "top1_accuracy": 0.8566929133858268,
+          "top3_accuracy": 0.9590551181102362
+        }
+      }
+    },
+    "pll": {
+      "samples": 15852,
+      "top1_accuracy": 0.7829295987887964,
+      "top3_accuracy": 0.9149634115569013,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 13904,
+          "top1_accuracy": 0.7672612197928653,
+          "top3_accuracy": 0.9075805523590333
+        },
+        "synthetic": {
+          "samples": 1948,
+          "top1_accuracy": 0.8947638603696099,
+          "top3_accuracy": 0.9676591375770021
+        }
+      }
+    },
+    "zbll": {
+      "samples": 3316,
+      "top1_accuracy": 0.7334137515078407,
+      "top3_accuracy": 0.9098311218335344,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 173,
+          "top1_accuracy": 0.7225433526011561,
+          "top3_accuracy": 0.8959537572254336
+        },
+        "synthetic": {
+          "samples": 3143,
+          "top1_accuracy": 0.7340120903595291,
+          "top3_accuracy": 0.9105949729557747
+        }
+      }
+    }
+  },
+  "selected_human_solver_held_out_action_agreement": {
+    "oll": {
+      "samples": 5702,
+      "top1_accuracy": 0.706068046299544,
+      "top3_accuracy": 0.8868817958611014,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 5702,
+          "top1_accuracy": 0.706068046299544,
+          "top3_accuracy": 0.8868817958611014
+        }
+      }
+    },
+    "pll": {
+      "samples": 10343,
+      "top1_accuracy": 0.7383737793676883,
+      "top3_accuracy": 0.897031808952915,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 10343,
+          "top1_accuracy": 0.7383737793676883,
+          "top3_accuracy": 0.897031808952915
+        }
+      }
+    },
+    "zbll": {
+      "samples": 69,
+      "top1_accuracy": 0.6956521739130435,
+      "top3_accuracy": 0.9130434782608695,
+      "by_sample_kind": {
+        "expert": {
+          "samples": 69,
+          "top1_accuracy": 0.6956521739130435,
+          "top3_accuracy": 0.9130434782608695
+        }
+      }
+    }
+  },
+  "selected_synthetic_held_out_policy_accuracy": {
+    "oll": {
+      "samples": 1259,
+      "top1_accuracy": 0.8800635424940428,
+      "top3_accuracy": 0.9563145353455124,
+      "by_sample_kind": {
+        "synthetic": {
+          "samples": 1259,
+          "top1_accuracy": 0.8800635424940428,
+          "top3_accuracy": 0.9563145353455124
+        }
+      }
+    },
+    "pll": {
+      "samples": 1922,
+      "top1_accuracy": 0.9094693028095734,
+      "top3_accuracy": 0.9745057232049948,
+      "by_sample_kind": {
+        "synthetic": {
+          "samples": 1922,
+          "top1_accuracy": 0.9094693028095734,
+          "top3_accuracy": 0.9745057232049948
+        }
+      }
+    },
+    "zbll": {
+      "samples": 3110,
+      "top1_accuracy": 0.6755627009646302,
+      "top3_accuracy": 0.8929260450160772,
+      "by_sample_kind": {
+        "synthetic": {
+          "samples": 3110,
+          "top1_accuracy": 0.6755627009646302,
+          "top3_accuracy": 0.8929260450160772
+        }
+      }
+    }
+  },
+  "checkpoint": "/Users/yoyo/Desktop/Deepcube/artifacts/last-layer-policy.pt",
+  "device": "mps",
+  "hardware": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.8.0"
+  },
+  "human_execution_or_recognition_time": "not measured"
+}

@@ -1,0 +1,21 @@
+name: mlp_state_history
+data:
+  train: data/processed/train.jsonl
+  validation: data/processed/validation.jsonl
+model:
+  type: mlp
+  use_history: true
+  max_history: 8
+  hidden_dims: [256, 128]
+train:
+  seed: 17
+  device: auto
+  cpu_threads: 2
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  early_stopping_patience: 6
+  checkpoint: artifacts/mlp-state-history.pt
+  metrics: artifacts/mlp-state-history.jsonl

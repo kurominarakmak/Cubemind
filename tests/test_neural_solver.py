@@ -1,8 +1,9 @@
 import torch
 
 from cubemind.environment.cube import (
-    MOVE_TOKENS, SIMULATOR_MOVE_TOKENS, SOLVED_STATE, apply_sequence, cross_complete,
+    MOVE_TOKENS, SIMULATOR_MOVE_TOKENS, SOLVED_STATE, apply_sequence, cross_complete, f2l_complete,
 )
+from cubemind.last_layer import solution_for_zbll_state, zbll_case_state
 from cubemind.models.solver import SOLVER_FEATURE_SIZE
 from cubemind.models.solver import SolverPolicyValue
 from cubemind.neural_solver import (
@@ -208,24 +209,40 @@ def test_neural_last_layer_failure_does_not_call_reference_teacher(monkeypatch):
     assert result["failure_reason"] is not None
 
 
-def test_zbll_recovery_preserves_chronological_move_order(monkeypatch):
-    def recover_after_one_auf(state, history, phase, _model, _device, *_args):
-        moves = ("R U R' U R U2 R'" if phase == "ZBLL" else
-                 "R U2 R' U' R U' R'" if phase == "OLL" else "U'").split()
-        final = apply_sequence(state, " ".join(moves))
-        return (final, list(history) + [SIMULATOR_MOVE_TOKENS.index(move) for move in moves], moves, len(moves),
-                "search_budget:ZBLL" if phase == "ZBLL" else None)
+def test_failed_zbll_rolls_back_state_history_and_candidate_moves(monkeypatch):
+    case_id = "T1-01"
+    start = zbll_case_state(case_id)
+    solution = solution_for_zbll_state(start, case_id)
+    initial_history = [SIMULATOR_MOVE_TOKENS.index("F")]
+    calls = []
 
-    monkeypatch.setattr("cubemind.neural_solver._solve_phase", recover_after_one_auf)
-    result = solve_last_layer(apply_sequence(SOLVED_STATE, "U"), FixedMovePolicy("U"),
-                              torch.device("cpu"), mode="search")
+    def fail_zbll_then_solve_oll(state, history, phase, _model, _device, *_args):
+        calls.append((phase, tuple(state), list(history)))
+        if phase == "ZBLL":
+            candidate = apply_sequence(state, "R")
+            assert not f2l_complete(candidate)
+            return (candidate, list(history) + [SIMULATOR_MOVE_TOKENS.index("R")], ["R"], 3,
+                    "search_budget:ZBLL")
+        assert phase == "OLL"
+        assert tuple(state) == start
+        assert history == initial_history
+        final = apply_sequence(state, solution)
+        return (final, list(history) + [SIMULATOR_MOVE_TOKENS.index(move) for move in solution],
+                solution, 7, None)
+
+    monkeypatch.setattr("cubemind.neural_solver._solve_phase", fail_zbll_then_solve_oll)
+    result = solve_last_layer(start, FixedMovePolicy("U"), torch.device("cpu"), mode="search",
+                              history=initial_history, move_count=23)
 
     assert result["verified"]
-    assert result["moves_by_phase"]["ZBLL"] == "R U R' U R U2 R'".split()
-    assert result["moves_by_phase"]["OLL"] == "R U2 R' U' R U' R'".split()
-    assert result["moves_by_phase"]["PLL"] == ["U'"]
-    assert result["moves"] == "R U R' U R U2 R' R U2 R' U' R U' R' U'".split()
-    assert apply_sequence(apply_sequence(SOLVED_STATE, "U"), result["moves"]) == SOLVED_STATE
+    assert [phase for phase, _state, _history in calls] == ["ZBLL", "OLL"]
+    assert result["moves_by_phase"]["ZBLL"] == []
+    assert result["moves_by_phase"]["OLL"] == solution
+    assert result["moves"] == solution
+    assert result["states_explored"] == 10
+    assert result["failed_attempts"][0]["candidate_moves"] == ["R"]
+    assert result["failed_attempts"][0]["f2l_preserved"] is False
+    assert apply_sequence(start, result["moves"]) == result["last_state"]
 
 
 def test_value_only_search_uses_random_branches_instead_of_policy_logits():

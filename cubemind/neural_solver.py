@@ -410,37 +410,61 @@ def solve_last_layer(state, model, device, mode="search", history=(), strategy="
     phases = ["ZBLL"] if eligible and strategy == "eo-aware" else ["OLL", "PLL"]
     recovery_used = False
     failure = None
+    attempts = []
     phase_index = 0
     while phase_index < len(phases):
         phase = phases[phase_index]
-        if not phase_complete(current, phase):
-            used = sum(len(path) for path in moves_by_phase.values())
-            overall_budget = (sum(int(value) for value in phase_budgets.values())
-                              if max_moves is None else int(max_moves))
-            remaining = overall_budget - used
-            if remaining <= 0:
-                failure = "total_move_budget"
-                phase_states.append((phase, current))
-                break
-            current, history, path, explored, failure = _solve_phase(
-                current, history, phase, policy, device, mode,
-                min(int(phase_budgets[phase]), remaining), beam_width, branching,
-                max_nodes, seen_total, initial_move_count + len(chronological_moves),
-                action_score_weight,
-            )
-            moves_by_phase[phase].extend(path)
-            chronological_moves.extend(path)
-            states_explored += explored
-        phase_states.append((phase, current))
+        if phase_complete(current, phase):
+            phase_states.append((phase, current))
+            phase_index += 1
+            continue
+        used = sum(len(path) for path in moves_by_phase.values())
+        overall_budget = (sum(int(value) for value in phase_budgets.values())
+                          if max_moves is None else int(max_moves))
+        remaining = overall_budget - used
+        if remaining <= 0:
+            failure = "total_move_budget"
+            phase_states.append((phase, current))
+            break
+        checkpoint_state, checkpoint_history = current, list(history)
+        phase_seen_total = set(seen_total)
+        attempt_started = time.perf_counter()
+        candidate_state, candidate_history, path, explored, failure = _solve_phase(
+            checkpoint_state, checkpoint_history, phase, policy, device, mode,
+            min(int(phase_budgets[phase]), remaining), beam_width, branching,
+            max_nodes, phase_seen_total, initial_move_count + len(chronological_moves),
+            action_score_weight,
+        )
+        states_explored += explored
+        attempt_seconds = time.perf_counter() - attempt_started
         if failure:
-            if (phase == "ZBLL" and allow_zbll_recovery and f2l_complete(current)
+            attempts.append({
+                "phase": phase, "candidate_moves": list(path),
+                "candidate_state": candidate_state,
+                "failure_reason": failure, "states_explored": explored,
+                "runtime_seconds": attempt_seconds,
+                "f2l_preserved": f2l_complete(candidate_state),
+            })
+            if (phase == "ZBLL" and allow_zbll_recovery and f2l_complete(checkpoint_state)
                     and not recovery_used):
+                # The ZBLL path is a speculative branch; fallback starts at the saved F2L boundary.
+                current, history = checkpoint_state, checkpoint_history
+                phase_states.append((phase, checkpoint_state))
                 phases = phases[:phase_index + 1] + ["OLL", "PLL"]
                 recovery_used = True
                 failure = None
                 phase_index += 1
                 continue
+            current, history = candidate_state, candidate_history
+            moves_by_phase[phase].extend(path)
+            chronological_moves.extend(path)
+            phase_states.append((phase, current))
             break
+        current, history = candidate_state, candidate_history
+        moves_by_phase[phase].extend(path)
+        chronological_moves.extend(path)
+        seen_total.update(phase_seen_total)
+        phase_states.append((phase, current))
         phase_index += 1
 
     verified = (failure is None and cube_solved(current) and f2l_complete(current)
@@ -459,6 +483,7 @@ def solve_last_layer(state, model, device, mode="search", history=(), strategy="
         "states_explored": states_explored, "runtime_seconds": time.perf_counter() - started,
         "failure_reason": failure, "zbll_eligible": eligible, "route": route,
         "strategy": strategy, "recovery_used": recovery_used,
+        "failed_attempts": attempts,
         "f2l_preserved": f2l_complete(current) if verified else None,
         "initial_state": original,
         "provenance": ("CubeMind last-layer neural policy; simulator verified; no deterministic fallback"

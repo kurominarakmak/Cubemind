@@ -9,11 +9,14 @@ import torch
 
 from cubemind.environment.cube import (
     COLORS, MOVE_TOKENS, SOLVED_STATE, apply_move, apply_sequence, cross_complete,
-    f2l_complete, last_layer_edges_oriented, parse_moves,
+    f2l_complete, last_layer_edges_oriented, parse_moves, solved_pair_mask,
 )
+from cubemind.algorithm_memory import recognize_oll_case
 from cubemind.last_layer import recognize_zbll_case, solution_for_zbll_state, zbll_case_state
 from cubemind.models.common import encode_history
 from cubemind.models.zbll import ZBLLClassifier
+from cubemind.models.expert_cross import load_expert_cross_policy
+from cubemind.models.algorithm_preference import load_algorithm_preference_model
 from cubemind.neural_solver import (
     cube_solved, load_expert_f2l_policy, load_last_layer_checkpoint, load_solver_checkpoint,
     reference_solve, solve_expert_aware_full, solve_neural, _solve_cross_model,
@@ -22,6 +25,8 @@ from cubemind.expert_aware_f2l import (
     ExpertAwareF2LPolicy, load_canonical_expert_action_model, load_expert_pair_selector,
 )
 from cubemind.hierarchical_f2l import load_hierarchical_f2l, solve_hierarchical_f2l
+from cubemind.v2_planner import solve_v2, solve_v2_profiles
+from cubemind.zbls import load_zbls_checkpoint
 from cubemind.training.engine import choose_device, model_from_checkpoint
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,6 +104,113 @@ def load_neural_full_solver(last_layer_path, cross_path, planner_path, expert_pa
 
 
 @st.cache_resource(show_spinner=False)
+def load_v2_models():
+    last_layer, last_layer_checkpoint, cross, history_length, f2l, calibration, device = load_neural_full_solver(
+        str(ARTIFACTS / "last-layer-policy.pt"), str(ARTIFACTS / "mlp-state-history.pt"),
+        str(ARTIFACTS / "hierarchical-f2l.pt"), str(ARTIFACTS / "canonical-expert-f2l.pt"),
+        str(ARTIFACTS / "expert-aware-pair-selector.pt"),
+        str(ARTIFACTS / "expert-aware-f2l-evaluation.json"),
+    )
+    zbls, zbls_checkpoint = load_zbls_checkpoint(ARTIFACTS / "v2" / "zbls-synthetic-policy.pt", device)
+    return cross, history_length, f2l, last_layer, zbls, device, {
+        "last_layer": last_layer_checkpoint.get("best_epoch"),
+        "zbls": zbls_checkpoint.get("best_epoch"),
+        "expert_fusion": calibration,
+    }
+
+
+@st.cache_resource(show_spinner=False)
+def load_neurosymbolic_models():
+    cross_path = ARTIFACTS / "v2" / "expert-cross-policy.pt"
+    f2l_path = ARTIFACTS / "hierarchical-f2l.pt"
+    if not cross_path.exists() or not f2l_path.exists():
+        raise ValueError("Train the expert Cross policy and hierarchical F2L model before using this mode")
+    device = choose_device("cpu")
+    cross, cross_checkpoint = load_expert_cross_policy(cross_path, device)
+    f2l, f2l_checkpoint = load_hierarchical_f2l(f2l_path, device)
+    preference_path = ARTIFACTS / "v2" / "algorithm-preference-policy.pt"
+    preference_model = (load_algorithm_preference_model(preference_path, device)
+                        if preference_path.exists() else None)
+    return cross, 0, f2l, device, {
+        "cross_seed": cross_checkpoint["seed"], "cross_epoch": cross_checkpoint["best_epoch"],
+        "f2l_epoch": f2l_checkpoint.get("best_epoch"),
+    }, preference_model
+
+
+def _phase_provenance(mode):
+    if mode in ("Neuro-Symbolic CFOP", "Neuro-Symbolic ZB", "Expert-Aware Global Planner"):
+        return {
+            "CROSS": "Neural-generated · human-only Cross policy",
+            "F2L": "Neural-generated · hierarchical F2L policy",
+            "ZBLS": "Deterministically retrieved · CubeRoot source, replay verified",
+            "OLL": "Deterministically retrieved · SpeedCubeDB via MIT-licensed @moishy/algsets",
+            "PLL": "Deterministically retrieved · MIT-licensed Tao Yu Alg-Trainer",
+            "ZBLL": "Deterministically retrieved · MIT-licensed Tao Yu Alg-Trainer",
+        }
+    if mode == "V2 Neural ZBLS Global Planner":
+        return {
+            "CROSS": "Neural-generated · learned Cross policy",
+            "F2L": "Neural-generated · hierarchical F2L planner",
+            "ZBLS": "Neural-generated · ZBLS policy",
+            "OLL": "Neural-generated · last-layer policy",
+            "PLL": "Neural-generated · last-layer policy",
+            "ZBLL": "Neural-generated · last-layer policy",
+        }
+    if mode == "Deterministic Reference":
+        return {phase: "Deterministic CFOP reference" for phase in ("CROSS", "F2L", "OLL", "PLL")}
+    return {phase: "Neural-generated · learned policy" for phase in
+            ("CROSS", "F2L", "ZBLS", "OLL", "PLL", "ZBLL")}
+
+
+def _profile_colors(profile):
+    return {
+        "White-only": [COLORS["D"]],
+        "White/yellow dual-color": [COLORS["D"], COLORS["U"]],
+        "Full color-neutral": [COLORS["D"], COLORS["U"], COLORS["F"],
+                               COLORS["B"], COLORS["R"], COLORS["L"]],
+    }[profile]
+
+
+def _plan_result(start_state, plan, mode, checkpoints, profile, algorithm_ranking):
+    selected = plan["selected"]
+    moves = selected["moves"] if selected else plan["cross_moves"]
+    phase_moves = selected["moves_by_phase"] if selected else {"CROSS": plan["cross_moves"]}
+    phase_states, current = [], start_state
+    for phase, sequence in phase_moves.items():
+        current = apply_sequence(current, sequence)
+        phase_states.append((phase, current))
+    states_by_phase = dict(phase_states)
+    f2l_state = states_by_phase.get("ZBLS", states_by_phase.get("F2L"))
+    last_state = apply_sequence(start_state, moves)
+    color = plan.get("selected_cross_color")
+    candidates = plan.get("candidates", [])
+    return {
+        **(selected or {}), "status": plan["status"], "moves": moves,
+        "last_state": last_state,
+        "verified": bool(selected and selected["verified"] and cube_solved(last_state)),
+        "moves_by_phase": phase_moves, "phase_states": phase_states,
+        "phase_provenance": _phase_provenance(mode),
+        "cross_complete": plan["cross_complete"],
+        "f2l_complete": bool(selected and selected["f2l_complete"]),
+        "solved_pair_mask": solved_pair_mask(f2l_state) if f2l_state else (False,) * 4,
+        "zbll_eligible_after_f2l": bool(selected and selected["zbll_eligible"]),
+        "route": selected["policy"] if selected else "no verified route",
+        "last_layer_route": selected["last_layer_route"] if selected else None,
+        "runtime_seconds": plan["runtime_seconds"], "states_explored": plan["search_nodes"],
+        "failure_reason": plan["failure_reason"],
+        "comparison_results": {"{}:{}".format(COLOR_NAMES.get(row.get("cross_color", color), "?"), row["policy"]): row
+                               for row in candidates},
+        "v2_plan": plan, "checkpoints": checkpoints,
+        "selected_cross_color": COLOR_NAMES.get(color, "unknown"),
+        "cross_colors_evaluated": [COLOR_NAMES[index] for index in plan.get("cross_colors_evaluated", [])],
+        "cross_plus_one_pairs": plan.get("cross_plus_one_pairs", 0),
+        "profile": profile,
+        "algorithm_ranking": algorithm_ranking,
+        "phase_algorithm_source": selected.get("last_layer_provenance") if selected else None,
+    }
+
+
+@st.cache_resource(show_spinner=False)
 def load_hierarchical_f2l_policy(path):
     device = choose_device("auto")
     model, checkpoint = load_hierarchical_f2l(path, device)
@@ -153,15 +265,35 @@ view = st.radio("Demo", ("Full solver", "Cross policy", "Last-layer recognition"
 
 if view == "Full solver":
     st.title("CubeMind · scramble-to-solution experiment")
-    st.caption("The new full-solve modes reuse expert-aware Cross/F2L search and add the trained neural Last Layer. Neural Greedy changes only Last-Layer inference; the guided mode uses the same upstream checkpoints and neural-guided Last-Layer search. Deterministic CFOP is a separate reference and never rescues neural results.")
+    st.caption("Neural Generation keeps the learned move-search baselines. Neuro-Symbolic modes use a human-only Cross policy and neural F2L planning, then retrieve simulator-verified OLL/PLL/ZBLL/ZBLS algorithms. The deterministic CFOP solver remains a separate reference.")
     solver_path = ARTIFACTS / "neural-cfop-policy.pt"
     with st.form("full_solve"):
         scramble = st.text_input("3×3 scramble", "R U F' D2 L B U2 R' F D L2 B'")
         mode = st.selectbox("Solving mode", (
             "Neural Greedy", "Expert-Aware Neural-Guided Full Solve", "Neural-Guided Search",
             "Neural Cross + Hierarchical Neural F2L", "Neural Cross + Expert-Aware F2L",
-            "Compare Hierarchical vs Expert-Aware F2L", "Deterministic Reference",
+            "Compare Hierarchical vs Expert-Aware F2L", "V2 Neural ZBLS Global Planner",
+            "Neuro-Symbolic CFOP", "Neuro-Symbolic ZB", "Expert-Aware Global Planner",
+            "Deterministic Reference",
         ))
+        algorithm_ranking = "Shortest verified"
+        if mode in ("Neuro-Symbolic CFOP", "Neuro-Symbolic ZB"):
+            cross_profile = st.selectbox("Cross-color capability", (
+                "White-only", "White/yellow dual-color", "Full color-neutral"), index=0)
+            cross_color_name = None
+        elif mode == "Expert-Aware Global Planner":
+            cross_profile = "Full color-neutral"
+            cross_color_name = None
+            st.caption("The global planner evaluates each of the six Cross colors independently.")
+        else:
+            cross_profile = None
+            cross_color_name = st.selectbox("V2 Cross color", (
+                "White", "Yellow", "Green", "Blue", "Red", "Orange"), index=0)
+        if mode in ("Neuro-Symbolic CFOP", "Neuro-Symbolic ZB", "Expert-Aware Global Planner"):
+            ranking_options = ["Shortest verified"]
+            if (ARTIFACTS / "v2" / "algorithm-preference-policy.pt").exists():
+                ranking_options.append("Human preference (trained cases)")
+            algorithm_ranking = st.selectbox("Algorithm ranking", ranking_options)
         max_moves = st.slider("Maximum moves for neural modes", min_value=20, max_value=180, value=120)
         submitted = st.form_submit_button("Solve and verify")
     if submitted:
@@ -171,7 +303,69 @@ if view == "Full solver":
             if len(scramble_moves) > 100:
                 raise ValueError("Please keep the scramble to 100 moves or fewer")
             start_state = apply_sequence(SOLVED_STATE, scramble_moves)
-            if mode == "Deterministic Reference":
+            if mode in ("Neuro-Symbolic CFOP", "Neuro-Symbolic ZB", "Expert-Aware Global Planner"):
+                cross_model, history_length, f2l_model, device, checkpoints, preference_model = load_neurosymbolic_models()
+                cross_colors = (list(range(6)) if mode == "Expert-Aware Global Planner"
+                                else _profile_colors(cross_profile))
+                plan = solve_v2_profiles(
+                    start_state, cross_model, history_length, f2l_model, None, None, device,
+                    cross_colors=cross_colors,
+                    f2l_options={"width": 128, "branching": 6, "max_nodes": 6000,
+                                 "max_depth": 22, "max_moves": max_moves,
+                                 "max_actions_per_pair": 22, "max_order_attempts": 24},
+                    last_layer_engine="algorithm_memory",
+                    zbls_engine=("disabled" if mode == "Neuro-Symbolic CFOP" else "algorithm_memory"),
+                    zbls_options={"max_candidates": 302},
+                    include_zbls=mode != "Neuro-Symbolic CFOP",
+                    compare_last_layer_routes=mode != "Neuro-Symbolic CFOP",
+                    algorithm_preference_model=(preference_model
+                                                if algorithm_ranking == "Human preference (trained cases)" else None),
+                )
+                result = _plan_result(start_state, plan, mode, checkpoints, cross_profile, algorithm_ranking)
+            elif mode == "V2 Neural ZBLS Global Planner":
+                cross_model, history_length, f2l_model, last_layer, zbls_model, device, checkpoints = load_v2_models()
+                plan = solve_v2(
+                    start_state, cross_model, history_length, f2l_model, last_layer,
+                    zbls_model, device,
+                    cross_color=next(color for color, name in COLOR_NAMES.items()
+                                     if name == cross_color_name.lower()),
+                    f2l_options={"width": 128, "branching": 6, "max_nodes": 6000,
+                                 "max_depth": 22, "max_moves": max_moves,
+                                 "max_actions_per_pair": 22, "max_order_attempts": 24},
+                    last_layer_options={"beam_width": 128, "branching": 8,
+                                        "max_nodes": 20000,
+                                        "budgets": {"OLL": 40, "PLL": 40, "ZBLL": 100}},
+                    zbls_options={"width": 48, "branching": 8, "max_depth": 30,
+                                  "max_nodes": 5000, "max_moves": 35},
+                )
+                selected = plan["selected"]
+                moves = selected["moves"] if selected else plan["cross_moves"]
+                phase_moves = selected["moves_by_phase"] if selected else {"CROSS": plan["cross_moves"]}
+                phase_states, phase_state = [], start_state
+                for phase, sequence in phase_moves.items():
+                    phase_state = apply_sequence(phase_state, sequence)
+                    phase_states.append((phase, phase_state))
+                v2_f2l_state = dict(phase_states).get("F2L")
+                last_state = apply_sequence(start_state, moves)
+                result = {
+                    **(selected or {}), "status": plan["status"], "moves": moves,
+                    "last_state": last_state, "verified": bool(selected and selected["verified"]
+                        and cube_solved(last_state)), "moves_by_phase": phase_moves,
+                    "phase_states": phase_states, "cross_complete": plan["cross_complete"],
+                    "f2l_complete": bool(selected and selected["f2l_complete"]),
+                    "solved_pair_mask": solved_pair_mask(v2_f2l_state) if v2_f2l_state else (False,) * 4,
+                    "zbll_eligible_after_f2l": bool(selected and selected["zbll_eligible"]),
+                    "route": selected["policy"] if selected else "no verified route",
+                    "last_layer_route": selected["last_layer_route"] if selected else None,
+                    "runtime_seconds": plan["runtime_seconds"],
+                    "states_explored": plan["search_nodes"],
+                    "failure_reason": plan["failure_reason"],
+                    "comparison_results": {"{}:{}".format(COLOR_NAMES.get(row.get("cross_color"), "?"), row["policy"]): row
+                                            for row in plan["candidates"]},
+                    "v2_plan": plan, "checkpoints": checkpoints,
+                    "selected_cross_color": cross_color_name,
+                }
+            elif mode == "Deterministic Reference":
                 result = reference_solve(scramble)
             elif mode in ("Neural Greedy", "Expert-Aware Neural-Guided Full Solve"):
                 last_layer_path = ARTIFACTS / "last-layer-policy.pt"
@@ -295,6 +489,7 @@ if view == "Full solver":
             result["status"] = ("F2L COMPLETE" if is_f2l_mode and replay_verified
                                 else "SOLVED" if replay_verified else "FAILED / INCOMPLETE")
             result["last_state"] = states[-1]
+            result.setdefault("phase_provenance", _phase_provenance(mode))
             st.session_state["full_solve_result"] = {
                 "scramble": scramble, "mode": mode, "result": result, "states": states,
             }
@@ -320,38 +515,76 @@ if view == "Full solver":
         st.write("Route:", result.get("route") or result.get("last_layer_route", ""))
         if result.get("provenance"):
             st.caption("Solution provenance: {}".format(result["provenance"]))
+        if result.get("phase_provenance"):
+            st.caption("Each phase below identifies whether moves were generated by a model or retrieved from a verified algorithm source.")
         if result.get("expert_fusion"):
             mix = result["expert_fusion"]
             st.caption("Expert action weight {:.2f} · planner action weight {:.2f} · validation calibrated".format(
                 mix["expert_weight"], 1.0 - mix["expert_weight"]))
         if result.get("comparison_results"):
-            st.subheader("Same-scramble F2L comparison")
+            st.subheader("Same-scramble route and Cross-color comparison" if result.get("cross_colors_evaluated")
+                         or solved_run["mode"] == "V2 Neural ZBLS Global Planner"
+                         else "Same-scramble F2L comparison")
             for label, compared in result["comparison_results"].items():
                 with st.expander(label, expanded=True):
                     st.write("Replay verified:", "YES" if compared["verified"] else "NO")
-                    st.write("Cross + F2L moves (STM):", move_metrics(compared["moves"])["stm"])
-                    st.write("Runtime:", "{:.3f} ms".format(compared["runtime_seconds"] * 1000))
-                    st.write("Search nodes:", compared["states_explored"])
+                    st.write("Full solution moves (STM):", compared.get("stm", move_metrics(compared["moves"])["stm"]))
+                    st.write("Runtime:", "{:.3f} ms".format(compared.get("runtime_seconds", 0) * 1000))
+                    st.write("Search nodes:", compared.get("search_nodes", compared.get("states_explored", 0)))
+                    if compared.get("failure_reason"):
+                        st.write("Failure reason:", compared["failure_reason"])
                     st.code(" ".join(compared["moves"]) or "(no moves)")
                     for pair in compared.get("pair_results", []):
                         st.write("{}: {}".format(pair["target_slot"], " ".join(pair["moves"]) or "already solved"))
-        for phase, title in (("CROSS", "Cross"), ("F2L", "F2L"), ("ZBLL", "ZBLL"), ("OLL", "OLL"), ("PLL", "PLL")):
+        for phase, title in (("CROSS", "Cross"), ("F2L", "F2L"), ("ZBLS", "ZBLS"),
+                             ("ZBLL", "ZBLL"), ("OLL", "OLL"), ("PLL", "PLL")):
             moves = result.get("moves_by_phase", {}).get(phase, [])
             if moves:
-                st.markdown("**{}**".format(title))
+                if phase == "ZBLL" and solved_run["mode"] == "V2 Neural ZBLS Global Planner":
+                    title = "Neural-generated ZBLL solution"
+                source = result.get("phase_provenance", {}).get(phase)
+                st.markdown("**{} · {}**".format(title, source) if source else "**{}**".format(title))
                 st.code(" ".join(moves))
         is_full_neural_mode = solved_run["mode"] in (
             "Neural Greedy", "Expert-Aware Neural-Guided Full Solve",
+            "V2 Neural ZBLS Global Planner", "Neuro-Symbolic CFOP", "Neuro-Symbolic ZB",
+            "Expert-Aware Global Planner",
         )
+        is_neurosymbolic_mode = solved_run["mode"] in (
+            "Neuro-Symbolic CFOP", "Neuro-Symbolic ZB", "Expert-Aware Global Planner")
+        if solved_run["mode"] == "V2 Neural ZBLS Global Planner":
+            st.write("Selected Cross color:", result.get("selected_cross_color"))
+            st.write("Selected route:", result.get("route"))
+            st.write("Cross+1 pairs detected by the simulator:", result["v2_plan"].get("cross_plus_one_pairs", 0))
+            st.write("ZBLS attempt:", result["v2_plan"].get("zbls_attempt"))
+            st.write("Verified candidates:", sum(row["verified"] for row in result["v2_plan"]["candidates"]))
+            if result.get("route") == "neural_zbls_global":
+                st.markdown("**Neural-generated ZBLS last-pair moves**")
+                st.code(" ".join(result["v2_plan"]["zbls_attempt"]["candidate_moves"]))
+        if is_neurosymbolic_mode:
+            st.write("Selected Cross color:", result.get("selected_cross_color"))
+            st.write("Cross colors evaluated:", ", ".join(result.get("cross_colors_evaluated", [])) or "one selected color")
+            st.write("Cross+1 pairs detected by the simulator:", result.get("cross_plus_one_pairs", 0))
+            st.write("Verified candidate routes:", sum(row["verified"] for row in result["v2_plan"]["candidates"]))
+            zbls_attempt = result["v2_plan"].get("zbls_attempt")
+            if zbls_attempt:
+                st.write("ZBLS retrieval:", zbls_attempt.get("case_id") or zbls_attempt.get("failure_reason"))
+                st.write("ZBLS candidates checked:", zbls_attempt.get("states_explored", 0))
+                if zbls_attempt.get("algorithm_candidates"):
+                    with st.expander("Compatible verified ZBLS algorithms"):
+                        for candidate in zbls_attempt["algorithm_candidates"][:5]:
+                            st.markdown("**{} · {}**".format(candidate["case_id"], candidate["move_metrics"]))
+                            st.code(" ".join(candidate["moves"]))
         if solved_run["mode"] in (
                 "Neural Cross + Hierarchical Neural F2L", "Neural Cross + Expert-Aware F2L",
                 "Compare Hierarchical vs Expert-Aware F2L") or is_full_neural_mode:
             st.write("Cross Verified:", "YES" if result.get("cross_complete") else "NO")
-            st.markdown("**Verified pair insertions**")
-            for index, pair in enumerate(result.get("pair_results", []), 1):
-                st.markdown("**F2L Pair {} — {}**".format(index, pair["target_slot"]))
-                st.code(" ".join(pair["moves"]) or "(already solved)")
-                st.write("Verified:", "YES" if pair["verified"] else "NO")
+            if solved_run["mode"] != "V2 Neural ZBLS Global Planner":
+                st.markdown("**Verified pair insertions**")
+                for index, pair in enumerate(result.get("pair_results", []), 1):
+                    st.markdown("**F2L Pair {} — {}**".format(index, pair["target_slot"]))
+                    st.code(" ".join(pair["moves"]) or "(already solved)")
+                    st.write("Verified:", "YES" if pair["verified"] else "NO")
             st.markdown("**F2L slot status**")
             pair_mask = result.get("solved_pair_mask") or (False,) * 4
             for index, pair in enumerate(("FR", "FL", "BL", "BR")):
@@ -365,11 +598,56 @@ if view == "Full solver":
                         "verified" if attempt["verified"] else attempt.get("failure_reason") or "incomplete",
                     ))
             st.write("F2L Complete:", "YES" if result.get("f2l_complete") else "NO")
-        if is_full_neural_mode and result.get("zbll_eligible_after_f2l"):
-            f2l_state = dict(result.get("phase_states", [])).get("F2L")
-            case_id = recognize_zbll_case(f2l_state) if f2l_state else None
-            st.write("Exact ZBLL recognition reference:", case_id or "unrecognized")
-            st.caption("Case recognition is shown as a baseline only; the neural solver generates its moves without case-to-algorithm lookup.")
+        if is_full_neural_mode and result.get("f2l_complete"):
+            phase_states = dict(result.get("phase_states", []))
+            f2l_state = phase_states.get("ZBLS", phase_states.get("F2L"))
+            zbll_case_id = recognize_zbll_case(f2l_state) if f2l_state else None
+            oll_case_id = recognize_oll_case(f2l_state) if f2l_state else None
+            if f2l_state:
+                st.markdown("**Last-layer input state after F2L**")
+                st.markdown(cube_svg(f2l_state), unsafe_allow_html=True)
+            if is_neurosymbolic_mode:
+                st.write("Exact OLL case:", oll_case_id or "OLL already oriented")
+                st.write("Exact ZBLL/PLL case:", zbll_case_id or "not edge-oriented or unknown")
+                st.write("Retrieved case IDs:", result.get("last_layer_case_ids", {}))
+                st.write("Algorithm source:", result.get("last_layer_provenance"))
+                st.write("Algorithm ranking:", result.get("algorithm_ranking"))
+                alternatives = result.get("last_layer_algorithms", [])
+                for phase in ("OLL", "PLL", "ZBLL"):
+                    phase_alternatives = [row for row in alternatives if row.get("phase") == phase]
+                    if phase_alternatives:
+                        ranking_label = ("human preference" if
+                                         phase_alternatives[0].get("preference_score") is not None
+                                         else "shortest first")
+                        with st.expander("Compatible {} algorithms ({})".format(phase, ranking_label)):
+                            for candidate in phase_alternatives[:5]:
+                                st.markdown("**{} · {} · {}**".format(
+                                    candidate["algorithm_id"], candidate["source"],
+                                    candidate["move_metrics"]))
+                                st.code(" ".join(candidate["moves"]))
+            else:
+                st.write("Exact ZBLL recognition reference:", zbll_case_id or "no eligible case")
+                st.caption("This neural-generation mode generates last-layer moves without algorithm-table retrieval.")
+                if solved_run["mode"] == "V2 Neural ZBLS Global Planner":
+                    st.write("Neural Last-Layer route:", result.get("last_layer_route"))
+        if solved_run["mode"] == "V2 Neural ZBLS Global Planner":
+            st.caption("V2 route search uses learned Cross, expert-aware F2L, neural last-layer, and neural ZBLS policies. The exact case label is diagnostic; no algorithm table selects moves.")
+        if st.checkbox("Show subgoal walkthrough", value=False, key="subgoal_walkthrough"):
+            purpose = {
+                "CROSS": "Place the four edges of the selected Cross color.",
+                "F2L": "Complete the four first-two-layer slots with the neural planner.",
+                "ZBLS": "Complete the last slot while orienting the last-layer edges.",
+                "OLL": "Orient the last-layer stickers.",
+                "PLL": "Permute the last-layer pieces.",
+                "ZBLL": "Solve an edge-oriented last layer in one algorithm.",
+            }
+            for phase in ("CROSS", "F2L", "ZBLS", "OLL", "PLL", "ZBLL"):
+                phase_moves = result.get("moves_by_phase", {}).get(phase, [])
+                if phase_moves:
+                    st.write("{}: {} · {}".format(
+                        phase, purpose[phase],
+                        result.get("phase_provenance", {}).get(phase, "recorded phase sequence")))
+            st.caption("This explains simulator subgoals and move provenance, not the solver’s unobserved reasoning.")
         st.markdown("**Moves through F2L**" if solved_run["mode"] == "Neural Cross + Hierarchical Neural F2L" else "**Full Solution**")
         st.code(" ".join(result["moves"]) or "(no moves)")
         counts = move_metrics(result["moves"])

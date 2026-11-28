@@ -1,0 +1,94 @@
+{
+  "task": "human OLL/PLL algorithm choice ranking",
+  "data_source": "local reco.nz 3x3 CFOP reconstructions; explicit OLL/PLL segments only",
+  "preference_label": "unique normalized table sequence; exact OLL recognition or unique PLL table mapping; the specific matched table algorithm must appear in replay-verified simulator candidates",
+  "normalization": "trim leading/trailing U AUF and whole-cube rotations; do not infer unmatched labels",
+  "candidate_families": {
+    "OLL": 57,
+    "PLL": 21
+  },
+  "matched_counts": {
+    "OLL_segments": 5738,
+    "OLL_matched_choice": 1106,
+    "PLL_segments": 6033,
+    "PLL_matched_choice": 1063,
+    "PLL_replay_or_case_mismatch": 141,
+    "OLL_replay_or_case_mismatch": 4318,
+    "PLL_unmatched_algorithm": 3070,
+    "PLL_ambiguous_or_unknown_case": 1759,
+    "OLL_unmatched_algorithm": 314
+  },
+  "choice_examples": {
+    "train": 1515,
+    "validation": 485,
+    "test": 169
+  },
+  "choice_examples_by_family": {
+    "train": {
+      "OLL": 777,
+      "PLL": 738
+    },
+    "validation": {
+      "OLL": 249,
+      "PLL": 236
+    },
+    "test": {
+      "OLL": 80,
+      "PLL": 89
+    }
+  },
+  "selected_seed": 37,
+  "selected_epoch": 20,
+  "seed_runs": [
+    {
+      "seed": 17,
+      "best_epoch": 20,
+      "validation_loss": 0.8095985670852446
+    },
+    {
+      "seed": 37,
+      "best_epoch": 20,
+      "validation_loss": 0.8050888730616299
+    },
+    {
+      "seed": 73,
+      "best_epoch": 20,
+      "validation_loss": 0.8202871681181426
+    }
+  ],
+  "initialization": "PyTorch random initialization",
+  "parameter_count": 8033,
+  "test_baselines": {
+    "shortest": {
+      "examples": 169,
+      "top1": 0.3668639053254438,
+      "paired_with_preference": {
+        "preference_only_correct": 70,
+        "baseline_only_correct": 10,
+        "both_correct": 52,
+        "neither_correct": 37,
+        "exact_mcnemar_two_sided_p": 3.161290522649495e-12
+      }
+    },
+    "most_frequent": {
+      "examples": 169,
+      "top1": 0.7514792899408284,
+      "paired_with_preference": {
+        "preference_only_correct": 3,
+        "baseline_only_correct": 8,
+        "both_correct": 119,
+        "neither_correct": 39,
+        "exact_mcnemar_two_sided_p": 0.2265625
+      }
+    }
+  },
+  "test_preference_model": {
+    "examples": 169,
+    "top1": 0.7218934911242604,
+    "top3": 0.9467455621301775,
+    "cross_entropy": 0.7775943780527312
+  },
+  "solver_conditioning": "not trained; no solver embeddings",
+  "human_execution_or_recognition_time": "not measured",
+  "checkpoint": "artifacts/v2/algorithm-preference-policy.pt"
+}

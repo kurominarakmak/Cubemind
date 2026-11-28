@@ -1,0 +1,1063 @@
+{
+  "schema_version": 1,
+  "dataset": "OLL",
+  "source": {
+    "name": "@moishy/algsets",
+    "version": "0.3.3",
+    "repository": "https://github.com/moishy-r/moishy-cubing",
+    "underlying_source": "SpeedCubeDB (as labeled by upstream OLL entries)",
+    "license": "MIT"
+  },
+  "cases": [
+    {
+      "case_id": "oll-1",
+      "family": "OLL",
+      "name": "OLL 1",
+      "algorithms": [
+        "R U2 R' R' F R F' U2 R' F R F'",
+        "R U2 R2 F R F' U2 R' F R F'",
+        "U R U' R2 D' r U' r' D R2 U R'",
+        "f R U R' U' R f' U' r' U' R U M'",
+        "L' U2 L2 F' L' F U2 L F' L' F"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-2",
+      "family": "OLL",
+      "name": "OLL 2",
+      "algorithms": [
+        "f U R U' R' f' F U R U' R' F'",
+        "F R U R' U' F' f R U R' U' f'",
+        "U' R U' R2 D' r U r' D R2 U R'",
+        "F R U R' U' S R U R' U' f'",
+        "U r U r' U2 R U2 R' U2 r U' r'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-3",
+      "family": "OLL",
+      "name": "OLL 3",
+      "algorithms": [
+        "U' f R U R' U' f' U' F R U R' U' F'",
+        "U R' F2 R2 U2 R' F R U2 R2 F2 R",
+        "r' R2 U R' U r U2 r' U M'",
+        "M R U R' U r U2 r' U M'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-4",
+      "family": "OLL",
+      "name": "OLL 4",
+      "algorithms": [
+        "U' f R U R' U' f' U F R U R' U' F'",
+        "U' R' F2 R2 U2 R' F' R U2 R2 F2 R",
+        "R' F R F' U' S R' U' R U R S'",
+        "U F U R U' R' F' U' F R U R' U' F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-5",
+      "family": "OLL",
+      "name": "OLL 5",
+      "algorithms": [
+        "r' U2 R U R' U r",
+        "U2 l' U2 L U L' U l",
+        "U2 R' F2 r U r' F R",
+        "U2 R' F2 L F L' F R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-6",
+      "family": "OLL",
+      "name": "OLL 6",
+      "algorithms": [
+        "r U2 R' U' R U' r'",
+        "F U' R2 D R' U' R D' R2 U F'",
+        "U2 l U2 L' U' L U' l'",
+        "U' x' D R2 U' R' U R' D' x"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-7",
+      "family": "OLL",
+      "name": "OLL 7",
+      "algorithms": [
+        "r U R' U R U2 r'",
+        "S' R U R' U R U2 R' U S",
+        "L' U2 L U2 L F' L' F",
+        "U2 l U L' U L U2 l'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-8",
+      "family": "OLL",
+      "name": "OLL 8",
+      "algorithms": [
+        "U2 r' U' R U' R' U2 r",
+        "l' U' L U' L' U2 l",
+        "R U2 R' U2 R' F R F'",
+        "R' F' r U' r' F2 R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-9",
+      "family": "OLL",
+      "name": "OLL 9",
+      "algorithms": [
+        "U R U R' U' R' F R R U R' U' F'",
+        "U R U R' U' R' F R2 U R' U' F'",
+        "R U2 R' U' S' R U' R' S",
+        "U2 F' U' F r U' r' U r U r'",
+        "U' L' U' L U' L F' L' F L' U2 L"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-10",
+      "family": "OLL",
+      "name": "OLL 10",
+      "algorithms": [
+        "R U R' U R' F R F' R U2 R'",
+        "U F U F' R' F R U' R' F' R",
+        "U M' R' U2 R U R' U R U M",
+        "U2 L' U' L U L F' L2 U' L U F"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-11",
+      "family": "OLL",
+      "name": "OLL 11",
+      "algorithms": [
+        "M R U R' U R U2 R' U M'",
+        "r' R2 U R' U R U2 R' U M'",
+        "U2 r U R' U R' F R F' R U2 r'",
+        "S R U R' U R U2 R' U2 S'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-12",
+      "family": "OLL",
+      "name": "OLL 12",
+      "algorithms": [
+        "U' M' R' U' R U' R' U2 R U' M",
+        "F R U R' U' F' U F R U R' U' F'",
+        "U' S R' U' R U' R' U2 R U2 S'",
+        "U M L' U' L U' L' U2 L U' M'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-13",
+      "family": "OLL",
+      "name": "OLL 13",
+      "algorithms": [
+        "r U' r' U' r U r' F' U F",
+        "F U R U2 R' U' R U R' F'",
+        "F U R U' R2 F' R U R U' R'",
+        "U2 f R U R2 U' R' U R U' f'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-14",
+      "family": "OLL",
+      "name": "OLL 14",
+      "algorithms": [
+        "R' F R U R' F' R F U' F'",
+        "r U R' U' r' F R2 U R' U' F'",
+        "l' U l U l' U' l F U' F'",
+        "F' U' L' U L2 F L' U' L' U L"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-15",
+      "family": "OLL",
+      "name": "OLL 15",
+      "algorithms": [
+        "r' U' r R' U' R U r' U r",
+        "U2 l' U' l L' U' L U l' U l",
+        "r' U' M' U' R U r' U r",
+        "U2 R' F' R L' U' L U R' F R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-16",
+      "family": "OLL",
+      "name": "OLL 16",
+      "algorithms": [
+        "r U r' R U R' U' r U' r'",
+        "r U M U R' U' r U' r'",
+        "U2 R' F R U R' U' F' R U' R' U2 R",
+        "U2 l U l' L U L' U' l U' l'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-17",
+      "family": "OLL",
+      "name": "OLL 17",
+      "algorithms": [
+        "R U R' U R' F R F' U2 R' F R F'",
+        "U2 F R' F' R U S' R U' R' S",
+        "U2 F R' F' R2 r' U R U' R' U' M'",
+        "U' F' r U r' U' S r' F r S'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-18",
+      "family": "OLL",
+      "name": "OLL 18",
+      "algorithms": [
+        "U R U2 R' R' F R F' U2 M' U R U' r'",
+        "U R U2 R2 F R F' U2 M' U R U' r'",
+        "r U R' U R U2 r2 U' R U' R' U2 r",
+        "U F S' R U' R' S R U2 R' U' F'",
+        "R D r' U' r D' R' U' R2 F R F' R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-19",
+      "family": "OLL",
+      "name": "OLL 19",
+      "algorithms": [
+        "M U R U R' U' M' R' F R F'",
+        "U S' R U R' S U' R' F R F'",
+        "R' U2 F R U R' U' F2 U2 F R",
+        "r' R U R U R' U' r R2 F R F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-20",
+      "family": "OLL",
+      "name": "OLL 20",
+      "algorithms": [
+        "r U R' U' M2 U R U' R' U' M'",
+        "r U R' U' M2 U R U' R' U' M'",
+        "M' U2 M U2 M' U M U2 M' U2 M",
+        "S' R U R' S U' M' U R U' r'",
+        "S R' U' R U R U R U' R' S'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-21",
+      "family": "OLL",
+      "name": "OLL 21",
+      "algorithms": [
+        "R U R' U R U' R' U R U2 R'",
+        "R U R' U R U' R' U R U2 R'",
+        "U R U2 R' U' R U R' U' R U' R'",
+        "U F R U R' U' R U R' U' R U R' U' F'",
+        "R' U' R U' R' U R U' R' U2 R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-22",
+      "family": "OLL",
+      "name": "OLL 22",
+      "algorithms": [
+        "R' U2 R2 U R2 U R2 U2 R'",
+        "R U2 R2 U' R2 U' R2 U' U' R",
+        "R U2 R2 U' R2 U' R2 U2 R",
+        "R' U2 R2 U R2 U R2 U2 R'",
+        "f R U R' U' S' R U R' U' F'",
+        "f R U R' U' f' F R U R' U' F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 6
+    },
+    {
+      "case_id": "oll-23",
+      "family": "OLL",
+      "name": "OLL 23",
+      "algorithms": [
+        "R2 D R' U2 R D' R' U2 R'",
+        "U2 R2 D' R U2 R' D R U2 R",
+        "R U R' U R U2 R2 U' R U' R' U2 R",
+        "U R U R' U' R U' R' U2 R U' R' U2 R U R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-24",
+      "family": "OLL",
+      "name": "OLL 24",
+      "algorithms": [
+        "r U R' U' r' F R F'",
+        "U2 R' F' r U R U' r' F",
+        "U' x' R U R' D R U' R' D' x",
+        "U R U R D R' U' R D' R2"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-25",
+      "family": "OLL",
+      "name": "OLL 25",
+      "algorithms": [
+        "U F' r U R' U' r' F R",
+        "R U2 R D R' U2 R D' R2",
+        "F R' F' r U R U' r'",
+        "x R' U R D' R' U' R D x'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-26",
+      "family": "OLL",
+      "name": "OLL 26",
+      "algorithms": [
+        "U R U2 R' U' R U' R'",
+        "R' U' R U' R' U2 R",
+        "U2 L' U' L U' L' U2 L",
+        "U2 L' U R U' L U R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-27",
+      "family": "OLL",
+      "name": "OLL 27",
+      "algorithms": [
+        "R U R' U R U2 R'",
+        "U' R' U2 R U R' U R",
+        "U L' U2 L U L' U L",
+        "U2 L U L' U L U2 L'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-28",
+      "family": "OLL",
+      "name": "OLL 28",
+      "algorithms": [
+        "r U R' U' M U R U' R'",
+        "R' F R S R' F' R S'",
+        "r U R' U' r' R U R U' R'",
+        "U2 M' U M U2 M' U M"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-29",
+      "family": "OLL",
+      "name": "OLL 29",
+      "algorithms": [
+        "U R U R' U' R U' R' F' U' F R U R'",
+        "r2 D' r U r' D r2 U' r' U' r",
+        "U S' R U R' U' R' F R F' U S",
+        "M U R U R' U' R' F R F' M'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-30",
+      "family": "OLL",
+      "name": "OLL 30",
+      "algorithms": [
+        "U2 F U R U2 R' U' R U2 R' U' F'",
+        "U' r' D' r U' r' D r2 U' r' U r U r'",
+        "U2 F R' F R2 U' R' U' R U R' F2",
+        "U S' R' U' R f R' U R U' F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-31",
+      "family": "OLL",
+      "name": "OLL 31",
+      "algorithms": [
+        "R' U' F U R U' R' F' R",
+        "U2 S' L' U' L U L F' L' f",
+        "U S R U R' U' f' U' F",
+        "U' F R' F' R U R U R' U' R U' R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-32",
+      "family": "OLL",
+      "name": "OLL 32",
+      "algorithms": [
+        "S R U R' U' R' F R f'",
+        "U2 L U F' U' L' U L F L'",
+        "R U B' U' R' U R B R'",
+        "U' R' F R F' U' r U' r' U r U r'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-33",
+      "family": "OLL",
+      "name": "OLL 33",
+      "algorithms": [
+        "R U R' U' R' F R F'",
+        "U2 L' U' L U L F' L' F",
+        "U2 r' F' r U r U' r' F",
+        "R U R' F' U' F R U' R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-34",
+      "family": "OLL",
+      "name": "OLL 34",
+      "algorithms": [
+        "U2 R U R2 U' R' F R U R U' F'",
+        "U f R f' U' r' U' R U M'",
+        "F R U R' U' R' F' r U R U' r'",
+        "U2 R U R' U' B' R' F R F' B"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-35",
+      "family": "OLL",
+      "name": "OLL 35",
+      "algorithms": [
+        "R U2 R' R' F R F' R U2 R'",
+        "R U2 R2 F R F' R U2 R'",
+        "f R U R' U' f' R U R' U R U2 R'",
+        "R U2 R' d' R' F R U' R' F' R",
+        "U L' U2 L2 F' L' F L' U2 L"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-36",
+      "family": "OLL",
+      "name": "OLL 36",
+      "algorithms": [
+        "U2 L' U' L U' L' U L U L F' L' F",
+        "U R U R2 F' U' F U R2 U2 R'",
+        "U2 R U R' F' R U R' U' R' F R U' R' F R F'",
+        "U2 R' F' U' F2 U R U' R' F' R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-37",
+      "family": "OLL",
+      "name": "OLL 37",
+      "algorithms": [
+        "F R U' R' U' R U R' F'",
+        "F R' F' R U R U' R'",
+        "U F' r U r' U' r' F r",
+        "U2 r2 D' r U' r' D r U r"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-38",
+      "family": "OLL",
+      "name": "OLL 38",
+      "algorithms": [
+        "R U R' U R U' R' U' R' F R F'",
+        "U F R U' R' S U' R U R' f'",
+        "r U R' U' r' F R U R U' R' F'",
+        "U2 L U L' U L U' L' U' L' B L B'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-39",
+      "family": "OLL",
+      "name": "OLL 39",
+      "algorithms": [
+        "U L F' L' U' L U F U' L'",
+        "U' f' r U r' U' r' F r S",
+        "U' R U R' F' U' F U R U2 R'",
+        "U' f' L F L' U' L' U L S"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-40",
+      "family": "OLL",
+      "name": "OLL 40",
+      "algorithms": [
+        "U R' F R U R' U' F' U R",
+        "U' f R' F' R U R U' R' S'",
+        "R r D r' U r D' r' U' R'",
+        "U' L' U' L F U F' U' L' U2 L"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-41",
+      "family": "OLL",
+      "name": "OLL 41",
+      "algorithms": [
+        "U2 R U R' U R U2 R' F R U R' U' F'",
+        "U2 F U R2 D R' U' R D' R2 F'",
+        "U' S U' R' F' U' F U R S'",
+        "M U' F' L' U' L U F M'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-42",
+      "family": "OLL",
+      "name": "OLL 42",
+      "algorithms": [
+        "R' U' R U' R' U2 R F R U R' U' F'",
+        "U F S' R U R' U' F' U S",
+        "U R' F R F' R' F R F' R U R' U' R U R'",
+        "U F R' F' R U2 R' U' R2 U' R2 U2 R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-43",
+      "family": "OLL",
+      "name": "OLL 43",
+      "algorithms": [
+        "U R' U' F' U F R",
+        "U2 F' U' L' U L F",
+        "f' L' U' L U f",
+        "B' U' R' U R B"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-44",
+      "family": "OLL",
+      "name": "OLL 44",
+      "algorithms": [
+        "f R U R' U' f'",
+        "U2 F U R U' R' F'",
+        "U R U B U' B' R'",
+        "U' L U F U' F' L'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-45",
+      "family": "OLL",
+      "name": "OLL 45",
+      "algorithms": [
+        "F R U R' U' F'",
+        "U R' F' U' F U R",
+        "U2 f U R U' R' f'",
+        "U2 F' L' U' L U F"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-46",
+      "family": "OLL",
+      "name": "OLL 46",
+      "algorithms": [
+        "R' U' R' F R F' U R",
+        "R' F' U' F R U' R' U2 R",
+        "U F R U R' U' F' U' R U R' U R U2 R'",
+        "l' U2 L2 F' L' F U L' U l"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-47",
+      "family": "OLL",
+      "name": "OLL 47",
+      "algorithms": [
+        "F' L' U' L U L' U' L U F",
+        "U' F R' F' R U2 R U' R' U R U2 R'",
+        "R' U' R' F R F' R' F R F' U R",
+        "U' R' F' U' F U F' U' F U R"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-48",
+      "family": "OLL",
+      "name": "OLL 48",
+      "algorithms": [
+        "F R U R' U' R U R' U' F'",
+        "U2 f U R U' R' U R U' R' f'",
+        "R U2 R' U' R U R' U2 R' F R F'",
+        "F R' F' U2 R U R' U R2 U2 R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-49",
+      "family": "OLL",
+      "name": "OLL 49",
+      "algorithms": [
+        "U2 r U' r2 U r2 U r2 U' r",
+        "l U' l2 U l2 U l2 U' l",
+        "R B' R2 F R2 B R2 F' R",
+        "U2 R' F R' F' R2 U2 B' R B R'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-50",
+      "family": "OLL",
+      "name": "OLL 50",
+      "algorithms": [
+        "r' U r2 U' r2 U' r2 U r'",
+        "U2 R' F R2 B' R2 F' R2 B R'",
+        "U' R U2 R' U' R U' R' F R U R' U' F'",
+        "U2 l' U l2 U' l2 U' l2 U l'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-51",
+      "family": "OLL",
+      "name": "OLL 51",
+      "algorithms": [
+        "f R U R' U' R U R' U' f'",
+        "U2 F U R U' R' U R U' R' F'",
+        "U' R' U' R' F R F' R U' R' U2 R",
+        "U r' F' U' F U F' U' F U r"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-52",
+      "family": "OLL",
+      "name": "OLL 52",
+      "algorithms": [
+        "F R U R' d R' U' R U' R'",
+        "U2 R' F' U' F U' R U R' U R",
+        "R U R' U R U' B U' B' R'",
+        "R U R' U R d' R U' R' F'",
+        "R U R' U R U' y R U' R' F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-53",
+      "family": "OLL",
+      "name": "OLL 53",
+      "algorithms": [
+        "r' U2 R U R' U' R U R' U r",
+        "r' U' R U' R' U R U' R' U2 r",
+        "U2 l' U' L U' L' U L U' L' U2 l",
+        "U r' U2 R U R' U' R U R' U r",
+        "U' l' U2 L U L' U' L U L' U l"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-54",
+      "family": "OLL",
+      "name": "OLL 54",
+      "algorithms": [
+        "r U2 R' U' R U R' U' R U' r'",
+        "r U R' U R U' R' U R U2 r'",
+        "U' r U2 R' U' R U R' U' R U' r'",
+        "U' r U r' R U R' U' R U R' U' r U' r'",
+        "U2 l U L' U L U' L' U L U2 l'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 5
+    },
+    {
+      "case_id": "oll-55",
+      "family": "OLL",
+      "name": "OLL 55",
+      "algorithms": [
+        "R U2 R2 U' R U' R' U2 F R F'",
+        "U R' F U R U' R2 F' R2 U R' U' R",
+        "U R' F R U R U' R2 F' R2 U' R' U R U R'",
+        "r U2 R2 F R F' U2 r' F R F'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-56",
+      "family": "OLL",
+      "name": "OLL 56",
+      "algorithms": [
+        "r U r' U R U' R' U R U' R' r U' r'",
+        "r U r' U R U' R' M' U R U2 r'",
+        "F R U R' U' R F' r U R' U' r'",
+        "r' U' r U' R' U R U' R' U R r' U r"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    },
+    {
+      "case_id": "oll-57",
+      "family": "OLL",
+      "name": "OLL 57",
+      "algorithms": [
+        "R U R' U' M' U R U' r'",
+        "U R U' R' S' R U R' S",
+        "U R U R' S' R U' R' S",
+        "R U R' U' R' r U R U' r'"
+      ],
+      "algorithm_sources": [
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB",
+        "SpeedCubeDB"
+      ],
+      "source_algorithm_count": 4
+    }
+  ]
+}

@@ -205,7 +205,8 @@ def solve_hierarchical_f2l(state, model, device, history=(), mode="search", widt
                            branching=8, max_nodes=6000, max_depth=18, max_moves=100,
                            max_actions_per_pair=30, max_order_attempts=16,
                            guidance="neural", seed=551, move_count=None, value_weight=0.5,
-                           conditional_legal=False, execution_cost_weight=0.0):
+                           conditional_legal=False, execution_cost_weight=0.0,
+                           stop_after_pairs=None):
     if mode not in ("greedy", "search"):
         raise ValueError("mode must be greedy or search")
     if guidance not in ("neural", "uniform"):
@@ -214,6 +215,8 @@ def solve_hierarchical_f2l(state, model, device, history=(), mode="search", widt
         raise ValueError("value_weight must be nonnegative")
     if execution_cost_weight < 0:
         raise ValueError("execution_cost_weight must be nonnegative")
+    if stop_after_pairs is not None and stop_after_pairs not in range(1, 5):
+        raise ValueError("stop_after_pairs must be 1..4")
     if min(width, branching, max_nodes, max_depth, max_moves, max_actions_per_pair, max_order_attempts) < 1:
         raise ValueError("F2L search budgets must be positive")
     start = tuple(state)
@@ -256,7 +259,8 @@ def solve_hierarchical_f2l(state, model, device, history=(), mode="search", widt
         nonlocal nodes_used, orders_used
         update_best(current, moves, order)
         current_mask = _mask_bits(current)
-        if current_mask == 15:
+        if current_mask == 15 or (stop_after_pairs is not None
+                                  and _popcount(current_mask) >= stop_after_pairs):
             return current, current_history, moves, order
         if len(moves) >= max_moves or orders_used >= max_order_attempts or nodes_used >= max_nodes:
             return None
@@ -335,6 +339,8 @@ def solve_hierarchical_f2l(state, model, device, history=(), mode="search", widt
         max_seen = max(max_seen, _popcount(next_mask))
         current_mask = next_mask
     verified = cross_complete(final_state) and f2l_complete(final_state)
+    prefix_verified = (stop_after_pairs is not None and cross_complete(final_state)
+                       and _popcount(_mask_bits(final_state)) >= stop_after_pairs)
     pair_results = []
     protected = initial_mask
     pending_moves = []
@@ -350,10 +356,13 @@ def solve_hierarchical_f2l(state, model, device, history=(), mode="search", widt
                                  "moves": list(pending_moves), "verified": True})
             protected = replay_mask
             pending_moves = []
-    failure_reason = None if verified else (attempts[-1]["failure_reason"] if attempts else "no_unsolved_pair")
+    failure_reason = None if verified or prefix_verified else (
+        attempts[-1]["failure_reason"] if attempts else "no_unsolved_pair")
     return {
-        "status": "F2L COMPLETE" if verified else "FAILED / INCOMPLETE",
+        "status": ("F2L COMPLETE" if verified else "F2L PREFIX COMPLETE" if prefix_verified
+                   else "FAILED / INCOMPLETE"),
         "moves": final_moves, "last_state": final_state, "verified": verified,
+        "prefix_verified": prefix_verified,
         "cross_complete": cross_complete(final_state), "f2l_complete": f2l_complete(final_state),
         "solved_pair_mask": solved_pair_mask(final_state),
         "pair_results": pair_results, "pair_attempts": attempts,

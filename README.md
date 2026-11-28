@@ -16,6 +16,8 @@ CubeMind studies next-move imitation with a deterministic 3×3 simulator and PyT
 - A separate end-to-end CFOP experiment: a from-scratch PyTorch policy/value MLP trained on simulator-verified synthetic CFOP teacher paths, ZBLL algorithm trajectories, and DAgger-style post-Cross states from the project Cross model. It has greedy and neural-guided beam-search modes; the deterministic reference never rescues neural attempts.
 - An expert-aware hierarchical F2L extension: canonical-frame action and pair-order models trained from scratch on solver-disjoint reco.nz rows. Validation-only calibration feeds expert scores into the existing pair-conditioned search; historical planner and expert checkpoints remain unchanged.
 - A from-scratch OLL/PLL/ZBLL policy/value model trained on replay-confirmed reco.nz last-layer segments plus separately stored simulator-generated CFOP/ZBLL trajectories. It uses neural greedy rollout or neural-guided search; exact case recognition is reported as a reference only, and failed neural routes never fall back to a table or full-cube solver.
+- A separate V2 goal-conditioned ZBLS policy/value/EO model trained from random initialization on case-disjoint CubeRoot algorithm simulations and explicit reco.nz ZBLS annotations. Neural search solved 5/36 unseen held-out ZBLS cases at a 3,000-node budget; the matched uniform search solved 0/36. This is a promising guidance signal, not a reliable ZBLS solver.
+- A bounded V2 full-solve route selector that compares conventional neural OLL→PLL, EO-aware neural last layer, and neural ZBLS routes. It selects only replay-verified complete solutions. White/yellow Cross modes map color labels to the canonical checkpoint scheme; the interactive full-solver demo shows per-route outcomes and the selected phases.
 - A Streamlit demo with a Cross-policy view and an interactive last-layer view showing the cube, exact case, neural prediction, predicted algorithm, and replay-verified solution.
 - The pretrained expert-aware full-cube checkpoint bundle is published on [Hugging Face](https://huggingface.co/iamrealwonyoung/cubemind-cfop-policies).
 
@@ -112,6 +114,17 @@ streamlit run demo/app.py
 
 Human reconstructions and synthetic teacher trajectories are stored in separate local JSONL files under `data/processed/last_layer/`. Training splits human examples by solver identity and holds out synthetic ZBLL case identities. The full benchmark excludes raw reco.nz scrambles, prior evaluation scrambles, and generated training scrambles. Neural modes use the existing expert-aware Cross/F2L stack; deterministic CFOP is a separate baseline and never rescues a neural attempt.
 
+Train and evaluate the V2 ZBLS policy and paired global route planner:
+
+```bash
+python -m cubemind.train_zbls_policy --seed 17 --epochs 6 --device cpu
+python -m cubemind.benchmark_zbls_policy --device cpu --max-nodes 3000 --output artifacts/v2/zbls-search-confirmatory.json
+python -m cubemind.benchmark_v2_planner --count 100 --seed 20261128 --device cpu --cross-color white --output artifacts/v2/full-solve-benchmark.json
+streamlit run demo/app.py
+```
+
+`train_zbls_policy` requires the local replay-verified reco.nz annotations under ignored `data/processed/reco_cfop/`; it keeps raw reconstructions out of the result files. Checkpoints, source counts, hashes, held-out prediction metrics, and the 36-case confirmatory ZBLS search are in `artifacts/v2/`. The full-solve benchmark writes progress after every case and records all neural routes on the same fresh scramble. Its timing is software compute only. The complete V2 results and limitations are in the [experiment report](docs/experiment_report.md#v2-neural-zbls-and-bounded-global-route-selection).
+
 `reco.py` follows all index pages by default; `--pages` and `--max-solves` can limit a run. It resumes from local raw/checkpoint records, validates full-solve replay, and writes exclusions to an ignored rejection log. Raw records live under `data/raw/reco_nz/` and solver-held-out action rows under `data/processed/reco_cfop/`. ZBLL case poses are generated under ignored `data/processed/zbll_algorithm_synthetic/`. Human and algorithm-synthetic sources remain separate.
 
 ## Results and interpretation
@@ -130,6 +143,8 @@ The subsequent expert-aware extension reached 69.13% held-out human-action Top-1
 
 The **Milestones C and D Last-Layer extension** uses a from-scratch PyTorch policy/value model trained on solver-held-out reco.nz OLL/PLL/ZBLL actions and separately stored simulator-generated trajectories. On the untouched stage test set it completed PLL on 158/158, OLL→PLL on 158/158, and eligible ZBLL on 194/200 (97%; Wilson 95% interval 93.61–98.62%). On 100 fresh scrambles, expert-aware Cross/F2L plus neural OLL→PLL solved 93/100; the EO-aware route solved 90/100 (82.56–94.48% interval), meeting the 90% point target. Neural-guided search outperformed greedy (90/100 vs 10/100); the matched value-only search ablation solved 0/100. EO awareness did not improve over OLL→PLL on this sample: only 10/100 expert-aware F2L outcomes were ZBLL-eligible and the paired difference was not significant (exact McNemar p=0.25). Every successful row was independently replay-checked from its scramble. See the [Milestone C/D report](docs/experiment_report.md#milestones-c-and-d-neural-last-layer-and-full-cube) and [benchmark JSON](artifacts/last-layer-benchmark.json). Timing is software runtime; human recognition and execution were not measured.
 
+The separate **V2 ZBLS and bounded route planner** trained a 278,986-parameter policy/value/EO MLP from random initialization. On 36 case-disjoint ZBLS cases it solved 5/36 with neural-guided search versus 0/36 for matched uniform search. On 100 fresh paired full-cube scrambles, conventional and EO-aware neural routes each solved 94/100; the selector across verified candidates solved 95/100, with no significant reliability gain over conventional neural CFOP (exact McNemar p=1.0). The deterministic reference solved 100/100 and averaged 5 fewer STM than the selector on shared successful cases. V2 is bounded route comparison, not globally exhaustive planning. V2.1 adds a separate human Cross policy and explicit X-Cross outcome counts; it does not infer inspection intent. See the [V2 report](docs/experiment_report.md#v2-neural-zbls-and-bounded-global-route-selection), [V2.1 algorithm memory](docs/algorithm_memory.md), [limitations](docs/limitations.md), and [case-level benchmark](artifacts/v2/full-solve-benchmark.json). Human execution and recognition time were not measured.
+
 ## Research notes
 
 - [Research proposal](docs/research_proposal.md)
@@ -139,3 +154,18 @@ The **Milestones C and D Last-Layer extension** uses a from-scratch PyTorch poli
 - [Portfolio summary](docs/portfolio_summary.md)
 
 The code is MIT-licensed. The included synthetic Cross fixture has its own CC0 notice. ZBLL data retains the MIT Alg-Trainer attribution/license; ZBLS data records its CubeRoot API source and verified conversion. Reco.nz raw/processed human data and its rejection log are local-only and excluded from the repository archive.
+
+## V2.1 neuro-symbolic planner
+
+The V2.1 path uses a human-only, randomly initialized Cross action policy and the existing expert-aware F2L planner, then compares neural Last-Layer generation with simulator-verified OLL/PLL/ZBLL/ZBLS retrieval. OLL/PLL variants are from the MIT-licensed `@moishy/algsets` snapshot; CubeRoot ZBLS license terms are not recorded in the imported snapshot. A separate from-scratch 8,033-parameter ranker learns OLL/PLL variant choices from 2,169 human segments whose specific table algorithms pass simulator replay. Held-out Top-1 is 72.19%, versus 36.69% for shortest and 75.15% for the most-frequent training choice; it has not shown a significant gain over frequency. It does not cover ZBLL/ZBLS preferences or human recognition/execution time.
+
+Train/reproduce the dedicated human Cross model and paired fresh-scramble comparison:
+
+```bash
+python -m cubemind.train_expert_cross --seeds 17 37 73
+python -m cubemind.train_algorithm_preferences --seeds 17 37 73 --epochs 20
+python -m cubemind.benchmark_neurosymbolic --count 100 --seed 20261129
+python -m cubemind.benchmark_neurosymbolic --preference-base artifacts/v2/neurosymbolic-100-benchmark.json --preference-output artifacts/v2/neurosymbolic-preference-100-benchmark.json
+```
+
+The paired benchmark uses the same human Cross and neural F2L policies in both arms, and records replay success, route eligibility, STM, search nodes, software runtime, and paired outcomes. The preference benchmark reuses the same scramble set; shortest and learned ranking both solved 97/100, while the preference route used 0.87 more STM and 0.28 s more software time on average. Human execution and recognition times remain unmeasured. See the expert Cross [model card](docs/model_card_expert_cross.md), [algorithm memory audit](docs/algorithm_memory.md), and [limitations](docs/limitations.md).

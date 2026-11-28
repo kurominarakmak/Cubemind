@@ -1,0 +1,2409 @@
+{
+  "task": "neural-guided ZBLS search on unseen canonical case identities",
+  "cases": 36,
+  "case_split": "case-disjoint 15% test; 10 prior pilot cases excluded",
+  "cross_color": "white",
+  "search_budget": {
+    "width": 32,
+    "branching": 6,
+    "max_depth": 28,
+    "max_nodes": 3000,
+    "max_moves": 32
+  },
+  "device": "cpu",
+  "models": {
+    "synthetic_search": {
+      "checkpoint_sha256": "e3685ac176d6e53a746d33eda1c5e9f42eafe2d69cc0544843e780a0873a81cf",
+      "successes": 5,
+      "success_rate": 0.1388888888888889,
+      "success_rate_wilson_95": [
+        0.060817253631150966,
+        0.2865985128039319
+      ],
+      "successful_stm_mean": 12.2,
+      "search_nodes_mean": 2880.0555555555557,
+      "runtime_mean_ms": 691.1079200555557,
+      "wall_runtime_seconds": 24.893056792,
+      "failure_reasons": {
+        "search_budget:ZBLS": 31
+      },
+      "per_case": [
+        {
+          "case_id": "CubeRoot-5144",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7024714160000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5148",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U",
+            "F",
+            "U2",
+            "U",
+            "F'",
+            "U2",
+            "F",
+            "U'",
+            "R",
+            "U'",
+            "R'",
+            "U2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6916242089999998,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5162",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U2",
+            "R",
+            "U'",
+            "R'",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "R",
+            "U",
+            "R'",
+            "U'",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7145572500000004,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5172",
+          "verified": true,
+          "moves": [
+            "U",
+            "R",
+            "U2",
+            "R'",
+            "U'",
+            "R",
+            "U'",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 2092,
+          "runtime_seconds": 0.4801692499999999,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5173",
+          "verified": false,
+          "moves": [
+            "y",
+            "U'",
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6987041659999997,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5174",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7202972499999998,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5176",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U'",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6981384579999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5186",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6997322080000004,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5194",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F",
+            "R'",
+            "F'",
+            "R"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6978293749999995,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5214",
+          "verified": false,
+          "moves": [
+            "R",
+            "U2",
+            "U",
+            "R'",
+            "U2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.70345675,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5215",
+          "verified": true,
+          "moves": [
+            "y'",
+            "U",
+            "R",
+            "U'",
+            "R'",
+            "U2",
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 2088,
+          "runtime_seconds": 0.5075894160000001,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5237",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U",
+            "F'",
+            "U2",
+            "F",
+            "U2",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7218308329999994,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5241",
+          "verified": false,
+          "moves": [
+            "y",
+            "U2",
+            "F'",
+            "U2",
+            "F",
+            "U'",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6997836670000002,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5251",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7050814170000006,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5262",
+          "verified": false,
+          "moves": [
+            "U2",
+            "F'",
+            "U2",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F",
+            "U2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6988369580000011,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5263",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.707260916000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5267",
+          "verified": false,
+          "moves": [
+            "y'",
+            "R",
+            "U2",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7306059999999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5274",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U2",
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "R",
+            "U'",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.706619958000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5275",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7308018749999992,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5294",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7163305840000014,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5311",
+          "verified": false,
+          "moves": [
+            "y",
+            "U",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7342801669999997,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5314",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U2",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7359368329999985,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5316",
+          "verified": true,
+          "moves": [
+            "y2",
+            "U2",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 1199,
+          "runtime_seconds": 0.3044027910000011,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5321",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U2",
+            "R",
+            "U'",
+            "R'",
+            "U'",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7288425839999988,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5327",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7271297499999996,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5355",
+          "verified": false,
+          "moves": [
+            "y",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.730846249999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5379",
+          "verified": true,
+          "moves": [
+            "y",
+            "U2",
+            "R",
+            "U'",
+            "R'",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 2986,
+          "runtime_seconds": 0.7302103749999986,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5380",
+          "verified": true,
+          "moves": [
+            "y",
+            "U2",
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 2317,
+          "runtime_seconds": 0.5590222500000017,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5383",
+          "verified": false,
+          "moves": [
+            "U",
+            "F'",
+            "U2",
+            "F",
+            "U",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7290851670000009,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5388",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.733456125,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5391",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7444140000000026,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6060",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F",
+            "R'",
+            "F'",
+            "R"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7478043330000013,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6080",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.735961083000003,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6123",
+          "verified": false,
+          "moves": [
+            "U",
+            "F'",
+            "U2",
+            "F",
+            "U",
+            "R",
+            "U",
+            "R'",
+            "U2",
+            "R",
+            "U2",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7385610000000007,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6126",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U",
+            "R",
+            "U",
+            "R'",
+            "U",
+            "R",
+            "U'",
+            "R'",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7368741659999998,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6127",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7313362919999982,
+          "failure_reason": "search_budget:ZBLS"
+        }
+      ]
+    },
+    "synthetic_greedy": {
+      "checkpoint_sha256": "e3685ac176d6e53a746d33eda1c5e9f42eafe2d69cc0544843e780a0873a81cf",
+      "successes": 1,
+      "success_rate": 0.027777777777777776,
+      "success_rate_wilson_95": [
+        0.004920280295569679,
+        0.141700337350308
+      ],
+      "successful_stm_mean": 9,
+      "search_nodes_mean": 54.916666666666664,
+      "runtime_mean_ms": 13.305082111110897,
+      "wall_runtime_seconds": 0.4809748330000012,
+      "failure_reasons": {
+        "depth_limit:ZBLS": 35
+      },
+      "per_case": [
+        {
+          "case_id": "CubeRoot-5144",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.014936458000001096,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5148",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013564750000000458,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5162",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013566499999999593,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5172",
+          "verified": false,
+          "moves": [
+            "U2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013616083000002277,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5173",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013716750000000388,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5174",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013220624999998876,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5176",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013406833000001228,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5186",
+          "verified": false,
+          "moves": [
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "R",
+            "B",
+            "U",
+            "B'",
+            "U'",
+            "R'",
+            "F'",
+            "U",
+            "F",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "R'",
+            "F",
+            "R",
+            "F'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013412290999998078,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5194",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013316957999997214,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5214",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.014354624999999288,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5215",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013833790999999707,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5237",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013658915999997134,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5241",
+          "verified": false,
+          "moves": [
+            "y",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013564375000001405,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5251",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013690291999999715,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5262",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013901166000000131,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5263",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.01368808299999813,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5267",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U",
+            "U",
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013893499999998227,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5274",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.014682249999999897,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5275",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013153541999997742,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5294",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013004417000001212,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5311",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.012991375000002137,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5314",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013210874999998623,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5316",
+          "verified": true,
+          "moves": [
+            "y2",
+            "U",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 17,
+          "runtime_seconds": 0.0043010409999979515,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5321",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.012936167000002996,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5327",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013236208999998667,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5355",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013235082999997871,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5379",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013177417000001412,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5380",
+          "verified": false,
+          "moves": [
+            "y",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013561458999998166,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5383",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013382332999999136,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5388",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013488625000000809,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5391",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013502583000001067,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6060",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013475833000001103,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6080",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013461625000001476,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6123",
+          "verified": false,
+          "moves": [],
+          "states_explored": 56,
+          "runtime_seconds": 0.013467834000000067,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6126",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.013431166999996691,
+          "failure_reason": "depth_limit:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6127",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 56,
+          "runtime_seconds": 0.01394112500000233,
+          "failure_reason": "depth_limit:ZBLS"
+        }
+      ]
+    },
+    "human_search": {
+      "checkpoint_sha256": "18f3c1e10038478f5ae2178bca493012c2ec5e1ab9bd7d96299a1ee503f53e4a",
+      "successes": 2,
+      "success_rate": 0.05555555555555555,
+      "success_rate_wilson_95": [
+        0.015369663767066846,
+        0.18144974107611211
+      ],
+      "successful_stm_mean": 15,
+      "search_nodes_mean": 2980.277777777778,
+      "runtime_mean_ms": 746.6566365277771,
+      "wall_runtime_seconds": 26.902331542000002,
+      "failure_reasons": {
+        "search_budget:ZBLS": 34
+      },
+      "per_case": [
+        {
+          "case_id": "CubeRoot-5144",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7253904579999997,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5148",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7265112080000016,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5162",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7286526669999986,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5172",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7254105419999988,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5173",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.740484833,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5174",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7278807499999971,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5176",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7444807090000012,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5186",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7229667909999975,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5194",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F",
+            "R'",
+            "F'",
+            "R"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.723927665999998,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5214",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7229196249999958,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5215",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7276563329999988,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5237",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7334116669999986,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5241",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7733250409999997,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5251",
+          "verified": true,
+          "moves": [
+            "y2",
+            "U'",
+            "R",
+            "U'",
+            "R'",
+            "U'",
+            "U'",
+            "R",
+            "U",
+            "R'",
+            "U'",
+            "U'",
+            "U'",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 2653,
+          "runtime_seconds": 0.6392127910000056,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5262",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7263363749999954,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5263",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7410107910000008,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5267",
+          "verified": true,
+          "moves": [
+            "y'",
+            "R",
+            "U",
+            "R'",
+            "U'",
+            "U'",
+            "U'",
+            "R",
+            "U'",
+            "R'",
+            "U'",
+            "U'",
+            "U'",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 2637,
+          "runtime_seconds": 0.6396988330000042,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5274",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U",
+            "R",
+            "U'",
+            "R'",
+            "U'",
+            "U'",
+            "U'",
+            "F'",
+            "U'",
+            "F",
+            "U'",
+            "U'",
+            "U'",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7551451659999984,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5275",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7442114169999954,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5294",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7411042499999994,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5311",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7799223750000053,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5314",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7569289999999995,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5316",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7338697920000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5321",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7297496670000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5327",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7334182919999961,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5355",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7548698749999971,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5379",
+          "verified": false,
+          "moves": [
+            "y",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7339449169999952,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5380",
+          "verified": false,
+          "moves": [
+            "y",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7316476669999972,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5383",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U'",
+            "F",
+            "U",
+            "U",
+            "U",
+            "R'",
+            "U'",
+            "R",
+            "U",
+            "R"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7347866670000016,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5388",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7286500419999982,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5391",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.728411874999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6060",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.739056000000005,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6080",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7763969579999994,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6123",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U'",
+            "F",
+            "U'",
+            "U'",
+            "U'",
+            "R'",
+            "U'",
+            "R",
+            "U",
+            "R"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7403363749999983,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6126",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.8335208749999978,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6127",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 1.1343906250000018,
+          "failure_reason": "search_budget:ZBLS"
+        }
+      ]
+    },
+    "mixed_search": {
+      "checkpoint_sha256": "91ecc1f0d006bef1d7cbf4d5351c75aee7166b418ec2e434f810b8ca59497b73",
+      "successes": 2,
+      "success_rate": 0.05555555555555555,
+      "success_rate_wilson_95": [
+        0.015369663767066846,
+        0.18144974107611211
+      ],
+      "successful_stm_mean": 10,
+      "search_nodes_mean": 2924.5555555555557,
+      "runtime_mean_ms": 762.9561990277778,
+      "wall_runtime_seconds": 27.480821667,
+      "failure_reasons": {
+        "search_budget:ZBLS": 34
+      },
+      "per_case": [
+        {
+          "case_id": "CubeRoot-5144",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 1.508756708,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5148",
+          "verified": false,
+          "moves": [
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F",
+            "U2",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 1.0785297910000011,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5162",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.760510416999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5172",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7380170829999955,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5173",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7343589999999978,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5174",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7379359580000013,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5176",
+          "verified": true,
+          "moves": [
+            "y'",
+            "R",
+            "U",
+            "R'",
+            "U'",
+            "U2",
+            "F'",
+            "U",
+            "F",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 2089,
+          "runtime_seconds": 0.5344979580000029,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5186",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7551938750000033,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5194",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U'",
+            "F'",
+            "U2",
+            "F",
+            "U'",
+            "R",
+            "U2",
+            "R'",
+            "U2",
+            "F'",
+            "U",
+            "F",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.740717625000002,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5214",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7371341249999972,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5215",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7386358329999965,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5237",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7394065419999976,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5241",
+          "verified": false,
+          "moves": [
+            "y",
+            "U2",
+            "F'",
+            "U2",
+            "F",
+            "U'",
+            "U2",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7406878339999992,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5251",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U",
+            "F",
+            "U2",
+            "F'",
+            "U'",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.747524625000004,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5262",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7215654590000042,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5263",
+          "verified": false,
+          "moves": [
+            "F",
+            "R'",
+            "F'",
+            "R",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7122470829999941,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5267",
+          "verified": false,
+          "moves": [
+            "y'",
+            "R",
+            "U2",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.718292292000001,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5274",
+          "verified": false,
+          "moves": [
+            "y'",
+            "B'",
+            "R",
+            "B"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7122142079999918,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5275",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.733501000000004,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5294",
+          "verified": false,
+          "moves": [
+            "F'",
+            "U'",
+            "U2",
+            "F",
+            "U2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7484137910000044,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5311",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7362192500000049,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5314",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.716153165999998,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5316",
+          "verified": true,
+          "moves": [
+            "y2",
+            "U2",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 1195,
+          "runtime_seconds": 0.29861774999999113,
+          "failure_reason": null
+        },
+        {
+          "case_id": "CubeRoot-5321",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U'",
+            "F'",
+            "U",
+            "F",
+            "U",
+            "U2",
+            "R",
+            "U",
+            "R'",
+            "U",
+            "R",
+            "U'",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7678446249999951,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5327",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7757302919999916,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5355",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7569346249999995,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5379",
+          "verified": false,
+          "moves": [
+            "y",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7442594580000019,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5380",
+          "verified": false,
+          "moves": [
+            "y",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.746709624999994,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5383",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.742857167000011,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5388",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.8110900420000036,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5391",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.8143839580000076,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6060",
+          "verified": false,
+          "moves": [
+            "y2",
+            "U2",
+            "F",
+            "U",
+            "F'",
+            "U2",
+            "U'",
+            "F",
+            "U2",
+            "F'",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.8021885830000031,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6080",
+          "verified": false,
+          "moves": [
+            "y2",
+            "F'",
+            "U'",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.766348832999995,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6123",
+          "verified": false,
+          "moves": [
+            "R",
+            "U2",
+            "R'",
+            "U",
+            "U2",
+            "F'",
+            "U'",
+            "F",
+            "U'",
+            "F'",
+            "U",
+            "F"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7618287500000065,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6126",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.8491934170000093,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6127",
+          "verified": false,
+          "moves": [
+            "y'",
+            "U2",
+            "F'",
+            "U'",
+            "F",
+            "U2",
+            "R",
+            "U2",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.737922416999993,
+          "failure_reason": "search_budget:ZBLS"
+        }
+      ]
+    },
+    "uniform_search": {
+      "checkpoint_sha256": null,
+      "successes": 0,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.09642183044857634
+      ],
+      "successful_stm_mean": null,
+      "search_nodes_mean": 3000,
+      "runtime_mean_ms": 727.6018784444448,
+      "wall_runtime_seconds": 26.206912791999997,
+      "failure_reasons": {
+        "search_budget:ZBLS": 36
+      },
+      "per_case": [
+        {
+          "case_id": "CubeRoot-5144",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7132541670000023,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5148",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7113059999999933,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5162",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7170465829999983,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5172",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7098636670000076,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5173",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7335443750000081,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5174",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7125773340000023,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5176",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7279516249999887,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5186",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7062857079999958,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5194",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7500420829999968,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5214",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7319984580000067,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5215",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7317209579999968,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5237",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7078191250000003,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5241",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.713128832999999,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5251",
+          "verified": false,
+          "moves": [
+            "y2",
+            "R",
+            "U",
+            "U",
+            "R'",
+            "U",
+            "U",
+            "U",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7497546249999942,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5262",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7359965419999952,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5263",
+          "verified": false,
+          "moves": [
+            "R",
+            "U",
+            "R'",
+            "U",
+            "U",
+            "U",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.730367041000008,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5267",
+          "verified": false,
+          "moves": [
+            "y'",
+            "R",
+            "U2",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7542333749999983,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5274",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.728865875000011,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5275",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7363397919999954,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5294",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7390895420000021,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5311",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7379319580000043,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5314",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7485640830000051,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5316",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7358090830000066,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5321",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7411320840000002,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5327",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.727990915999996,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5355",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7358788340000046,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5379",
+          "verified": false,
+          "moves": [
+            "y",
+            "R",
+            "U",
+            "R'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7366724999999974,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5380",
+          "verified": false,
+          "moves": [
+            "y"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7525762500000042,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5383",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7342534590000014,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5388",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7258821249999983,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-5391",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7088039580000043,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6060",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7005225829999944,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6080",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7229713750000002,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6123",
+          "verified": false,
+          "moves": [],
+          "states_explored": 3000,
+          "runtime_seconds": 0.6989092919999962,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6126",
+          "verified": false,
+          "moves": [
+            "y2"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7126197909999945,
+          "failure_reason": "search_budget:ZBLS"
+        },
+        {
+          "case_id": "CubeRoot-6127",
+          "verified": false,
+          "moves": [
+            "y'"
+          ],
+          "states_explored": 3000,
+          "runtime_seconds": 0.7319636250000059,
+          "failure_reason": "search_budget:ZBLS"
+        }
+      ]
+    }
+  },
+  "offline_algorithm_reference": {
+    "verified_cases": 302,
+    "successes": 36,
+    "role": "algorithm database replay reference only; not used during neural inference"
+  }
+}

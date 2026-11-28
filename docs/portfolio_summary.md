@@ -1,5 +1,11 @@
 # Portfolio summary
 
+## V2.1 status
+
+V2.1 adds 57 OLL identities/240 variants, 21 PLL identities with 104 replay-matched SpeedCubeDB variants, exact 493-case ZBLL/PLL recognition, and 302 simulator-verified ZBLS setup/algorithm pairs. A 118,418-parameter expert Cross policy was trained from scratch on solver-disjoint human Cross labels: 47.37% Top-1 and 71.67% Top-3 on 3,996 held-out actions, compared with 12.09%/27.08% majority baselines. It is action imitation, not evidence of expert inspection decisions.
+
+The V2.1 fresh 100-scramble paired run solved 93/100 with neural Last-Layer/ZBLS generation, 97/100 with verified symbolic retrieval plus bounded ZBLS prefix search, and 100/100 with the deterministic reference. Conventional neural OLL→PLL solved 93/100, symbolic OLL/PLL 94/100, and each EO-aware CFOP route 93/100 or 94/100 respectively. ZBLL eligibility after completed F2L was 14/100. The optional 8,033-parameter human OLL/PLL preference ranker reached 72.19% held-out Top-1 on 169 choices, below the most-frequent baseline (75.15%) but above shortest (36.69%). Its statistical comparison against frequency was not significant. On the same 100 scrambles, learned preference and shortest ranking both solved 97/100; preference ranking averaged 0.87 STM and 0.28 s more. It therefore did not improve end-to-end results. No model or dataset was uploaded or published.
+
 CubeMind now spans three deliberately separate research tracks:
 
 - **Cross foundation:** exact shortest-Cross labels, from-scratch MLP/Transformer baselines, held-out scramble evaluation, and policy-guided search.

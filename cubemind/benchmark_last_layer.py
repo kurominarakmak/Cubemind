@@ -188,6 +188,11 @@ def _neural_full_row(scramble, start, prefix, result, route):
         "pll_complete": verified, "zbll_eligible": eligible,
         "direct_zbll_success": direct_zbll,
         "recovery_used": result.get("recovery_used", False), "route": result["route"],
+        "failed_attempts": result.get("failed_attempts", []),
+        "failed_attempt_search_nodes": sum(item.get("states_explored", 0)
+                                            for item in result.get("failed_attempts", [])),
+        "failed_attempt_runtime_seconds": sum(item.get("runtime_seconds", 0.0)
+                                               for item in result.get("failed_attempts", [])),
         "stm": counts["stm"], "htm": counts["htm"], "rotations": counts["rotations"],
         "search_nodes": prefix["search_nodes"] + result["states_explored"],
         "runtime_seconds": prefix["runtime_seconds"] + result["runtime_seconds"],

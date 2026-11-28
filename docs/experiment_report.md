@@ -427,3 +427,80 @@ Result:   solved; 47 STM/HTM, 4,591 search nodes, 2.87 s compute, 0 rotations
 ```
 
 Reproduce with the training command in `README.md`, followed by the validation and 100-scramble commands there. The final benchmark used CPU on macOS 26.6.2 arm64, Python 3.9.6, and PyTorch 2.8.0. The full test suite passed (74 tests); `artifacts/last-layer-benchmark.json` contains per-scramble moves, phase traces, intermediate states, confidence intervals, and failure reasons. `artifacts/demo-full-solve.jpg` is a Streamlit screenshot of the verified direct-ZBLL example.
+
+## V2: neural ZBLS and bounded global route selection
+
+V2 preserves the Cross/F2L and Last-Layer checkpoints and their benchmark artifacts. It adds a random-initialized PyTorch policy/value/EO model for the last F2L slot and a bounded route comparison across conventional neural OLL→PLL, EO-aware neural last layer, and a three-pair-prefix → neural ZBLS → neural ZBLL route. Only candidates that replay to a solved cube can be selected; among them the selector minimizes STM, then rotations, then expanded search nodes. This is a small candidate comparison, not an exhaustive or globally optimal solver.
+
+### ZBLS training sources and held-out predictions
+
+The synthetic source contains 302 simulator-verified CubeRoot ZBLS case identities and 7,248 simulator-generated presentations. Case-disjoint splits are 211/45/46 identities for train/validation/test. The human source contains only explicitly annotated, replay-verified reco.nz ZBLS segments: 49 train trajectories / 576 actions, 16 validation / 144 actions, and 9 held-out trajectories / 97 actions. Human and synthetic action rows stay separate; the mixed model combines only the training and validation partitions. All three models started from random initialization and selected epoch 6. Raw reconstructions are not copied into the V2 outputs.
+
+| Model | Test source | Action Top-1 / Top-3 | EO accuracy | Value MAE |
+| --- | --- | ---: | ---: | ---: |
+| Synthetic-only | 10,188 actions from 46 unseen case identities | 51.82% / 82.23% | 99.06% | 0.958 |
+| Human-only | 97 actions from 9 held-out trajectories | 21.65% / 41.24% | 95.88% | 3.189 |
+| Mixed | synthetic held-out cases | 52.49% / 80.74% | 99.18% | 1.180 |
+| Mixed | 97 held-out human actions | 37.11% / 72.16% | 95.88% | 1.989 |
+
+The human test is small and the mixed model's higher agreement is not evidence of more human-like solving. These are teacher-forced next-action metrics. Training source counts, split IDs, epoch histories, and hashes are recorded in `artifacts/v2/zbls-training-evaluation.json` and `artifacts/v2/zbls-manifest.json`.
+
+### Case-disjoint neural ZBLS search
+
+The confirmatory search excludes the 10 case identities used in an earlier exploratory pilot, leaving 36 unseen held-out cases. All neural variants had the same width-32, branching-6, 3,000-node budget; the greedy and uniform controls are labeled separately. The algorithm database is used only for offline training and replay reference, never to choose inference moves.
+
+| Variant | Verified | Wilson 95% interval | Mean STM when solved | Mean nodes | Mean compute time |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Synthetic-guided search | 5/36 (13.9%) | 6.1–28.7% | 12.2 | 2,880 | 691 ms |
+| Synthetic greedy | 1/36 (2.8%) | 0.5–14.2% | 9.0 | 55 | 13 ms |
+| Human-guided search | 2/36 (5.6%) | 1.5–18.1% | 15.0 | 2,980 | 747 ms |
+| Mixed-guided search | 2/36 (5.6%) | 1.5–18.1% | 10.0 | 2,925 | 763 ms |
+| Matched uniform search | 0/36 | 0–9.6% | — | 3,000 | 728 ms |
+
+Synthetic action guidance beat uniform search on this small case-disjoint sample, but 5/36 is far below a dependable completion rate. Human-only and mixed search did not improve completion. All 36 cases had an offline algorithm replay reference; this is not a deterministic inference fallback. Preserve the negative result when interpreting the model.
+
+### Planner, color handling, and demo
+
+The V2 planner compares routes from one learned Cross result and one expert-aware F2L search, then evaluates a completed-F2L branch and a three-pair prefix branch. It accounts for failed route work in total node/runtime measurements and independently replays selected moves from the original cube. When choosing yellow Cross, it rotates the cube and relabels colors into the checkpoints' canonical white-down input scheme; the emitted moves are still replayed against the original color state. A one-scramble integration smoke solved under both white and yellow Cross, but both selected conventional OLL→PLL, found zero Cross+1 pairs, and exhausted the ZBLS attempt budget. This verifies wiring only, not comparative reliability.
+
+The Streamlit full-solver view now includes `V2 Neural ZBLS Global Planner`, a white/yellow Cross selector, candidate route scores, the ZBLS attempt, exact ZBLL case recognition as a diagnostic, phase move sequences, and full replay verification. Exact case recognition and the offline table do not select V2 moves. Cross+1 pair count is measured by the simulator at the Cross boundary; there is no learned expert Cross/X-Cross planner in this milestone.
+
+### Paired 100-scramble full-solve comparison
+
+The fixed V2 configuration was evaluated on 100 fresh, distinct 25-turn outer-face scrambles (seed 20261128). Every method received the same starts. The deterministic package was run afterward as a labeled reference, not a neural fallback. The V2 selector chooses minimum STM only among complete simulator-verified candidates.
+
+| Route | Verified solves (Wilson 95%) | Mean successful STM | Mean nodes | Mean compute time |
+| --- | ---: | ---: | ---: | ---: |
+| Conventional neural Cross/F2L → OLL→PLL | 94/100 (87.52–97.22%) | 60.72 | 6,397 | 4.35 s |
+| EO-aware neural Cross/F2L → ZBLL when eligible, otherwise OLL→PLL | 94/100 (87.52–97.22%) | 61.73 | 6,620 | 4.48 s |
+| Neural three-pair prefix → ZBLS → ZBLL route | 8/100 (4.11–15.00%) | 65.63 | 9,924 | 5.30 s |
+| V2 minimum-STM selector across verified candidates | 95/100 (88.82–97.85%) | 60.16 | 16,515 total | 9.55 s total |
+| Deterministic CFOP reference | 100/100 (96.30–100%) | 55.03 | 0 | 1.82 s |
+
+Conventional and EO-aware neural routes solved the exact same 94 cases (paired McNemar p=1.0); the EO-aware route averaged 1.01 more STM on those shared successes. ZBLL was eligible after 16/95 completed conventional F2L endpoints (16.8%). The ZBLS search was attempted 98 times and completed the last slot with EO on 8 attempts (8.2%). Only one scramble had a simulator-detected F2L pair already solved at the Cross boundary; this is an outcome count, not evidence of an expert X-Cross decision.
+
+The route selector chose conventional OLL→PLL on 85 scrambles, EO-aware on 5, and the ZBLS route on 5; 5 had no verified route. Against fixed conventional neural CFOP, the selector added one solved case (95 vs 94; exact McNemar p=1.0). On their 94 common successes, selected solutions averaged 60.02 STM versus 60.72 (paired sign test p=0.0039); this reflects the explicit minimum-STM selection rule and does not establish expert likeness or faster human execution. Against the deterministic reference, the selector solved 95/100 vs 100/100 (exact McNemar p=0.0625) and averaged 5.00 more STM on the 95 common solves (paired sign test p=0.000045). The comparison does not support a reliability or move-count advantage over the reference. The V2 selector used about 9.55 seconds and 16,515 nodes per scramble because it runs multiple neural candidates; the reference averaged 1.82 seconds. These are software timings only.
+
+Four failures exhausted an F2L pair-search budget; one additional scramble had no verified complete route after Last-Layer search. Cross completed on all 100. This V2 run does not train an expert Cross/X-Cross policy, enumerate multiple Cross or pair-order candidates, use a learned full-solve value model, or prove globally optimal plans. The 100-scramble results and all case-level trajectories are in `artifacts/v2/full-solve-benchmark.json`, including checkpoint hashes, candidate and selected routes, search cost, failure causes, Wilson intervals, and paired tests. The benchmark command in `README.md` reproduces this comparison; CPU software timing was measured, while human execution and recognition time remain unmeasured.
+
+## V2.1 neuro-symbolic Cross and last-layer pilot
+
+V2.1 keeps the neural search baselines and adds a distinct symbolic algorithm-memory path. Replay audits pass for all 57 OLL identities/240 algorithms, all 21 PLL identities/104 imported variants, all 493 ZBLL/PLL primary identities/algorithms, and all 302 CubeRoot ZBLS setup/algorithm pairs. See [the algorithm-memory audit](algorithm_memory.md).
+
+The new 118,418-parameter Cross action policy was randomly initialized and trained only from explicit human `CROSS` segments on solver-disjoint reco.nz splits. Three seeds were trained; seed 37 was selected on validation loss. On 3,996 held-out actions, Top-1 was 47.37%, Top-3 71.67%, and cross-entropy 1.744, versus majority-action 12.09%/27.08%. These are action-agreement results; the model does not predict inspection intent, Cross-color choice, or X-Cross actions. Cross+1/X-Cross annotations are counted separately.
+
+The paired benchmark uses identical fresh scrambles, the same human Cross and hierarchical F2L policies, and white Cross. On seed 20261129, neural Last-Layer/ZBLS generation solved 93/100; verified algorithm-memory retrieval with the bounded symbolic ZBLS prefix solved 97/100. Conventional neural OLL→PLL solved 93/100 versus 94/100 through symbolic OLL/PLL; both neural and symbolic EO-aware CFOP routes solved 93/100 versus 94/100. The deterministic full-solver reference solved 100/100. The completed-F2L endpoints were ZBLL-eligible in 14/100 cases. In the selected full-solve comparison, symbolic had four successes where neural failed and neural had none where symbolic failed (exact McNemar p=0.125). On common full-solve successes, the symbolic selector used 3.77 fewer STM on average than neural generation (93 shared successes). This is one paired scramble seed; symbolic retrieval uses a finite database and simulator replay, not a learned solver. Human execution and recognition times remain unmeasured. Full results, Wilson intervals, compute cost, route eligibility, and paired rows are in [`artifacts/v2/neurosymbolic-100-benchmark.json`](../artifacts/v2/neurosymbolic-100-benchmark.json).
+
+### Human OLL/PLL algorithm preference
+
+An 8,033-parameter ranker was trained from random initialization on explicit human OLL/PLL segments, after matching a unique normalized table sequence and independently replaying that specific candidate algorithm on the segment's input state. The resulting solver-disjoint set contains 2,169 choices: 1,515 train, 485 validation, and 169 test. The excluded remainder of the 5,738 OLL and 6,033 PLL segments was ambiguous, unmatched, or failed candidate replay.
+
+| Test policy | Top-1 | Top-3 | Paired comparison |
+| --- | ---: | ---: | --- |
+| Shortest variant | 36.69% | — | Preference-only correct 70; shortest-only 10; exact p=3.16×10⁻¹² |
+| Most frequent training choice per case | 75.15% | — | Preference-only correct 3; frequency-only 8; exact p=0.227 |
+| Learned preference ranker | 72.19% | 94.67% | Cross-entropy 0.778 |
+
+The ranker improves substantially over choosing the shortest variant, but the sample does not show a gain over the most-frequent-choice baseline. It ranks only OLL/PLL candidates for cases represented during training; it does not select ZBLL/ZBLS algorithms or predict execution/recognition time.
+
+On the same 100 scrambles, shortest and preference ranking both solved 97/100 (Wilson 95% interval 91.55–98.97%; paired exact McNemar p=1.0), with the same three failures. On all 97 common successes, preference ranking averaged 57.18 STM versus 56.31 for shortest selection, an increase of 0.87 STM. Average software time was 6.98 s versus 6.70 s, with the same mean search-node count (25,516). The preference option selected the symbolic ZBLS-prefix route on 79 cases versus 48 for shortest ranking; consistent with the longer CFOP candidates after OLL/PLL reranking, the minimum-STM selector changed route more often. This does not mean the ZBLS algorithm itself was preference-trained. This run shows no end-to-end benefit from the preference model. The full route rows and replay checks are in [`artifacts/v2/neurosymbolic-preference-100-benchmark.json`](../artifacts/v2/neurosymbolic-preference-100-benchmark.json). These are compute measurements only; no human timing was collected.

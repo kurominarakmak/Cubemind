@@ -6,6 +6,8 @@ Can small neural models trained from scratch imitate expert 3×3 CFOP move choic
 
 The project keeps source-separated evidence tracks. Human reco.nz reconstructions supervise demonstrated next actions. Simulator-generated trajectories supply controlled coverage. The algorithm table supports exact recognition and offline teacher labels; it is not evidence of human-like strategy and is not a neural inference-time solver.
 
+V2.1 narrows the architecture to learned strategic actions plus verified algorithm memory. It adds a human-only Cross action policy, explicit Cross+1/X-Cross outcome annotations, six-frame Cross planning, paired neural-generation versus algorithm-memory last-layer routes, and a from-scratch OLL/PLL preference ranker trained on replay-verified human choices. The ranker improves on a shortest-only baseline but has not shown a significant gain over the most-frequent training choice, so table lookup and preference prediction are reported as separate contributions. See the [algorithm-memory audit](algorithm_memory.md) and [paired report](experiment_report.md#v21-neuro-symbolic-cross-and-last-layer-pilot).
+
 ## Research foundation
 
 The original synthetic Cross experiment remains the controlled engineering baseline: shortest-Cross BFS generates labels, MLP/Transformer models are randomly initialized, and held-out scramble evaluation separates action accuracy from complete Cross rollout. Its labels are optimal Cross paths, not human choices.

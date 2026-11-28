@@ -66,6 +66,18 @@ def test_neural_guided_pair_search_replays_to_all_four_f2l_pairs():
     assert result["route"] == "hierarchical neural F2L; no deterministic fallback"
 
 
+def test_hierarchical_solver_can_stop_at_a_verified_three_pair_prefix():
+    route = ["R", "U", "R'", "U'"]
+    start = apply_sequence(SOLVED_STATE, inverse_sequence(route))
+    result = solve_hierarchical_f2l(
+        start, HierarchicalF2LPolicy(), torch.device("cpu"), stop_after_pairs=3,
+    )
+    assert result["prefix_verified"]
+    assert not result["verified"]
+    assert not result["f2l_complete"]
+    assert result["moves"] == []
+
+
 def test_end_to_end_cross_then_hierarchical_f2l_replays_from_scramble():
     route = ["R", "U", "R'", "U'"]
     cross_state = apply_sequence(SOLVED_STATE, inverse_sequence(route))

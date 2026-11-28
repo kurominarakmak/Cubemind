@@ -1,6 +1,6 @@
 # Dataset provenance
 
-**Updated:** 2026-11-17
+**Updated:** 2026-11-28
 
 ## Human solve reconstructions
 
@@ -32,9 +32,19 @@ This use is local to the user's authorized research project; the repository does
 
 Human reconstruction rows are not mixed into the algorithm-generated training set.
 
+## V2 ZBLS model data
+
+The V2 ZBLS policy uses three source-separated configurations. The synthetic dataset contains simulator-generated, replay-verified trajectories derived from the 302 imported CubeRoot cases, with 7,248 presentations split by canonical case identity (211 train / 45 validation / 46 test). The human dataset contains only explicitly annotated, replay-verified reco.nz ZBLS phase segments and inherits the existing solver-disjoint partitions (49 train trajectories / 576 actions, 16 validation / 144, and 9 test / 97). The mixed policy combines training rows from the two sources but keeps their validation and test results separate. No human intent is inferred from an unannotated solve phase, and raw reconstruction rows are not copied into V2 benchmark artifacts.
+
+The V2 ZBLS training run used random initialization and did not reuse pretrained encoders. The synthetic-only, human-only, and mixed checkpoints plus source counts, split identities, configuration, and hashes are local at `artifacts/v2/`. They have not been uploaded as public releases; local research use and public checkpoint redistribution are separate questions.
+
 ## Other baselines
 
 The paired full-CFOP benchmark uses [`@moishy/cfop` 0.4.0](https://www.npmjs.com/package/@moishy/cfop), an MIT-licensed deterministic solver, for both policies. The package includes its own CFOP/ZBLS/ZBLL algorithm sets; these are used only inside the solver benchmark and are not used to train CubeMind's neural models. The ZBLL classifier and its held-out test cases use the Alg-Trainer data; the local ZBLS table comes from CubeRoot.
+
+## V2.1 expert Cross labels
+
+The Cross policy uses only explicit `CROSS` actions from the already processed reco.nz CFOP corpus, with its existing solver-disjoint train/validation/test assignments. It excludes post-Cross actions and non-outer-turn labels. The saved manifest records 25,596/4,901/3,996 usable Cross actions across train/validation/test, with 21,703/5,856/3,060 Cross+1 annotations and 17,672/4,053/2,659 X-Cross annotations retained as separate outcome counts. The annotations do not reveal inspection intent or a solver's permitted color profile. Of 5,738 explicit OLL and 6,033 PLL segments, 2,169 choices matched a unique table variant and passed candidate-specific simulator replay (1,515 train, 485 validation, 169 solver-held-out test). Unmatched, ambiguous, and non-replaying segments were excluded. Raw reco.nz rows remain local and Git-ignored.
 
 ## Original synthetic Cross corpus
 

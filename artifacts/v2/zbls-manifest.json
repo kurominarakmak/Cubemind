@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "report": "artifacts/v2/zbls-training-evaluation.json",
+  "synthetic_source": "algorithm_synthetic:CubeRoot-ZBLS",
+  "human_source": "expert:reco.nz:explicit-ZBLS-annotation",
+  "raw_reconstructions_saved": false,
+  "training_split_counts": {
+    "train": 45654,
+    "validation": 9666,
+    "test": 10188
+  },
+  "checkpoint_hashes": {
+    "synthetic": "e3685ac176d6e53a746d33eda1c5e9f42eafe2d69cc0544843e780a0873a81cf",
+    "human": "18f3c1e10038478f5ae2178bca493012c2ec5e1ab9bd7d96299a1ee503f53e4a",
+    "mixed": "91ecc1f0d006bef1d7cbf4d5351c75aee7166b418ec2e434f810b8ca59497b73"
+  }
+}
